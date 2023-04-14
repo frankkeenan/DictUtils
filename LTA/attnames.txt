@@ -1,0 +1,170 @@
+academic	this item is a member of the academic wordlist for this source language
+advanced	this item is/is not suitable for use in an advanced level dictionary
+appr	this element has been approved by the content owner
+before_names	Phonetic is to be used before names
+before_vowels	Phonetic is to be used before vowels
+block	Specifies if CSS block display should be applied to this tag.
+bord	this element is &#x2018;borderline&#x2019; and can be suppressed from publication if extent needs to be reduced
+careful	check data is correct vs &#x2018;near homonyms&#x2019;
+cet4	Chinese College English Test Level 4 applies to this item
+cet6	Chinese College English Test Level 6 applies to this item
+cefr	CEFR level
+check	Instructions for editorial attention - can be ignored
+class	refers to a class selector in an associated Cascading Style Sheet
+cols	column width of an image
+cstyle	The character style for a symbol
+tab	Whether a note box should have a tab
+width	width of an image
+contextid	Part of the indexing structure. The identifier of a particular element within the entry
+corpus_freq	corpus frequency for this item
+corpus_src	source of corpus frequency
+cset	cset multiple choice values
+cultequiv	translation is a cultural equivalent rather than a direct translation
+data-s_type	The icon to be used
+depth	height of an image
+dialog	example includes a dialogue between two speakers
+display	how should the element be displayed
+display_xpos	manual instruction to display ts element xpos attribute
+dlf	dlf multiple choice values
+dps_ref	Editing system's link to containing entry 
+dps_subref	Editing system's link to element
+dps_targetproject	Editing system's link to containing project
+dpsid	Editing system's link identifier
+dpsref	Editing system's link to containing entry 
+dpsresource	Editing system's link to containing project
+dupedid	Identifier on an element that has been repopulated around the dictionary
+ds	ds multiple choice values
+dup	On &lt;entry&gt; tag used for resolving possible duplicate entry keys; On other elements used to indicate that an element has been duplicated around the database (e.g. usage notes) where in print form it only occurs in one location
+edition	market-specific edition multiple choice values
+eid	electronic identifier for this element. Used when the data is imported to populate DPS links between elements
+elementary	this item is/is not suitable for use in an elementary level dictionary
+enc	this item is an encyclopedic term
+entrymod	entry has been added, changed or deleted, compared to a reference version of the database
+etc	Specifies whether there are more items to the set
+examplebank	The examples are supplementary to what is in the book 
+file	media to be incorporated
+final_position	 phonetics: form used in final position
+fold	Name of previous filename used
+form	the type of irregular or base form
+gender	identifies a specifically feminine or masculine form
+geo	geography value - from an enumerated set
+gr	grammar value -  from an enumerated set
+gram	gram - from an enumerated set
+g	geo - from an enumerated set
+gen	Collocations dictionary: is the entry generated from editorial instructions 
+heavyduty	allows special formatting for large phrasal verbs group sections
+height	height of an image
+hlength	The number of characters in the headword (to help CSS)
+hm	the homonym number for this entry when multiple entries have the same headword
+href	electronic reference to another element&#x2019;s eid attribute. 
+hw	Collocations: headword referred to <FK ?/>
+id	electronic identifier
+idx	How should the element be indexed
+il	inflected form value
+indexform	The form by which the element should be indexed
+imported	cross reference data as originally imported.
+index	do/do not index this item for digital products
+intermediate	this item is/is not suitable for use in an intermediate level dictionary
+late	editorial attribute - can be ignored
+l1	level 1 topic attribute &#x2013; by default, required
+l2	level 2 topic attribute &#x2013; by default, optional
+l3	level 3 topic attribute &#x2013; by default, optional
+lang	indicates the main language used in an element
+list	The name of the wordlist that an item belongs to
+lookup	Attribute on lookup tag to help with linking to related information	
+mediarecord	this is a copy of @e:mediarecord in the DPS system &#x2013; the copy forces a DPS xref update if @e:mediarecord has changed
+mod	element differs from the corresponding element in a reference version of the database
+n	Sense number to display
+name	audio/image filename less extension, as required by DPS
+netm	Chinese National Entrance Test of English for Master of Arts/Master of Science Candidates applies to this item
+new	this element is new to this edition of this dictionary
+new2e	this element is new to this edition of this dictionary
+new4e	this element is new to this edition of this dictionary
+nonaz	specifies type of non A&#x2013;Z placeholder entry used in DPS
+obed	Whether an element was to be used in the Oxford Basic dictionary
+override	can be used to replace xr-g content generated by DPS
+ox2000	this item belongs to the Oxford 2000 vocabulary for this source language
+ox3000	this item belongs to the Oxford 3000 vocabulary for this source language
+ox5000	this item belongs to the Oxford 5000 vocabulary for this source language
+opal_spoken	The item is a member of the OPAL spoken wordlist
+opal_written	The item is a member of the OPAL written wordlist
+p	part of speech - from an enumerated set
+pic	picture information
+parent	Collocations: editorial attribute for specifying the "slot" a cl tag appears in
+pnc	Attribute to force suppression of automatic punctuation
+pos	part of speech - from an enumerated set
+pref	a number indicating the preference level of this pronunciation of the word &#x2013; 1 = &#x2018;most preferred&#x2019;
+project	specification of which project a link points to
+e.g. &#x2018;British English&#x2019; or &#x2018;North American
+English&#x2019;
+project_lang	the source language for this entry, e.g. &#x2018;British English&#x2019; or &#x2018;North American English&#x2019;
+psg	for ad hoc technical use by OUP publishing systems group
+pub	this element is only published in the specified products
+q	&#x2018;qualifies&#x2019; attribute or element content
+random	do/do not select this item for random text display or audio play
+r	register information - from an enumerated set
+reg	register information - from an enumerated set
+ref	Which media to use?
+resource	electronic reference to another database &#x2013; this is used when the data is imported to populate DPS links between elements
+sb	Specific to Collocations dictionary - used for group near-synonyms	
+sl	Specific to Collocations dictionary - used to indicate usage of the collocate	
+showh	display/hide target headword &#x2013; overrides the default rules for publication of the cross reference
+sk	sort override. Use this value instead of the entry key (as defined in DPS) to determine the sort order of the entry
+source	the original source database for this element
+speaker	the example requires a male/female speaker (or both) when recorded
+spoken	this xg-s features a list of spoken examples (i.e. with audio recordings)
+src	media file to use
+srcid	Identifier of content that is replicated around a title
+st	Entry status (e.g. cr for core, nl for normal)
+stg	Editorial status - can be ignored
+status	&#x2018;S&#x2019; (safe to use at any time), &#x2018;SQ&#x2019; (safe-query: probably safe to use but may change and need further updating) or &#x2018;NYD&#x2019; (&#x2018;not yet dead&#x2019; for nearly all living people: these entries are to be suppressed, but kept in the database so they can be reinstated when the person dies).
+s	subject information - from an enumerated set
+style	How an element manifests
+subj	subject information - from an enumerated set
+subref	electronic reference to the eid addtibute of an element which may be inside an entry.
+sup	this element is always suppressed from publication (NB not the same as the DPS &#x2018;discarded&#x2019; status). Suppressed entries are typically used as placeholder targets where a cross reference targets non A-Z material
+symbol	The symbol to display
+t	Collocations specific: indicating how to treat an &lt;sb-g&gt; tag
+thumb	thumbnail picture information
+title	the headword is the title of a published/artistic work &#x2013; used in encyclopedic entries
+topic	On a Ref tag - indicated the target
+topics	Topics associated with this content
+topic_cefr	The CEFR value for an item that may not be a member of the Oxford 3000/5000 wordlist but is a member of a topic
+tofix	this element requires editorial attention
+trans	transcription scheme &#x2013; ald8, oaad or orthographic
+type	co value indicates consonant doubling, extent = use this partial to reduce extent, langdiff = use this partial to show language difference
+type	indicates a special type of entry &#x2013; e.g. encyclopedic articles
+type	indicates if the bold form is identified as an idiom or phrasal verb
+type	type of variants group &#x2013; abbreviation, derived adverb, alternative form, full form, symbol, variant form, variant spelling
+unbox	usage note box types
+un	usage note types
+verbform	To indicate that the phonetic is within a verbform table
+wd	word
+wfp	word family part of speech - from an enumerated set
+wordlist	Which wordlist is the content a member of
+xpos	xpos multiple choice values &#x2013; must correspond to pos element pos attribute
+xref_type	Whether an xref is internal to the project
+xt	cross reference type multiple choice values
+alt	Alternate text for an image
+brackets	Force brackets not to be generated
+core	core word (Oxford 2000 or 3000 depending on dictionary level)
+ed	Which edition to use the content for
+newturk2e	Editorial information - ignore
+nospace	Force space to be suppressed
+oldref	Previous reference identifier
+pt	Transitive
+reinstate_turk2e	Editorial information - ignore
+slashes	Force phonetic slashed to be suppressed
+picref	System reference to an image - ignore
+xmlns	XML namespace information
+xmlns:d	XML namespace information
+xmlns:e	XML namespace information
+xmlns:md	XML namespace information
+data	Exercise: data to load
+e:id	Editing system's element identifier
+e:targeteltid	Editing system's target element identifier
+e:targetid	Editing system's element's parent entry identifier
+e:targetproject	Editing system's Project identifier
+exercise	Exercise type
+level	Level of usage for exercise tags.
+altforms	Whether the content of the tag contains alternate forms (e.g. slashed phrasal verbs)

@@ -1,0 +1,610 @@
+<!--	comment. Can be removed/ignored	
+?...	all tags beginning with &lt;? are for our typesetting program and can be removed/ignored	
+?xm-replace_text	Ignore	
+Media	A tag to incorporate files specified by the type attribute (audio, image or video). For images the topic and thumb values are the large image and thumbnail to include
+Ref	A linking mechanism with the topic attribute indicating the target	
+a	<alt-g><new>Anchor tag - may be used in audio for symbols also</new> or <old>alternative form</old></alt-g>
+ab	abbreviation	
+alpha_start	when starting a new letter of the alphabet, contains the letter. Useful for headers in printed publications.	
+alt	alternative text. Used where alternatives exist in bold forms, e.g. an idiom which can be expressed in various forms
+alt-g	alternative text group. A container for all the alternatives (alt elements) in a given bold form context
+althead	usage note alternatives heading	
+ar	container for synonyms listed underneath the headword	
+ar-g	group of words on the arrow relating to strength of synonym	
+arbd1	usage note bold style 1	
+arcon	tag encloses information about abbreviation and past tense/past participle	
+aref	audio reference
+arit1	usage note italic style 1	
+arl	Specification of tags for indexing (can be used to assign priority e.g. Headword is more significant than inflection)
+ars-g	a group of ar tags	
+audio	audio reference. Specifies a file or other resource containing the audio to be played
+autocomp	Part of the indexing structure: How the bold items in the entry can be autocompleted
+autocompletes	A container tag for the &lt;autocomp&gt; tags
+b	bold style	
+batch	A container tag for the dictionary	
+bf	elementary level bold form
+bf-g	elementary level bold form group. A container for all elements relating to a specific bf
+bf-gs	elementary level bold forms group. A container for a sequence of bf-g elements and bf-related un and xr-gs elements. This allows idioms, phrasal verbs and other phrase items to be presented in any sequence in an elementary level dictionary
+bf-l	a container for a sequence of equivalent bf elements
+bk	A typesetting instruction that can be ignored (partners with &lt;ek&gt; to keep elements on a line)
+block-g	Tag to force elements to display="block"
+blocklabel-g	Tag to force label elements to display="block"
+blockquote	XHTML-style block quote element
+body	XHTML-style body element for main body of usage note box
+bold-g	group of bold style	
+bpt	bold in verb pattern	
+br	typesetting instruction to force a line break
+browse	Part of the indexing structure: A browsable description of the element including headword and part of speech
+cap_in_xh	capital letter in cross reference	
+cc	complement collocate	
+cdill	A tag to incorporate an illustration in a digital product
+cf	complement frame
+cf-g	group cf elements
+cfe	bilingual compound fixed expression form
+cfe-g	compound fixed expression group. A container for all elements relating to a specific compound fixed expression
+cfe-gs	compound fixed expressions group. A container for a sequence of cfe-g elements and related xr-gs elements
+cfe-l	a container for a sequence of equivalent cfe elements
+cl	collocate	
+cl-g	group of examples within the patterns and collocations section	
+cl_in_x	collocation in example	
+clear	used for our typesetting program. Can be removed/ignored	
+closed	The text that should show on a collapsible tag when closed - but be hidden when open
+cm	editorially keyed non-structural text
+cm2	editorially keyed non-structural text
+cm_in_bf	editorially keyed non-structural text
+cm_in_id	editorially keyed non-structural text
+cm_in_pv	editorially keyed non-structural text
+co	consonant doubling	
+coll	Collocation
+coll-g	A container for collocations
+coll-gs	A container for coll-g
+collsubhead	subheading within a collocations note box	
+cop	consonant double 2	
+cpd	compound form
+cpd-g	compound group. A container for all elements relating to a specific compound
+cpd-gs	compounds group. A container for a sequence of cpd-g elements
+cpd-l	a container for a sequence of equivalent cpd elements
+cr_entry	Core entry - the basic unit of information in a dictionary. A container for all elements relating to the word being defined
+cset	compiling set. A multiple choice list
+cu	if the word is archaic etc.	
+d	definition	
+dc	definition collocate	
+dd	The &lt;dd&gt; tag is used to describe a term/name in a description list (as HTML5).
+def	definition
+def_qt	definition quoted text
+den	denominator number in a fraction
+dh	definition headword. Typically identifies a non-defining vocabulary headword used in the definition
+dhb	bold headword in definition	
+dhs	headword in speech marks	
+dis-g	discriminator group. A container for a sequence of discriminators
+display	Part of the indexing structure: Display versions of indexing elements
+div	As with HTML - styling defined by teh class attribute
+dl	The dl tag is used for declaring a definition list. This tag is used within &lt;dd&gt; tag. A definition list is similar to other lists but in a definition list, each list item contains two entries; a term and a description
+dlf	literal/figurative discriminator. A multiple choice list
+dps-data	a physical collection of entries. This is the root element in the DTD
+dr	derivative form
+dr-g	derivative group. A container for all elements relating to a specific derivative
+dr-gs	derivatives group. A container for a sequence of dr-g elements
+dr-l	a container for a sequence of equivalent dr elements
+dre	derivative ending	
+driv	Derivative
+ds	subject discriminator. A multiple choice list
+ds original attribute	invalid value found in original data &#x2013; use in combination with @ds="_to_fix"
+dst	contains a cross reference of text before it	
+dt	definition title. A non-active reference to the title of an artistic/literary work
+dtxt	free text discriminator
+eb	emphasis &#x2013; bold
+eb_in_if	bold emphasis in irregular form	
+eb_in_x	bold emphasis in example	
+ebi	emphasis &#x2013; bold italic
+edition-g	edition group. A container for a sequence of include or exclude elements
+ei	emphasis &#x2013; italic
+ei-g	Phonetics for electronic
+ei_in_un	italic emphasis in usage note	
+eix	example sentences	
+ek	A typesetting instruction that can be ignored (partners with &lt;bk&gt; to keep elements on a line)
+en	capitalizes words	
+entry	the basic unit of information in a dictionary. A container for all elements relating to the word being defined
+eph	emphasis &#x2013; phonetics
+epsf	Name of the EPS image file
+er	emphasis &#x2013; roman
+esc	emphasis &#x2013; small caps
+esu	superscript override
+eth	no instances in the sample	
+etym	etymology	
+eul	emphasis &#x2013; underline
+exceptions	container for imported translation data that cannot be automatically be matched to a specific sense
+exclude	indicates that the parent of the edition-g element is excluded from a market-specific edition of the main numbered edition, e.g. an edition for Germany. The parent of the edition-g element is included in all editions not specified by an exclude element
+exp	expanded form &#x2013; as used in cf
+expair	holds a normal example sentence in an &lt;x&gt; tag	
+ff	full form	
+fkpt	verb pattern	
+fm	form of headword	
+fmx	Headword used with &lt;x&gt; tag	
+footer	footer element used in blockquote to indicate author/source, etc.
+frac-g	fraction used within text
+full	For elements that are to have a skeleton form option - this is the non skeleton version. The class atttribute specified which content type it refers to
+g	geographic information e.g. &#x2018;US&#x2019;, &#x2018;especially US&#x2019;, &#x2018;US also&#x2019;, &#x2018;Brit&#x2019;, &#x2018;Brit also&#x2019;, etc.	
+g_label	contains the geographical information of the word, e.g. &#x2018;Brit&#x2019;	
+geo	geographical label. A multiple choice list
+gi	un geographic label	
+gl	example gloss. An explanation of part of an example
+gr	gives information about countable or uncountable nouns	
+gram	grammar label. A multiple choice list
+grammar	grammar labels
+gram-g	grammar group. A container for a sequence of gram elements
+greek	Greek text	
+greeki	Greek italic text	
+guide	not used in the book. Can be removed/ignored	
+guide_info	attributes specific to ald9_guide entries
+h	headword form
+h-g	headword group. A container for a sequence of elements relating to the headword
+h-l	a container for a sequence of equivalent h elements
+h1	XHTML-style heading 1 element
+h2	<alt-g><new>XHTML-style heading 2 element</new> or <old>second headword</old></alt-g>
+h3	XHTML-style heading 3 element
+h4	XHTML-style heading 4 element
+hcr	core headword form
+he	headword ending	
+heading	heading title for help boxes	
+headword	headword form
+help	help note	
+hh	help note heading	
+hide	holds the translation to the English word in &lt;h&gt;	
+hide_images	holds the translation to the English word in &lt;h&gt;	
+hm	homonym number	
+hp 	same as &lt;h&gt;. The only difference is in the book where only part of the &lt;hp&gt; word is printed. For example, &lt;h&gt;podwa&#x017C;a&#x0107;&lt;/h&gt;&lt;z&gt;/&lt;/z&gt;&lt;hp&gt;podwa&#x017C;y&#x0107;&lt;/hp&gt; prints as podwa&#x017C;a&#x0107;/&#x017C;y&#x0107;	
+hs	headword start	
+i	IPA	
+i-g	IPA group	
+id	idiom	
+id-g	idiom group	
+idm	idiom form
+idm-g	idiom group. A container for all elements relating to a specific idiom
+idm-gs	idioms group. A container for a sequence of idm-g elements and idiom-related un and xr-gs elements
+idm-l	a container for a sequence of equivalent idm elements
+ids-g	Idioms group
+if	irregular form
+if-g	irregular form group. A container for all elements relating to a specific irregular form
+if-gs	irregular forms group. A container for a sequence of if-g elements
+if-l	a container for a sequence of equivalent if elements
+if2	irregular form 2	
+ifs-g	irregular forms group	
+il	Plurality of an inflection
+ill	illustration reference. Specifies a file or other resource containing the image or video to be displayed/played	
+ill-g	container for a number of related illustration references. For example, a thumbnail image used in an electronic product and the composite image displayed when the thumbnail image is selected by the user	
+img	Image	
+include	indicates that the parent of the edition-g element is included in a market-specific edition of the main numbered edition, e.g. an edition for Germany. The parent of the edition-g element is excluded from all editions not specified by an include element	
+index	Inside the indexer structure the item to be index. In rest of entry the bold form at which this translation should appear in an index (or bilingual equivalent A-Z) to the current A-Z	
+indexer	The indexing structure to allow easier access to the important elements inside an entry. All of the information is already contained within the entry so it can be deleted if not wanted.
+indexing	Part of the indexing structure. A container for the elements that might be indexed from the entry with the &lt;arl&gt; indicating the importance of the element (e.g. headword, inflection).
+#infl	<alt-g><new>inflection form</new> or <old>inflections group. A container for a sequence of infl elements</old></alt-g>
+infl	inflection form
+infl-g	inflections group. A container for a sequence of infl elements	
+inflection	An inflection	
+it	italic style	
+it2	italic style 2	
+itpt	italic in verb pattern	
+labels	A geographical, register, and subject labels	
+label-g	label group. A container for a collection of geo, reg, subj labels	
+langbanksubhead	subheading used in language bank note box	
+leading	non-closing tag appearing before tags. Used internally for typesetting.	
+li	XHTML-style list item element	
+list	The wordlist an item belongs to
+lookup	A tag with an attribute to help with linking to related information	
+m-g	synonym group contents list	
+metadata	A container tag for non-printing information, typically inflections, wordlist information and topics.
+mn-g	contains a &lt;z&gt; and an &lt;msd&gt;	
+msd	contains separate senses for the same headword	
+n-g	numbered sense group	
+ndv	non-defining vocabulary item
+ngnum	sense number	
+nil	this element indicates that the parent element is intentionally empty	
+note	A note on usage	
+note-g	Containing group for notes - can be ignored	
+np	new paragraph	
+nt	Contains the same word as the headword	
+num	numerator number in a fraction	
+or	this element indicates alternative elements within a bold form group or label group	
+p	<alt-g><new>XHTML-style paragraph element</new> or <old>part of speech</old></alt-g>
+p-g	<alt-g><new>Paragraph inside a blockquote</new> or <old>part of speech group</old></alt-g>
+pat-g	the patterns and collocations group for a synonyms entry
+para	usage note paragraph	
+patterns	usage note patterns	
+pcnt	secondary stress mark	
+pfv	pronominal form of verb	
+phon	phonetic transcription	
+phon-gb	phonetic transcription (British)	
+phon-us	phonetic transcription (US)
+pic	Picture to use - file is specified by the name attribute
+pic-g	A container tag for pic tags
+pit	part of speech italic	
+pnc	text added programatically
+pnc_heading	text added programatically for a heading
+pnc_h	same as &lt;pnc_id&gt; but within &lt;h&gt; tags	
+pnc_id	non-closing tag appearing before punctuation within &lt;id-g&gt; tags	
+pnc_pv	same as &lt;pnc_id&gt; but within phrasal verbs	
+pos	part of speech. A multiple choice list	
+pos-g	container for a collection of pos elements	
+posref	part of speech reference. A part of speech at the top of an entry or subentry, which functions as a cross reference to a subentry-g within that entry or subentry	
+pracpron	Practice pronunciation content
+pron-g	pronunciation group. A container for all elements relating to the pronunciation of an item	
+pron-gs	pronunciations group. A container for a sequence of pron-g elements	
+pronref	pronunciation group reference. Allows pron-gs to reference pron-g elements in other pron-gs elements	
+pt	indicates whether the verb is transitive or intransitive, i.e. whether it has an object or not
+ptl	the abbreviated form of the parent element&#x2019;s content	
+p_un	A paragraph in a usage note.
+pv	phrasal verb form	
+pv-g	phrasal verb group. A container for all elements relating to a specific phrasal verb	
+pv-gs	phrasal verbs group. A container for a sequence of pv-g or pvp-g elements	
+pv-l	a container for a sequence of equivalent pv elements	
+pvhead	phrasal verb headword. Used where phrasal verbs are presented as separate entries	
+pvp-g	phrasal verb particle group. A container for a sequence of pv-g elements where the phrasal verbs contain the same particle	
+pvs-g	phrasal verbs group. A container for a sequence of pv-g or pvp-g elements	
+q	qualifier	
+qu	Usage label	
+r	register label. A multiple choice list	
+reg	register label. A multiple choice list	
+res-g	resource group. A container for cross references to text resources stored in other databases and for other locally stored &#x2018;feature&#x2019; resources. Typically these resources are published as special features within the cross-referencing entry	
+revout	Reverse out display of content
+ro	roman style	
+root	root of headword. Used in Arabic and some other dictionaries	
+rsh	occurs when the headword, or derivatives thereof, are used within the &lt;d&gt; tag	
+run_hd	a version of the headword without word breaks or stress marks	
+runhd	used by our typesetting program. Can be removed/ignored.	
+rx-g	recorded example group. A container for an example and the audio recordings of that example	
+s	subject area	
+s_label	subject area label	
+sb-g	Specific to Collocations dictionary - used to group near-synonyms	
+sc	small caps style	
+scpt	small caps in verb pattern	
+sd	sense discriminator	
+sd-g	senses group	
+semlink	semantic link to a related piece of information
+semlink-g	a container for semantic links
+see_note	Linke to a note
+sense-g	Sense group
+sensenum	Sense number
+seo	Part of the indexing structure. Currently just the headword element
+span	tag that contains styling information for its contents 
+sh	tag that includes punctuation in blue secondary stress mark	
+sh-g	tag that usually comes before a new synonym example	
+shcut	shortcut. A thematic heading for a sequence of sense groups	
+shcut-g	shortcut group. A container for a shortcut and its related sense groups. For backward compatibility shcut is also still allowed in the sn-gs structure	
+sl-g	Specific to Collocations dictionary - used to group by usage of the collocate	
+sn-g	sense group	
+sn-gs	senses group. A container for a sequence of sn-g elements, with an optional &#x2018;shortcut&#x2019; heading (but see new and preferred shcut-g structure above). Cross references and help notes which apply to all senses in the sn-gs may follow after all the sn-g elements	
+sp_h	indicates a space between the headwords that is comprised of two separate words	
+spacer	indicates a space between English and Arabic translation	
+spoken-examples	Spoken examples
+spx	an English example sentence, also containing tags for audio	
+spx-g	English sentences that the user can listen to	
+srch	In an index a form of the search item without capitalization, spacing or accented characters
+st	start of bold form &#x2013; often ignored for entry ordering	
+star_entry	keyword	
+stress_dr	derivative stress mark	
+stress_entry	Entry headword begins with a stress mark
+stress_v	primary stress mark	
+sty	A tag to style the contents as specified by the name attribute
+sub	XHTML-style subscript element	
+sub_num	subscript number	
+subentry-g	part of speech subentry group. A container for all elements relating to the current part(s) of speech	
+subentry-gs	parts of speech subentries group. A container for a sequence of subentry-g elements	
+subhead	usage note subheading	
+subj	subject label. A multiple choice list	
+subs-g	subsense group. A container for all elements relating to a specific subsense	
+summary	Visible heading for the &lt;details&gt; elelment.
+details	Contains additional details that the user can view or hide as an interactive widget
+sup	XHTML-style superscript element.
+sup_num	superscript number	
+swung-dash	headword can be displayed by a tilde
+symbol	A reference to a symbol	
+symbol-g	A container tag for symbols
+sym	symbol	
+syn	each word in the synonym group (&lt;syn-g&gt;)	
+synh	A synonym headword in the synonyms part of a thesaurus entry
+synh-g	A container for a group of synonyms in the synonyms part of a thesaurus entry
+syn-g	synonym group	
+tab	The tab content of a note
+target	In an index the target in the main title for this index entry
+table	XHTML-style table element	
+tarial	usage note title &#x2013; sans serif text	
+tcf	translation of complement frame	
+td	XHTML-style table data element	
+tdc	relates to Korean text formatting	
+tdef	definition in translation language	
+tds	relates to Korean text formatting	
+tei	italic emphasis	
+tei_in_tun	italic emphasis in usage note	
+tel	elaboration of translation	
+tetym	etymology text for Korean	
+tgl	refers to the Polish translation of an English sentence/word (Serbian/Polish Wordpower)	
+th	XHTML-style table header element	
+thelp	help text for Korean	
+thm 	homonym number same as &lt;hm&gt;	
+title	title element for ill-g or note	
+tobj	translation object	
+top-g	top group	
+topline-g	A tag that may be useful for selecting what is presented on the top 
+topic	topic classification	
+topt	translation optional phrase	
+tp	self-closing tag that indicates whether the translation is a verb, noun, etc. by using an attribute in the &lt;tp&gt; tag	
+tr	XHTML-style table row element	
+trans _tsmaller	smaller Korean translation within IPA section of entry	
+trans-g	a container for all elements relating to a specific translation or group of equivalent translations	
+trans-gs	a container for a sequence of trans-g elements	
+trans_smaller	smaller Korean translation within IPA section of entry	
+translation-g	a container for a sequence of (alternative) trans-gs elements. Used in a multilingual A-Z &#x2018;spine&#x2019;	
+ts	translation	
+ts-g	a container to group index with ts index	
+ts2	secondary importance translation. It is an alternative word for the preceding &lt;ts&gt; translation as opposed to a totally different translation.	
+tsab	abbreviation of translation	
+tu	refers to Korean type	
+tud	refers to Korean type	
+tun	gives further advice to the non-English user, usually shown in a box	
+tx	translation of example	
+u	use note	
+ud	use definition	
+ul	XHTML-style unordered list element	
+un	usage note. A narrative note explaining usage of a word	
+un-sng	A sense inside a usage note
+un-sngs	A container for senses inside a usage note
+un_box	usage note boxed	
+un_frame	usage note frame	
+unbox	usage note box. A longer narrative note explaining usage of a word, usually presented in the entry as a special feature	
+uncl	usage note collocate	
+unebi	usage note emphasis bold italic	
+unei	usage note emphasis italic	
+unfm	usage note bold form	
+ungi	usage note geographical label &#x2013; italic	
+ungl	usage note gloss	
+unsyn	usage note synonym	
+untext	usage note text	
+unwx	usage note wrong example	
+unx	usage note example	
+unxh	usage note cross-referenced headword	
+uppercase	render the contents in upper case
+use	use note. A brief grammatical note	
+v	variant	
+v-g	variant group. A container for all elements relating to a specific variant	
+v-gs	variants group. A container for a sequence of v-g elements and associated if-gs elements	
+v_blue	variant - to display in blue
+v_in_dr-g	variant in dr-g	
+v_in_id-g	variant in id-g	
+v_in_pv-g	variant in pv-g	
+vc	variant compound form	
+vc_in_dr-g	variant compound in dr-g	
+vc_in_id-g	variant compound in id-g	
+vc_in_pv-g	variant compound in pv-g	
+vdr	relates to alternative ending of derivatives	
+ve	vocabulary extension	
+vf	variant form
+vo	extra definition within an entry
+vp	verb pattern form	
+vp-l	A container for alternate verb pattern forms	
+vp-g	verb pattern group. A container for all elements relating to a specific verb pattern	
+vp-gs	verb patterns group. A container for a sequence of vp-g elements	
+vs	variant spelling	
+vs-g	variants group	
+vs_in_dr-g	variant spelling in dr-g	
+vs_in_id-g	variant spelling in id-g	
+wd	word referenced by phonetics	
+wdb	wordbreak	
+wf-g	word family group. A container for all elements relating to a word family	
+wf-heading	used as heading for word family box	
+wfo	word family opposite	
+wfp	word family part of speech. A multiple choice list	
+wfw	word family word	
+wfw-g	word family word group. A container for all elements relating to a word family word	
+wordlist	Indicates that the sense or group is a member of the wordlist specified by the list attribute
+wordlist-g	A container for wordlsit tags
+wx	wrong example	
+x	example	
+x-g	example group. A container for all elements relating to an example	
+x-gs	examples group. A container for a sequence of x-g elements	
+x_in_cl-g	contains an example sentence within a &lt;cl-g&gt;	
+x_in_tun	an example sentence (like an &lt;x&gt;, but inside a &lt;tun&gt;)	
+xaudio	example audio reference. Specifies a file or other resource containing the audio to be played	
+xh	cross reference headword component	
+xhm	cross reference homonym number component	
+xhm_fm	cross reference homonym number, form of headword	
+xhm_ss	superscript number	
+xmm	referral to Topic Map	
+xp	&lt;xr&gt; part of speech	
+xpg	page number referral	
+xpic	link to the picture for the entry that precedes it	
+xpos	cross reference part of speech component	
+xr	cross reference	
+xr-g	cross reference group. A container for all elements relating to a specific cross reference	
+xr-gs	cross references group. A container for a sequence of xr-g/xref elements of the same type	
+xr_in_d	cross reference in definition	
+xref	cross reference error. A container for all elements relating to a specific cross reference, where it is known that the cross reference being imported into DPS has technical or editorial issues	
+xs	cross reference sense component	
+xs_fm	variant spelling form of headword	
+xs_ss	superscript number for sense numbers	
+xst	cross reference start component	
+xsubs	cross reference subsense component	
+xt	cross reference text	
+xw	cross reference subheadword component	
+xwf-g	defines the &#x2018;word family box&#x2019;	
+y	American pronunciation	
+z	generated punctuation. General tag that includes punctuation such as commas and brackets.	
+z-s	signifies the area in which the word is used, e.g. technical	
+z2	generated punctuation &#x2013; style 2	
+z_a	information on use of adjectives, e.g. &#x2018;usually&#x2019;	
+z_ab	contains a word &#x2018;abbr.&#x2019; to signify an abbreviation	
+z_arrow	an arrow to indicate that this is a link	
+z_cl	Generated punctuation	
+z_clsp	Generated punctuation space	
+z_core_h	headwords which are part of the Oxford 3000	
+z_coresym	symbol for headwords which are part of the Oxford 3000	
+z_dr-g	derivative group, contains derivative symbol and non-breaking thin space	
+z_ds	indicate subject area that the word is found within	
+z_fr	indicates text within a frame	
+z_g	contains geographical information about where the phrase/word is used	
+z_g_it	as above, geographical information but puts the text within the tag as italics	
+z_gi	used to display what type of English the word is from, e.g. &#x2018;NAmE&#x2019;, &#x2018;BrE&apos;	
+z_gr	contains information about [U] or [C] nouns	
+z_gr2	offers information on whether the headword is singular or plural	
+z_gr_br	a grammatical bracket	
+z_gr_esc	text inside a grammatical bracket	
+z_gr_it	contains information about part of speech	
+z_gr_ro	contains information about singular or plural word immediately after the headword	
+z_he	contains text such as &#x2018;BrE also&#x2019;	
+z_he_er	contains &#x2018;also&#x2019; within a &lt;z_he&gt;	
+z_i-g	contains &apos;&ipaslash_open&apos; entity	
+z_il	contains grammatical information pertaining to singular/plural, past, present or future participles	
+z_mm	tag contains the text for &#x2018;See the topic map&#x2026;&#x2019; directions	
+z_mn-g	tag contains the digit for the sense number of entry directly underneath the headword	
+z_n	tag contains the large blue digit indicating the separate sense definitions within the entry	
+z_p	part of speech	
+z_p_in_id-g	part of speech inside an idiom group (&lt;id-g&gt;)	
+z_p_in_n-g	part of speech (as &lt;z_p&gt;) within an &lt;n-g&gt; tag	
+z_p_in_p-g	part of speech inside a speech group (&lt;p-g&gt;)	
+z_pat	&#x2018;Patterns and Collocations&#x2019; heading	
+z_phon-us	Label for US phonetics
+z_pt	indicates whether the verb is in/transitive	
+z_pt_br	Bracket areound transitivity information
+z_pvsym	Tag to display the title of the phrasal verbs section	
+z_r	contains the text indicating how and when the word might be used (informal, formal, disapproving, etc.	
+z_r_it	As &lt;z_r&gt; but indicates italic text formatting. Nested within the &lt;z_r&gt; tag	
+z_red	brackets surrounding &lt;dtxt&gt;	
+z_s	subject area	
+z_sb-g	Generated punctuation for display purposes	
+z_sp1_ds	contains a space that comes after a &lt;ds&gt; tag	
+z_sp1_g	indicates that the content is a non-breaking space, so the bracket does not end up at the end of the line	
+z_sp1_idpvsep	indicates a space before an idiom separator bar	
+z_sp1_r	indicates a space after an &lt;r&gt; tag	
+z_sp1_unsym	indicates a space before a usage note symbol	
+z_sp1a_ds	contains a space that comes after a &lt;ds&gt; tag	
+z_sp1a_r	contains a space that comes after an &lt;r&gt; tag	
+z_sp2_arrow	contains a space that follows an arrow symbol	
+z_sp2_drsym	contains a space that follows a derivative symbol	
+z_sp2_ds	contains a space that comes after a word in italic	
+z_sp2_g	a space that comes after a word in italic or geographic information	
+z_sp2_idpvsep	contains a space that comes after a separator bar	
+z_sp2_idsym	indicates a space that follows an idiom symbol	
+z_sp2_pt	contains a space that comes after an [I,T] indicatorm e.g. &lt;z_pt&gt;I,T&lt;/z_pt&gt;	
+z_sp2_pvsym	contains a thin space that comes after a phrasal verbs tag, e.g. of a &lt;pv&gt; tag: &lt;z&gt;&pvsym&lt;/z&gt;	
+z_sp2_r	indicates a non-breaking space between last letter of a word and a bracket	
+z_sp2_star	indicates a non-breaking thin space after a usage note symbol. e.g. of usage note tag: &lt;z&gt;&unsym2;&lt;/z&gt;	
+z_sp_gr	contains a space after a [C] (countable) indicator, so that there is a space between bracket and letter	
+z_sp_r	contains a space that comes after the &lt;r&gt; tag	
+z_space	indicates a space added by punctuation
+z_spc_post	a space placed after an etymology symbol (&etymsym)	
+z_spc_pre	a space placed before an etymology symbol (&etymsym)	
+z_sub	subscript
+z_sup	superscript
+z_sym	contains &#x2018;symb&#x2019;	
+z_title	Generated punctuation for display purposes	
+z_tp	indicates whether the translation is a verb, noun, etc. by displaying text such as verb, noun etc.	
+z_tssym	shows a triangle before the translated word	
+z_unbox	usage note box	
+z_vs	indicates &#x2018;also&#x2019; text that indicates an alternate headword, e.g. Master&#x2019;s Degree, also Masters	
+z_vs-g	contains text such as &#x2018;Also&#x2019;	
+z_vsg	only one instance of this, for the text &#x2018;also&#x2019; within the &lt;z_r&gt; tag of &#x2018;marked&#x2019;, synonym &#x2018;unmistakable&#x2019;	
+z_wfp	word family part of speech	
+z_xh_eb	bold emphasis	
+z_xh_er	roman override within &lt;xh&gt;	
+z_xr	single, plural nouns and various tense information	
+z_xr2	part of explanation for past tense or plurals	
+z_xr_ei	cross reference with italic emphasis	
+z_xr_esc	cross reference to a different section of the dictionary, e.g. colour pages	
+z_y	geographic label for NAmE (North American English)	
+zblue	indicates blue colour, particularly around punctuation in derivatives section	
+zd	derivatives	
+zgct	generated grammar &#x2013; (un)countable style	
+zgpl	generated grammar &#x2013; plural style	
+zgr	generated grammar &#x2013; default style	
+zn	synonym group number	
+zp	indicates paragraph break
+zp_ars-g	arrow symbol group. Relates to the arrow that indicates the strength of synonyms from weakest to strongest	
+zp_cl-g	indicates &#x2018;Patterns and Collocations&#x2019; title	
+zp_d	part of speech definition	
+zp_d2	same as &lt;zp_d&gt; but within &lt;dr-g&gt;	
+zp_dr-g	self-closing tag that appears at the start of the line before &lt;z&gt;&drsym;&lt;/z&gt;&lt;dr&gt;	
+zp_frame	frame giving information about English rules and regulations	
+zp_help	relates to help notes within the definitions	
+zp_id	indicates the beginning of a new idiom group definition	
+zp_id-g	break before idiom group	
+zp_key	forced paragraph break before definition	
+zp_key_new	forced paragraph break before definition	
+zp_link	allows user to click to see and hear English sentences	
+zp_mn-g	part of a sequence of tags that contain the number at the beginning of an example. It does not have an end tag.	
+zp_n-g	number group	
+zp_ng	indicates the beginning of a new sense number definition	
+zp_p	used by our typesetting program. Can be removed/ignored.	
+zp_pv-g	paragraph break before phrasal verb	
+zp_sh-g	relates to the collection of tags that are found in separate synonym sections	
+zp_sh-g_first	precedes an &lt;sh-g&gt; tag	
+zp_sp1a_r	space after &lt;r&gt; tag	
+zp_syn-g	the space between the number and the words	
+zp_un_x	Generated punctuation to force paragraph break	
+zp_x	has no relevance	
+zp_xr	Generated punctuation to force paragraph break	
+zpt	generated punctuation in verb pattern	
+zt_euro_in_sym	Euro symbol
+zt_euro_in_x	Euro symbol
+ebblue	blue bold override
+frac	fraction
+frac_slash	slash for a fraction
+p_stress_in_v	Primary stress in a variant &#x02C8;
+s_stress_in_v	Secondary stress in a variant &#x02CC;
+unbox_body	Body of a usage note
+unbox_heading	heading for a usage note
+z_drsym	Derivative symbol
+z_idsym	Idiom symbol
+z_idsyms	Idiom symbol
+z_pvsyms	Phrasal verb symbol
+z_sdsym	Symbol for shortcut text
+z_unbox_tab	Tab on a usage note 
+z_undrivsym	Symbol for usage note of type driv
+z_ungramsym	Symbol for usage note of type gram
+z_unhelpsym	Symbol for usage note of type help
+z_uninfosym	Symbol for usage note of type info
+z_unmiscsym	Symbol for usage note of type misc
+z_unmoresym	Symbol for usage note of type more
+z_xroppsym	Symbol for opposite cross reference
+z_xrsym	Cross reference symbol
+z_xrsynsym	Symbol for synonym cross reference
+z_xsep	Separator for examples
+hide_images	tag around images should the user not want to display images
+inflected_form	inflection form
+inflections	inflections group. A container for a sequence of inflected_form elements
+jumplink	Links to elements inside the entry - the target is specified by the href attribute
+jumplinks	A container for jumplink eleemnts
+ol	XHTML-style ordered list 
+phon_label	Label for phonetics
+phons_br	Phonetics - British
+phons_eafrican	Phonetics - East African
+phons_n_am	Phonetics - North American
+phons_safrican	Phonetics - South African
+phons_seasian	Phonetics - South East Asian
+phons_wafrican	Phonetics - West African
+sensebody	Content of a sense that is not on the top line of the sense
+sensetop	Content of a sense that is the top line of the sense
+skeleton	Skeleton form of the item - mainly to hide phonetics
+symbols	A tag to group symbols (e.g. Oxford 3000, Oxford 5000, CEFR)
+topic-g	A container for topic tags
+variants	Variant forms
+webtop	Items to be displayed on the top line of an entry
+webtop2	Items to be displayed on the top line of a subentry (e.g. idiom, phrasal verb)
+xh_bold	A cross reference element to be displayed in bold
+xrefs	A container for cross references
+dict	The container tag for the dictionary
+ar-gs	Container for ar-g elements
+dsyn	Use of synonym inside the description
+exercise	Link to associated exercise
+exercise-g	Container for exercise-g elements
+subentryref	Link to subentry
+subentryref-g	Container for ar-g elements
+syn-gs	Container for syn-g elements
+syn-l	Container for list of syn elements
+syndef	Definition of the synonym
+synref	Link to synonym
+xlbl	Label for x-ref
+xsd	Sense definiton for link
+HK	Hong Kong terms (in Chinese translation)
+TW	Taiwan terms (in Chinese translation)
+chn	Chinese translation
+und	text/definition inside usage note box
