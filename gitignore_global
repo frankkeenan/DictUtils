@@ -1,0 +1,1934 @@
+keenanf@LT-PF3AEX3N:~$ cd GitRepos/StudentsDictionary
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ ls -alrt
+total 58928
+-rwxrwxrwx 1 keenanf keenanf       54 Apr  5 11:20 README.md
+-rwxrwxrwx 1 keenanf keenanf     9912 Apr  5 11:20 add_indexer.pl
+-rwxrwxrwx 1 keenanf keenanf     9515 Apr  5 11:20 add_pracpron.pl
+-rwxrwxrwx 1 keenanf keenanf     2441 Apr  5 11:20 add_upload_date.pl
+-rwxrwxrwx 1 keenanf keenanf     2310 Apr  5 11:20 del_non_licensable_pics.pl
+-rwxrwxrwx 1 keenanf keenanf     1769 Apr  5 11:20 do_web_sortkeys.pl
+-rwxrwxrwx 1 keenanf keenanf     5601 Apr  5 11:20 eid_adder19.pl
+-rwxrwxrwx 1 keenanf keenanf     1810 Apr  5 11:20 lose_dps_atts.pl
+-rwxrwxrwx 1 keenanf keenanf    10251 Apr  5 11:20 lose_unwanted_app_resources.pl
+-rwxrwxrwx 1 keenanf keenanf     6241 Apr  5 11:20 lose_unwanted_xref_types.pl
+-rwxrwxrwx 1 keenanf keenanf     6844 Apr  5 11:20 make_paragon_app_index.pl
+-rwxrwxrwx 1 keenanf keenanf     4272 Apr  5 11:20 reduce_app_licensing.pl
+-rwxrwxrwx 1 keenanf keenanf    58091 Apr  5 11:20 restructure.pl
+-rwxrwxrwx 1 keenanf keenanf    45104 Apr  5 11:20 restructure_web_content.pl
+-rwxrwxrwx 1 keenanf keenanf     3202 Apr  5 11:20 select_app_casio.pl
+-rwxrwxrwx 1 keenanf keenanf     2315 Apr  5 11:20 select_students.pl
+-rwxrwxrwx 1 keenanf keenanf     3190 Apr  5 11:20 select_wordpower.pl
+-rwxrwxrwx 1 keenanf keenanf     7321 Apr  5 11:20 sorter.pl
+-rwxrwxrwx 1 keenanf keenanf     2903 Apr  5 11:20 utf82hex.pl
+-rwxrwxrwx 1 keenanf keenanf     9149 Apr  5 11:20 xml2licensing.pl
+-rwxrwxrwx 1 keenanf keenanf     5149 Apr  5 11:26 add_app_h_sk_and_sort.pl
+-rwxrwxrwx 1 keenanf keenanf    48447 Apr  5 11:57 utils.pl
+-rwxrwxrwx 1 keenanf keenanf      414 Apr  5 12:01 dl.sh~
+-rwxrwxrwx 1 keenanf keenanf      188 Apr  5 12:01 dl.sh
+-rwxrwxrwx 1 keenanf keenanf     1663 Apr  5 12:02 oneline.pl
+-rwxrwxrwx 1 keenanf keenanf    19696 Apr  5 12:17 ents_to_unicode2.pl
+-rwxrwxrwx 1 keenanf keenanf    39238 Apr  5 12:18 digital_restructure.pl
+-rwxrwxrwx 1 keenanf keenanf     1658 Apr  5 12:32 punc.pl
+-rwxrwxrwx 1 keenanf keenanf        0 Apr  5 12:37 del_non_licensable_pics.pl.log
+drwxrwxrwx 1 keenanf keenanf     4096 Apr  5 12:38 PUNC
+drwxrwxrwx 1 keenanf keenanf     4096 Apr  5 16:29 data
+-rwxrwxrwx 1 keenanf keenanf     1990 Apr 13 08:46 add_sortkeys.pl
+drwxrwxrwx 1 keenanf keenanf     4096 Apr 13 09:19 LTA
+-rwxrwxrwx 1 keenanf keenanf     6475 Apr 13 09:19 lta.pl
+drwxrwxrwx 1 keenanf keenanf     4096 Apr 13 09:43 Licensing
+-rwxrwxrwx 1 keenanf keenanf      728 Apr 13 15:40 j.sh~
+-rwxrwxrwx 1 keenanf keenanf      633 Apr 13 15:45 j.sh
+-rwxrwxrwx 1 keenanf keenanf      633 Apr 13 15:46 get_samples.sh
+-rwxrwxrwx 1 keenanf keenanf     2078 Apr 13 15:48 get_m_sample.pl
+-rwxrwxrwx 1 keenanf keenanf     4212 Apr 14 09:52 ge.pl
+-rwxrwxrwx 1 keenanf keenanf       11 Apr 14 09:54 ids.dat
+drwxrwxrwx 1 keenanf keenanf     4096 Apr 14 09:54 Samples
+drwxrwxrwx 1 keenanf keenanf     4096 Apr 14 09:57 BUGS
+-rwxrwxrwx 1 keenanf keenanf    34131 Apr 14 09:59 target_app10.pl
+-rwxrwxrwx 1 keenanf keenanf     1977 Apr 14 10:16 add_date_comment.pl
+-rwxrwxrwx 1 keenanf keenanf       60 Apr 14 10:19 run_all.sh
+-rwxrwxrwx 1 keenanf keenanf    13108 Apr 14 10:21 run_licensing_casio.pl
+-rwxrwxrwx 1 keenanf keenanf     1968 Apr 14 10:57 get_audio_to_collect.pl~
+-rwxrwxrwx 1 keenanf keenanf    21235 Apr 14 11:00 j.res
+drwxrwxrwx 1 keenanf keenanf     4096 Apr 14 11:05 ..
+-rwxrwxrwx 1 keenanf keenanf     6034 Apr 14 11:16 lose_unwanted_app_resources.pl.in
+-rwxrwxrwx 1 keenanf keenanf     6034 Apr 14 11:16 lose_unwanted_app_resources.pl.out
+-rwxrwxrwx 1 keenanf keenanf     6034 Apr 14 11:16 eid_adder19.pl.in
+-rwxrwxrwx 1 keenanf keenanf     6025 Apr 14 11:16 eid_adder19.pl.out
+-rwxrwxrwx 1 keenanf keenanf     6025 Apr 14 11:16 add_pracpron.pl.in
+-rwxrwxrwx 1 keenanf keenanf     6064 Apr 14 11:16 add_pracpron.pl.out
+-rwxrwxrwx 1 keenanf keenanf     6064 Apr 14 11:16 do_web_sortkeys.pl.in
+-rwxrwxrwx 1 keenanf keenanf     6064 Apr 14 11:16 do_web_sortkeys.pl.out
+-rwxrwxrwx 1 keenanf keenanf     5825 Apr 14 11:16 select_app_casio.pl.in
+-rwxrwxrwx 1 keenanf keenanf     5825 Apr 14 11:16 select_app_casio.pl.out
+-rwxrwxrwx 1 keenanf keenanf     5825 Apr 14 11:16 sorter.pl.in
+-rwxrwxrwx 1 keenanf keenanf     5703 Apr 14 11:16 sorter.pl.out
+-rwxrwxrwx 1 keenanf keenanf     5703 Apr 14 11:16 digital_restructure.pl.in
+-rwxrwxrwx 1 keenanf keenanf     7969 Apr 14 11:16 digital_restructure.pl.out
+-rwxrwxrwx 1 keenanf keenanf     7969 Apr 14 11:16 add_indexer.pl.in
+-rwxrwxrwx 1 keenanf keenanf     8393 Apr 14 11:16 add_indexer.pl.out
+-rwxrwxrwx 1 keenanf keenanf     8393 Apr 14 11:16 lose_unwanted_xref_types.pl.in
+-rwxrwxrwx 1 keenanf keenanf     8393 Apr 14 11:16 lose_unwanted_xref_types.pl.out
+-rwxrwxrwx 1 keenanf keenanf     5877 Apr 14 11:16 add_upload_date.pl.in
+-rwxrwxrwx 1 keenanf keenanf     5877 Apr 14 11:16 add_upload_date.pl.out
+-rwxrwxrwx 1 keenanf keenanf     5877 Apr 14 11:16 target_app10.pl.in
+-rwxrwxrwx 1 keenanf keenanf     5977 Apr 14 11:16 target_app10.pl.out
+-rwxrwxrwx 1 keenanf keenanf     5977 Apr 14 11:16 restructure_web_content.pl.in
+-rwxrwxrwx 1 keenanf keenanf     5991 Apr 14 11:16 restructure_web_content.pl.out
+-rwxrwxrwx 1 keenanf keenanf     3201 Apr 14 11:16 xml2licensing.pl.in
+-rwxrwxrwx 1 keenanf keenanf     3257 Apr 14 11:16 xml2licensing.pl.out
+-rwxrwxrwx 1 keenanf keenanf     2263 Apr 14 11:16 make_paragon_app_index.pl.in
+-rwxrwxrwx 1 keenanf keenanf     2263 Apr 14 11:16 make_paragon_app_index.pl.out
+-rwxrwxrwx 1 keenanf keenanf     2346 Apr 14 11:18 phons_system_ald10_licensing_or_digital.pl
+-rwxrwxrwx 1 keenanf keenanf        0 Apr 14 12:07 lose_unwanted_app_resources.pl.log
+-rwxrwxrwx 1 keenanf keenanf        0 Apr 14 12:07 digital_restructure.pl.log
+-rwxrwxrwx 1 keenanf keenanf 51488813 Apr 14 12:08 Idmid2eid.dat
+-rwxrwxrwx 1 keenanf keenanf   712821 Apr 14 12:08 eid_adder19.pl.log
+-rwxrwxrwx 1 keenanf keenanf       37 Apr 14 12:08 newids.dat
+-rwxrwxrwx 1 keenanf keenanf  3471232 Apr 14 12:08 add_pracpron.pl.log
+-rwxrwxrwx 1 keenanf keenanf        0 Apr 14 12:09 target_app10.pl.log
+-rwxrwxrwx 1 keenanf keenanf        0 Apr 14 12:10 restructure_web_content.pl.log
+-rwxrwxrwx 1 keenanf keenanf   138411 Apr 14 12:10 _sks.dat
+-rwxrwxrwx 1 keenanf keenanf  1136707 Apr 14 12:10 make_paragon_app_index.pl.log
+drwxrwxrwx 1 keenanf keenanf     4096 Apr 14 12:16 .
+-rwxrwxrwx 1 keenanf keenanf     2534 Apr 14 12:16 list_images_used.pl
+drwxrwxrwx 1 keenanf keenanf     4096 Apr 14 12:17 .git
+-rwxrwxrwx 1 keenanf keenanf  2672640 Apr 14 12:17 Samples.tar
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ ls Licensing/
+students_app_licensing.xml             students_app_licensing_index.xml.errs         tags_and_attributes_description_wordpower.htm  wordpower_app_licensing_index.xml
+students_app_licensing.xml.errs        students_app_licensing_tmp.xml                wordpower_app_licensing.xml                    wordpower_app_licensing_index.xml.errs
+students_app_licensing_empty_defs.txt  students_app_licensing_tmp.xml.errs           wordpower_app_licensing.xml.errs               wordpower_app_licensing_tmp.xml
+students_app_licensing_index.xml       tags_and_attributes_description_students.htm  wordpower_app_licensing_empty_defs.txt         wordpower_app_licensing_tmp.xml.errs
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ git pull
+remote: Enumerating objects: 22, done.        
+remote: Counting objects: 100% (22/22), done.        
+remote: Compressing objects: 100% (7/7), done.        
+remote: Total 16 (delta 9), reused 14 (delta 7), pack-reused 0        
+Unpacking objects: 100% (16/16), 1.80 KiB | 9.00 KiB/s, done.
+From github.com:frankkeenan/StudentsDictionary
+   8f6dd71..fcf85c5  main       -> origin/main
+Updating 8f6dd71..fcf85c5
+error: Your local changes to the following files would be overwritten by merge:
+	add_sortkeys.pl
+	run_licensing_casio.pl
+Please commit your changes or stash them before you merge.
+Aborting
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ mkdir BAK
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ mv add_sortkeys.pl run_licensing_casio.pl BAK/
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ git pull
+Updating 8f6dd71..fcf85c5
+Fast-forward
+ LTA                    |   1 +
+ LTA/attnames.txt       | 170 --------------------------------------------
+ LTA/ents_old_dtd.txt   | 418 -----------------------------------------------------------------------------------------------------------
+ LTA/tag_info.dat       | 610 -------------------------------------------------------------------------------------------------------------------------------------------------------------
+ add_sortkeys.pl        |   2 +-
+ get_samples.sh         |  13 ++--
+ lta.pl                 | 294 +---------------------------------------------------------------------------
+ run_licensing_casio.pl |  50 ++++---------
+ 8 files changed, 24 insertions(+), 1534 deletions(-)
+ create mode 120000 LTA
+ delete mode 100644 LTA/attnames.txt
+ delete mode 100644 LTA/ents_old_dtd.txt
+ delete mode 100644 LTA/tag_info.dat
+ mode change 100755 => 120000 lta.pl
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ cd ~/GitRepos/UpperPrimary
+keenanf@LT-PF3AEX3N:~/GitRepos/UpperPrimary$ ls -al
+total 129988
+drwxrwxrwx 1 keenanf keenanf     4096 Apr 15 19:09 .
+drwxrwxrwx 1 keenanf keenanf     4096 Apr 14 11:05 ..
+drwxrwxrwx 1 keenanf keenanf     4096 Apr 14 12:16 .git
+drwxrwxrwx 1 keenanf keenanf     4096 Apr 14 09:42 BUGS
+-rwxrwxrwx 1 keenanf keenanf 13408002 Apr 14 14:37 Idmid2eid.dat
+drwxrwxrwx 1 keenanf keenanf     4096 Apr 15 19:09 Illustrations_licensing
+-rwxrwxrwx 1 keenanf keenanf 59750400 Apr 14 10:35 Illustrations_licensing.tar
+drwxrwxrwx 1 keenanf keenanf     4096 Apr 14 10:03 Licensing
+drwxrwxrwx 1 keenanf keenanf     4096 Apr  5 09:52 PUNC
+-rwxrwxrwx 1 keenanf keenanf       59 Apr  5 09:15 README.md
+drwxrwxrwx 1 keenanf keenanf     4096 Apr 13 15:52 Samples
+-rwxrwxrwx 1 keenanf keenanf  2580480 Apr 14 11:41 Samples.tar
+-rwxrwxrwx 1 keenanf keenanf   179832 Apr 14 14:42 _sks.dat
+-rwxrwxrwx 1 keenanf keenanf     5199 Apr  5 09:15 add_app_h_sk_and_sort.pl
+-rwxrwxrwx 1 keenanf keenanf     1977 Apr 14 10:15 add_date_comment.pl
+-rwxrwxrwx 1 keenanf keenanf     1968 Apr 14 10:06 add_date_comment.pl~
+-rwxrwxrwx 1 keenanf keenanf     9912 Apr  5 09:15 add_indexer.pl
+-rwxrwxrwx 1 keenanf keenanf    39643 Apr 14 10:15 add_indexer.pl.in
+-rwxrwxrwx 1 keenanf keenanf    40570 Apr 14 10:15 add_indexer.pl.out
+-rwxrwxrwx 1 keenanf keenanf     9515 Apr  5 09:15 add_pracpron.pl
+-rwxrwxrwx 1 keenanf keenanf    26898 Apr 14 10:15 add_pracpron.pl.in
+-rwxrwxrwx 1 keenanf keenanf  2046267 Apr 14 14:37 add_pracpron.pl.log
+-rwxrwxrwx 1 keenanf keenanf    28121 Apr 14 10:15 add_pracpron.pl.out
+-rwxrwxrwx 1 keenanf keenanf     1990 Apr  5 11:04 add_sortkeys.pl
+-rwxrwxrwx 1 keenanf keenanf     5002 Apr  5 09:15 add_symbol_codes.pl
+-rwxrwxrwx 1 keenanf keenanf     2441 Apr  5 09:15 add_upload_date.pl
+-rwxrwxrwx 1 keenanf keenanf    28618 Apr 14 10:15 add_upload_date.pl.in
+-rwxrwxrwx 1 keenanf keenanf    28618 Apr 14 10:15 add_upload_date.pl.out
+-rwxrwxrwx 1 keenanf keenanf     1968 Apr 13 15:59 collect_images.pl
+drwxrwxrwx 1 keenanf keenanf     4096 Apr  4 16:23 data
+-rwxrwxrwx 1 keenanf keenanf     2310 Apr  5 09:15 del_non_licensable_pics.pl
+-rwxrwxrwx 1 keenanf keenanf        0 Apr  5 09:55 del_non_licensable_pics.pl.log
+-rwxrwxrwx 1 keenanf keenanf    39238 Apr  5 09:29 digital_restructure.pl
+-rwxrwxrwx 1 keenanf keenanf    27979 Apr 14 10:15 digital_restructure.pl.in
+-rwxrwxrwx 1 keenanf keenanf        0 Apr 14 14:36 digital_restructure.pl.log
+-rwxrwxrwx 1 keenanf keenanf    39643 Apr 14 10:15 digital_restructure.pl.out
+-rwxrwxrwx 1 keenanf keenanf     5739 Apr  5 09:15 do_icons.pl
+-rwxrwxrwx 1 keenanf keenanf     3220 Apr  5 09:15 do_topics.pl
+-rwxrwxrwx 1 keenanf keenanf     1769 Apr  5 09:15 do_web_sortkeys.pl
+-rwxrwxrwx 1 keenanf keenanf    28121 Apr 14 10:15 do_web_sortkeys.pl.in
+-rwxrwxrwx 1 keenanf keenanf    28121 Apr 14 10:15 do_web_sortkeys.pl.out
+-rwxrwxrwx 1 keenanf keenanf     5601 Apr  5 09:15 eid_adder19.pl
+-rwxrwxrwx 1 keenanf keenanf    26909 Apr 14 10:15 eid_adder19.pl.in
+-rwxrwxrwx 1 keenanf keenanf   952065 Apr 14 14:37 eid_adder19.pl.log
+-rwxrwxrwx 1 keenanf keenanf    26898 Apr 14 10:15 eid_adder19.pl.out
+-rwxrwxrwx 1 keenanf keenanf    19696 Apr  5 09:29 ents_to_unicode2.pl
+-rwxrwxrwx 1 keenanf keenanf    19692 Apr  5 09:28 ents_to_unicode2.pl~
+-rwxrwxrwx 1 keenanf keenanf     6354 Apr  5 09:15 expand_labels.pl
+-rwxrwxrwx 1 keenanf keenanf     3792 Apr  5 09:15 expand_topics.pl
+-rwxrwxrwx 1 keenanf keenanf    28618 Apr 14 10:15 expand_topics.pl.in
+-rwxrwxrwx 1 keenanf keenanf    27698 Apr 14 10:15 expand_topics.pl.out
+-rwxrwxrwx 1 keenanf keenanf     4212 Apr 14 08:46 ge.pl
+-rwxrwxrwx 1 keenanf keenanf     4353 Apr 14 08:42 ge.pl~
+-rwxrwxrwx 1 keenanf keenanf     5529 Apr  5 09:15 get_indd_tag_samples.pl
+-rwxrwxrwx 1 keenanf keenanf     2109 Apr  5 12:58 get_licensing_sample.pl
+-rwxrwxrwx 1 keenanf keenanf     1968 Apr  5 12:45 get_licensing_sample.pl~
+-rwxrwxrwx 1 keenanf keenanf     2078 Apr 13 15:43 get_m_sample.pl
+-rwxrwxrwx 1 keenanf keenanf     1968 Apr 13 14:56 get_m_sample.pl~
+-rwxrwxrwx 1 keenanf keenanf      784 Apr 13 15:52 get_samples.sh
+-rwxrwxrwx 1 keenanf keenanf      493 Apr 13 15:51 get_samples.sh~
+-rwxrwxrwx 1 keenanf keenanf     1189 Apr  5 09:15 hex2utf8.pl
+-rwxrwxrwx 1 keenanf keenanf       24 Apr 14 08:43 ids.dat
+-rwxrwxrwx 1 keenanf keenanf       19 Apr 14 08:42 ids.dat~
+-rwxrwxrwx 1 keenanf keenanf     9096 Apr 14 10:11 j.res
+-rwxrwxrwx 1 keenanf keenanf     9000 Apr 14 09:33 j.xml
+-rwxrwxrwx 1 keenanf keenanf    23801 Apr 14 08:56 j.xml~
+-rwxrwxrwx 1 keenanf keenanf 21037056 Apr  5 09:53 jj
+-rwxrwxrwx 1 keenanf keenanf     2534 Apr 14 12:15 list_images_used.pl
+-rwxrwxrwx 1 keenanf keenanf     1968 Apr 14 12:11 list_images_used.pl~
+-rwxrwxrwx 1 keenanf keenanf     2290 Apr  5 09:15 list_pub_attribs.pl
+-rwxrwxrwx 1 keenanf keenanf     1810 Apr  5 09:15 lose_dps_atts.pl
+-rwxrwxrwx 1 keenanf keenanf    10321 Apr  5 09:15 lose_unwanted_app_resources.pl
+-rwxrwxrwx 1 keenanf keenanf    31609 Apr 14 10:15 lose_unwanted_app_resources.pl.in
+-rwxrwxrwx 1 keenanf keenanf        0 Apr 14 14:36 lose_unwanted_app_resources.pl.log
+-rwxrwxrwx 1 keenanf keenanf    26989 Apr 14 10:15 lose_unwanted_app_resources.pl.out
+-rwxrwxrwx 1 keenanf keenanf     6241 Apr  5 09:15 lose_unwanted_xref_types.pl
+-rwxrwxrwx 1 keenanf keenanf    40570 Apr 14 10:15 lose_unwanted_xref_types.pl.in
+-rwxrwxrwx 1 keenanf keenanf    40570 Apr 14 10:15 lose_unwanted_xref_types.pl.out
+-rwxrwxrwx 1 keenanf keenanf     6529 Apr  5 11:05 lta.pl
+-rwxrwxrwx 1 keenanf keenanf     6844 Apr  5 09:15 make_paragon_app_index.pl
+-rwxrwxrwx 1 keenanf keenanf     8000 Apr 14 10:15 make_paragon_app_index.pl.in
+-rwxrwxrwx 1 keenanf keenanf  1484264 Apr 14 14:42 make_paragon_app_index.pl.log
+-rwxrwxrwx 1 keenanf keenanf     8000 Apr 14 10:15 make_paragon_app_index.pl.out
+-rwxrwxrwx 1 keenanf keenanf     5010 Apr  5 09:15 mark_dict_tags.pl
+-rwxrwxrwx 1 keenanf keenanf   524000 Apr 14 14:37 newids.dat
+-rwxrwxrwx 1 keenanf keenanf     1663 Apr  5 09:15 oneline.pl
+-rwxrwxrwx 1 keenanf keenanf    19685 Apr  5 09:15 phons_autopartialler_endings.pl
+-rwxrwxrwx 1 keenanf keenanf    35191 Apr  5 09:15 phons_autopartialler_remaining.pl
+-rwxrwxrwx 1 keenanf keenanf    59157 Apr  5 09:15 phons_print_picker.pl
+-rwxrwxrwx 1 keenanf keenanf    10995 Apr  5 09:15 phons_system_ald10.pl
+-rwxrwxrwx 1 keenanf keenanf     2346 Apr  5 09:15 phons_system_ald10_licensing_or_digital.pl
+-rwxrwxrwx 1 keenanf keenanf     5009 Apr  5 09:15 prefix.pl
+-rwxrwxrwx 1 keenanf keenanf    31977 Apr 14 10:15 prefix.pl.in
+-rwxrwxrwx 1 keenanf keenanf    31609 Apr 14 10:15 prefix.pl.out
+-rwxrwxrwx 1 keenanf keenanf     1658 Apr  5 09:53 punc.pl
+-rwxrwxrwx 1 keenanf keenanf     4272 Apr  5 09:15 reduce_app_licensing.pl
+-rwxrwxrwx 1 keenanf keenanf    58091 Apr  5 09:20 restructure.pl
+-rwxrwxrwx 1 keenanf keenanf    46366 Apr  5 09:15 restructure_web_content.pl
+-rwxrwxrwx 1 keenanf keenanf    27877 Apr 14 10:15 restructure_web_content.pl.in
+-rwxrwxrwx 1 keenanf keenanf 28204190 Apr 14 14:42 restructure_web_content.pl.log
+-rwxrwxrwx 1 keenanf keenanf    27955 Apr 14 10:15 restructure_web_content.pl.out
+-rwxrwxrwx 1 keenanf keenanf      100 Apr  5 09:15 run_all.sh
+-rwxrwxrwx 1 keenanf keenanf     4683 Apr  5 09:15 run_both.pl
+-rwxrwxrwx 1 keenanf keenanf    10397 Apr 14 10:14 run_licensing_casio.pl
+-rwxrwxrwx 1 keenanf keenanf     4683 Apr  5 09:15 run_proof_indesign.pl
+-rwxrwxrwx 1 keenanf keenanf     3676 Apr  5 09:15 run_tmp.pl
+-rwxrwxrwx 1 keenanf keenanf     4683 Apr  5 09:15 run_web.pl
+-rwxrwxrwx 1 keenanf keenanf   858239 Apr  5 12:54 sample.xml
+-rwxrwxrwx 1 keenanf keenanf     1563 Apr 14 12:15 sample_images.dat
+-rwxrwxrwx 1 keenanf keenanf     2476 Apr  5 09:15 select_american.pl
+-rwxrwxrwx 1 keenanf keenanf     3202 Apr  5 09:15 select_app_casio.pl
+-rwxrwxrwx 1 keenanf keenanf    28121 Apr 14 10:15 select_app_casio.pl.in
+-rwxrwxrwx 1 keenanf keenanf    28121 Apr 14 10:15 select_app_casio.pl.out
+-rwxrwxrwx 1 keenanf keenanf     2456 Apr  5 09:15 select_british.pl
+-rwxrwxrwx 1 keenanf keenanf     6356 Apr  5 09:15 select_print.pl
+-rwxrwxrwx 1 keenanf keenanf     7277 Apr  5 09:15 sorter.pl
+-rwxrwxrwx 1 keenanf keenanf    28121 Apr 14 10:15 sorter.pl.in
+-rwxrwxrwx 1 keenanf keenanf    27979 Apr 14 10:15 sorter.pl.out
+-rwxrwxrwx 1 keenanf keenanf    33218 Apr 14 09:44 target_app10.pl
+-rwxrwxrwx 1 keenanf keenanf    27698 Apr 14 10:15 target_app10.pl.in
+-rwxrwxrwx 1 keenanf keenanf        0 Apr 14 14:39 target_app10.pl.log
+-rwxrwxrwx 1 keenanf keenanf    27877 Apr 14 10:15 target_app10.pl.out
+-rwxrwxrwx 1 keenanf keenanf    21733 Apr  5 09:15 target_indesign.pl
+-rwxrwxrwx 1 keenanf keenanf    11671 Apr  5 09:15 tmp.pl
+-rwxrwxrwx 1 keenanf keenanf   313803 Apr  5 09:15 topics_db.xml
+-rwxrwxrwx 1 keenanf keenanf     2903 Apr  5 09:15 utf82hex.pl
+-rwxrwxrwx 1 keenanf keenanf    48447 Apr  5 12:57 utils.pl
+-rwxrwxrwx 1 keenanf keenanf     9149 Apr  5 09:15 xml2licensing.pl
+-rwxrwxrwx 1 keenanf keenanf    12332 Apr 14 10:15 xml2licensing.pl.in
+-rwxrwxrwx 1 keenanf keenanf    12529 Apr 14 10:15 xml2licensing.pl.out
+keenanf@LT-PF3AEX3N:~/GitRepos/UpperPrimary$ git pull
+remote: Enumerating objects: 156, done.        
+remote: Counting objects: 100% (22/22), done.        
+remote: Compressing objects: 100% (9/9), done.        
+remote: Total 156 (delta 12), reused 21 (delta 11), pack-reused 134        
+Receiving objects: 100% (156/156), 53.75 MiB | 7.57 MiB/s, done.
+Resolving deltas: 100% (12/12), completed with 6 local objects.
+From github.com:frankkeenan/UpperPrimary
+   1c5a819..64652f9  main       -> origin/main
+Updating 1c5a819..64652f9
+Updating files: 100% (137/137), done.
+Fast-forward
+ LTA                                                          |   1 +
+ Licensing/Full/Pictures/large/animals_desert.png             | Bin 0 -> 511352 bytes
+ Licensing/Full/Pictures/large/animals_farm.png               | Bin 0 -> 882257 bytes
+ Licensing/Full/Pictures/large/animals_insects_am.png         | Bin 0 -> 354006 bytes
+ Licensing/Full/Pictures/large/animals_insects_br.png         | Bin 0 -> 353618 bytes
+ Licensing/Full/Pictures/large/animals_marine.png             | Bin 0 -> 362354 bytes
+ Licensing/Full/Pictures/large/animals_pets.png               | Bin 0 -> 435661 bytes
+ Licensing/Full/Pictures/large/animals_polar.png              | Bin 0 -> 296028 bytes
+ Licensing/Full/Pictures/large/animals_river_am.png           | Bin 0 -> 353759 bytes
+ Licensing/Full/Pictures/large/animals_river_br.png           | Bin 0 -> 353441 bytes
+ Licensing/Full/Pictures/large/animals_tropical.png           | Bin 0 -> 436677 bytes
+ Licensing/Full/Pictures/large/animals_woodland.png           | Bin 0 -> 512168 bytes
+ Licensing/Full/Pictures/large/appearance_am.png              | Bin 0 -> 506281 bytes
+ Licensing/Full/Pictures/large/appearance_br.png              | Bin 0 -> 506351 bytes
+ Licensing/Full/Pictures/large/body.png                       | Bin 0 -> 197345 bytes
+ Licensing/Full/Pictures/large/body_face.png                  | Bin 0 -> 220828 bytes
+ Licensing/Full/Pictures/large/buildings_entertainment_am.png | Bin 0 -> 935188 bytes
+ Licensing/Full/Pictures/large/buildings_entertainment_br.png | Bin 0 -> 934236 bytes
+ Licensing/Full/Pictures/large/buildings_historical_am.png    | Bin 0 -> 295444 bytes
+ Licensing/Full/Pictures/large/buildings_historical_br.png    | Bin 0 -> 295442 bytes
+ Licensing/Full/Pictures/large/buildings_public_am.png        | Bin 0 -> 551661 bytes
+ Licensing/Full/Pictures/large/buildings_public_br.png        | Bin 0 -> 553149 bytes
+ Licensing/Full/Pictures/large/buildings_shops_am.png         | Bin 0 -> 624354 bytes
+ Licensing/Full/Pictures/large/buildings_shops_br.png         | Bin 0 -> 624483 bytes
+ Licensing/Full/Pictures/large/classroom_classroom_am.png     | Bin 0 -> 706472 bytes
+ Licensing/Full/Pictures/large/classroom_classroom_br.png     | Bin 0 -> 708036 bytes
+ Licensing/Full/Pictures/large/classroom_stationery_am.png    | Bin 0 -> 262630 bytes
+ Licensing/Full/Pictures/large/classroom_stationery_br.png    | Bin 0 -> 261283 bytes
+ Licensing/Full/Pictures/large/daily_routine_am.png           | Bin 0 -> 615606 bytes
+ Licensing/Full/Pictures/large/daily_routine_br.png           | Bin 0 -> 616837 bytes
+ Licensing/Full/Pictures/large/environment_am.png             | Bin 0 -> 334448 bytes
+ Licensing/Full/Pictures/large/environment_br.png             | Bin 0 -> 331239 bytes
+ Licensing/Full/Pictures/large/food_breakfast.png             | Bin 0 -> 464564 bytes
+ Licensing/Full/Pictures/large/food_drinks_am.png             | Bin 0 -> 344126 bytes
+ Licensing/Full/Pictures/large/food_drinks_br.png             | Bin 0 -> 344293 bytes
+ Licensing/Full/Pictures/large/food_meals_am.png              | Bin 0 -> 892969 bytes
+ Licensing/Full/Pictures/large/food_meals_br.png              | Bin 0 -> 891141 bytes
+ Licensing/Full/Pictures/large/food_snacks_am.png             | Bin 0 -> 529806 bytes
+ Licensing/Full/Pictures/large/food_snacks_br.png             | Bin 0 -> 529350 bytes
+ Licensing/Full/Pictures/large/fruit.png                      | Bin 0 -> 460856 bytes
+ Licensing/Full/Pictures/large/fruit_berries.png              | Bin 0 -> 318827 bytes
+ Licensing/Full/Pictures/large/fruit_citrus.png               | Bin 0 -> 298549 bytes
+ Licensing/Full/Pictures/large/fruit_tropical.png             | Bin 0 -> 597593 bytes
+ Licensing/Full/Pictures/large/health_am.png                  | Bin 0 -> 423165 bytes
+ Licensing/Full/Pictures/large/health_br.png                  | Bin 0 -> 424702 bytes
+ Licensing/Full/Pictures/large/hobbies_active_am.png          | Bin 0 -> 436490 bytes
+ Licensing/Full/Pictures/large/hobbies_active_br.png          | Bin 0 -> 434665 bytes
+ Licensing/Full/Pictures/large/hobbies_home.png               | Bin 0 -> 548763 bytes
+ Licensing/Full/Pictures/large/holiday_accommodation_am.png   | Bin 0 -> 339511 bytes
+ Licensing/Full/Pictures/large/holiday_accommodation_br.png   | Bin 0 -> 340792 bytes
+ Licensing/Full/Pictures/large/holiday_items_am.png           | Bin 0 -> 281924 bytes
+ Licensing/Full/Pictures/large/holiday_items_br.png           | Bin 0 -> 280003 bytes
+ Licensing/Full/Pictures/large/house_bathroom_am.png          | Bin 0 -> 451774 bytes
+ Licensing/Full/Pictures/large/house_bathroom_br.png          | Bin 0 -> 451755 bytes
+ Licensing/Full/Pictures/large/house_bedroom_am.png           | Bin 0 -> 441392 bytes
+ Licensing/Full/Pictures/large/house_bedroom_br.png           | Bin 0 -> 442825 bytes
+ Licensing/Full/Pictures/large/house_dining_room_am.png       | Bin 0 -> 577520 bytes
+ Licensing/Full/Pictures/large/house_dining_room_br.png       | Bin 0 -> 577246 bytes
+ Licensing/Full/Pictures/large/house_kitchen_am.png           | Bin 0 -> 374643 bytes
+ Licensing/Full/Pictures/large/house_kitchen_br.png           | Bin 0 -> 372278 bytes
+ Licensing/Full/Pictures/large/house_living_room_am.png       | Bin 0 -> 460450 bytes
+ Licensing/Full/Pictures/large/house_living_room_br.png       | Bin 0 -> 459250 bytes
+ Licensing/Full/Pictures/large/house_outside_am.png           | Bin 0 -> 416412 bytes
+ Licensing/Full/Pictures/large/house_outside_br.png           | Bin 0 -> 415823 bytes
+ Licensing/Full/Pictures/large/instruments_keyboard.png       | Bin 0 -> 318887 bytes
+ Licensing/Full/Pictures/large/instruments_percussion.png     | Bin 0 -> 290100 bytes
+ Licensing/Full/Pictures/large/instruments_stringed.png       | Bin 0 -> 377118 bytes
+ Licensing/Full/Pictures/large/instruments_wind.png           | Bin 0 -> 221318 bytes
+ Licensing/Full/Pictures/large/jobs_art.png                   | Bin 0 -> 234875 bytes
+ Licensing/Full/Pictures/large/jobs_education_am.png          | Bin 0 -> 273584 bytes
+ Licensing/Full/Pictures/large/jobs_education_br.png          | Bin 0 -> 272129 bytes
+ Licensing/Full/Pictures/large/jobs_emergency_services.png    | Bin 0 -> 250840 bytes
+ Licensing/Full/Pictures/large/jobs_outdoor.png               | Bin 0 -> 377010 bytes
+ Licensing/Full/Pictures/large/jobs_science_am.png            | Bin 0 -> 228571 bytes
+ Licensing/Full/Pictures/large/jobs_science_br.png            | Bin 0 -> 228529 bytes
+ Licensing/Full/Pictures/large/jobs_service_am.png            | Bin 0 -> 474018 bytes
+ Licensing/Full/Pictures/large/jobs_service_br.png            | Bin 0 -> 471464 bytes
+ Licensing/Full/Pictures/large/landscape_coast.png            | Bin 0 -> 658055 bytes
+ Licensing/Full/Pictures/large/landscape_countryside_am.png   | Bin 0 -> 886426 bytes
+ Licensing/Full/Pictures/large/landscape_countryside_br.png   | Bin 0 -> 887050 bytes
+ Licensing/Full/Pictures/large/landscape_mountains.png        | Bin 0 -> 736075 bytes
+ Licensing/Full/Pictures/large/packaging_am.png               | Bin 0 -> 486630 bytes
+ Licensing/Full/Pictures/large/packaging_br.png               | Bin 0 -> 489290 bytes
+ Licensing/Full/Pictures/large/party_am.png                   | Bin 0 -> 843014 bytes
+ Licensing/Full/Pictures/large/party_br.png                   | Bin 0 -> 843743 bytes
+ Licensing/Full/Pictures/large/routine_chores_am.png          | Bin 0 -> 394354 bytes
+ Licensing/Full/Pictures/large/routine_chores_br.png          | Bin 0 -> 397467 bytes
+ Licensing/Full/Pictures/large/school_subjects_am.png         | Bin 0 -> 429452 bytes
+ Licensing/Full/Pictures/large/school_subjects_br.png         | Bin 0 -> 429206 bytes
+ Licensing/Full/Pictures/large/shapes.png                     | Bin 0 -> 87936 bytes
+ Licensing/Full/Pictures/large/space.png                      | Bin 0 -> 575717 bytes
+ Licensing/Full/Pictures/large/sports_extreme_am.png          | Bin 0 -> 495272 bytes
+ Licensing/Full/Pictures/large/sports_extreme_br.png          | Bin 0 -> 495075 bytes
+ Licensing/Full/Pictures/large/sports_individual.png          | Bin 0 -> 446057 bytes
+ Licensing/Full/Pictures/large/sports_racket_am.png           | Bin 0 -> 664260 bytes
+ Licensing/Full/Pictures/large/sports_racket_br.png           | Bin 0 -> 659310 bytes
+ Licensing/Full/Pictures/large/sports_team_am.png             | Bin 0 -> 401154 bytes
+ Licensing/Full/Pictures/large/sports_team_br.png             | Bin 0 -> 401656 bytes
+ Licensing/Full/Pictures/large/toys_am.png                    | Bin 0 -> 306401 bytes
+ Licensing/Full/Pictures/large/toys_br.png                    | Bin 0 -> 308450 bytes
+ Licensing/Full/Pictures/large/toys_equipment_am.png          | Bin 0 -> 824784 bytes
+ Licensing/Full/Pictures/large/toys_equipment_br.png          | Bin 0 -> 824425 bytes
+ Licensing/Full/Pictures/large/toys_games_puzzles.png         | Bin 0 -> 403980 bytes
+ Licensing/Full/Pictures/large/vegetables_am.png              | Bin 0 -> 507880 bytes
+ Licensing/Full/Pictures/large/vegetables_beans_am.png        | Bin 0 -> 338403 bytes
+ Licensing/Full/Pictures/large/vegetables_beans_br.png        | Bin 0 -> 335547 bytes
+ Licensing/Full/Pictures/large/vegetables_br.png              | Bin 0 -> 509740 bytes
+ Licensing/Full/Pictures/large/vegetables_salad_am.png        | Bin 0 -> 300657 bytes
+ Licensing/Full/Pictures/large/vegetables_salad_br.png        | Bin 0 -> 299633 bytes
+ Licensing/Full/Pictures/large/vehicles_aircraft_am.png       | Bin 0 -> 329232 bytes
+ Licensing/Full/Pictures/large/vehicles_aircraft_br.png       | Bin 0 -> 329929 bytes
+ Licensing/Full/Pictures/large/vehicles_boats_am.png          | Bin 0 -> 245489 bytes
+ Licensing/Full/Pictures/large/vehicles_boats_br.png          | Bin 0 -> 246282 bytes
+ Licensing/Full/Pictures/large/vehicles_rail_am.png           | Bin 0 -> 290530 bytes
+ Licensing/Full/Pictures/large/vehicles_rail_br.png           | Bin 0 -> 291789 bytes
+ Licensing/Full/Pictures/large/vehicles_road_am.png           | Bin 0 -> 344392 bytes
+ Licensing/Full/Pictures/large/vehicles_road_br.png           | Bin 0 -> 355766 bytes
+ Licensing/Full/Pictures/large/vehicles_small_am.png          | Bin 0 -> 313243 bytes
+ Licensing/Full/Pictures/large/vehicles_small_br.png          | Bin 0 -> 314778 bytes
+ Licensing/Full/Pictures/large/wear_accessories_am.png        | Bin 0 -> 315580 bytes
+ Licensing/Full/Pictures/large/wear_accessories_br.png        | Bin 0 -> 317247 bytes
+ Licensing/Full/Pictures/large/wear_clothes_am.png            | Bin 0 -> 646424 bytes
+ Licensing/Full/Pictures/large/wear_clothes_br.png            | Bin 0 -> 649604 bytes
+ Licensing/Full/Pictures/large/wear_coats_jackets.png         | Bin 0 -> 265093 bytes
+ Licensing/Full/Pictures/large/wear_jewellery_am.png          | Bin 0 -> 121432 bytes
+ Licensing/Full/Pictures/large/wear_jewellery_br.png          | Bin 0 -> 121958 bytes
+ Licensing/Full/Pictures/large/wear_shoes_am.png              | Bin 0 -> 331703 bytes
+ Licensing/Full/Pictures/large/wear_shoes_br.png              | Bin 0 -> 333501 bytes
+ Licensing/Full/Pictures/large/wear_sports_casual.png         | Bin 0 -> 238098 bytes
+ Licensing/Full/Pictures/large/weather.png                    | Bin 0 -> 274805 bytes
+ ge.pl                                                        |   0
+ get_samples.sh                                               |  16 ++++---
+ lta.pl                                                       | 294 +----------------------------------------------------------------------------------------------------------------------
+ prefix.pl                                                    |   3 ++
+ run_licensing_casio.pl                                       |   2 +-
+ target_app10.pl                                              | 277 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++---------------------------------------------
+ xml2licensing.pl                                             |  78 ++++++++++++++++++++++++--------
+ 137 files changed, 240 insertions(+), 431 deletions(-)
+ create mode 120000 LTA
+ create mode 100755 Licensing/Full/Pictures/large/animals_desert.png
+ create mode 100755 Licensing/Full/Pictures/large/animals_farm.png
+ create mode 100755 Licensing/Full/Pictures/large/animals_insects_am.png
+ create mode 100755 Licensing/Full/Pictures/large/animals_insects_br.png
+ create mode 100755 Licensing/Full/Pictures/large/animals_marine.png
+ create mode 100755 Licensing/Full/Pictures/large/animals_pets.png
+ create mode 100755 Licensing/Full/Pictures/large/animals_polar.png
+ create mode 100755 Licensing/Full/Pictures/large/animals_river_am.png
+ create mode 100755 Licensing/Full/Pictures/large/animals_river_br.png
+ create mode 100755 Licensing/Full/Pictures/large/animals_tropical.png
+ create mode 100755 Licensing/Full/Pictures/large/animals_woodland.png
+ create mode 100755 Licensing/Full/Pictures/large/appearance_am.png
+ create mode 100755 Licensing/Full/Pictures/large/appearance_br.png
+ create mode 100755 Licensing/Full/Pictures/large/body.png
+ create mode 100755 Licensing/Full/Pictures/large/body_face.png
+ create mode 100755 Licensing/Full/Pictures/large/buildings_entertainment_am.png
+ create mode 100755 Licensing/Full/Pictures/large/buildings_entertainment_br.png
+ create mode 100755 Licensing/Full/Pictures/large/buildings_historical_am.png
+ create mode 100755 Licensing/Full/Pictures/large/buildings_historical_br.png
+ create mode 100755 Licensing/Full/Pictures/large/buildings_public_am.png
+ create mode 100755 Licensing/Full/Pictures/large/buildings_public_br.png
+ create mode 100755 Licensing/Full/Pictures/large/buildings_shops_am.png
+ create mode 100755 Licensing/Full/Pictures/large/buildings_shops_br.png
+ create mode 100755 Licensing/Full/Pictures/large/classroom_classroom_am.png
+ create mode 100755 Licensing/Full/Pictures/large/classroom_classroom_br.png
+ create mode 100755 Licensing/Full/Pictures/large/classroom_stationery_am.png
+ create mode 100755 Licensing/Full/Pictures/large/classroom_stationery_br.png
+ create mode 100755 Licensing/Full/Pictures/large/daily_routine_am.png
+ create mode 100755 Licensing/Full/Pictures/large/daily_routine_br.png
+ create mode 100755 Licensing/Full/Pictures/large/environment_am.png
+ create mode 100755 Licensing/Full/Pictures/large/environment_br.png
+ create mode 100755 Licensing/Full/Pictures/large/food_breakfast.png
+ create mode 100755 Licensing/Full/Pictures/large/food_drinks_am.png
+ create mode 100755 Licensing/Full/Pictures/large/food_drinks_br.png
+ create mode 100755 Licensing/Full/Pictures/large/food_meals_am.png
+ create mode 100755 Licensing/Full/Pictures/large/food_meals_br.png
+ create mode 100755 Licensing/Full/Pictures/large/food_snacks_am.png
+ create mode 100755 Licensing/Full/Pictures/large/food_snacks_br.png
+ create mode 100755 Licensing/Full/Pictures/large/fruit.png
+ create mode 100755 Licensing/Full/Pictures/large/fruit_berries.png
+ create mode 100755 Licensing/Full/Pictures/large/fruit_citrus.png
+ create mode 100755 Licensing/Full/Pictures/large/fruit_tropical.png
+ create mode 100755 Licensing/Full/Pictures/large/health_am.png
+ create mode 100755 Licensing/Full/Pictures/large/health_br.png
+ create mode 100755 Licensing/Full/Pictures/large/hobbies_active_am.png
+ create mode 100755 Licensing/Full/Pictures/large/hobbies_active_br.png
+ create mode 100755 Licensing/Full/Pictures/large/hobbies_home.png
+ create mode 100755 Licensing/Full/Pictures/large/holiday_accommodation_am.png
+ create mode 100755 Licensing/Full/Pictures/large/holiday_accommodation_br.png
+ create mode 100755 Licensing/Full/Pictures/large/holiday_items_am.png
+ create mode 100755 Licensing/Full/Pictures/large/holiday_items_br.png
+ create mode 100755 Licensing/Full/Pictures/large/house_bathroom_am.png
+ create mode 100755 Licensing/Full/Pictures/large/house_bathroom_br.png
+ create mode 100755 Licensing/Full/Pictures/large/house_bedroom_am.png
+ create mode 100755 Licensing/Full/Pictures/large/house_bedroom_br.png
+ create mode 100755 Licensing/Full/Pictures/large/house_dining_room_am.png
+ create mode 100755 Licensing/Full/Pictures/large/house_dining_room_br.png
+ create mode 100755 Licensing/Full/Pictures/large/house_kitchen_am.png
+ create mode 100755 Licensing/Full/Pictures/large/house_kitchen_br.png
+ create mode 100755 Licensing/Full/Pictures/large/house_living_room_am.png
+ create mode 100755 Licensing/Full/Pictures/large/house_living_room_br.png
+ create mode 100755 Licensing/Full/Pictures/large/house_outside_am.png
+ create mode 100755 Licensing/Full/Pictures/large/house_outside_br.png
+ create mode 100755 Licensing/Full/Pictures/large/instruments_keyboard.png
+ create mode 100755 Licensing/Full/Pictures/large/instruments_percussion.png
+ create mode 100755 Licensing/Full/Pictures/large/instruments_stringed.png
+ create mode 100755 Licensing/Full/Pictures/large/instruments_wind.png
+ create mode 100755 Licensing/Full/Pictures/large/jobs_art.png
+ create mode 100755 Licensing/Full/Pictures/large/jobs_education_am.png
+ create mode 100755 Licensing/Full/Pictures/large/jobs_education_br.png
+ create mode 100755 Licensing/Full/Pictures/large/jobs_emergency_services.png
+ create mode 100755 Licensing/Full/Pictures/large/jobs_outdoor.png
+ create mode 100755 Licensing/Full/Pictures/large/jobs_science_am.png
+ create mode 100755 Licensing/Full/Pictures/large/jobs_science_br.png
+ create mode 100755 Licensing/Full/Pictures/large/jobs_service_am.png
+ create mode 100755 Licensing/Full/Pictures/large/jobs_service_br.png
+ create mode 100755 Licensing/Full/Pictures/large/landscape_coast.png
+ create mode 100755 Licensing/Full/Pictures/large/landscape_countryside_am.png
+ create mode 100755 Licensing/Full/Pictures/large/landscape_countryside_br.png
+ create mode 100755 Licensing/Full/Pictures/large/landscape_mountains.png
+ create mode 100755 Licensing/Full/Pictures/large/packaging_am.png
+ create mode 100755 Licensing/Full/Pictures/large/packaging_br.png
+ create mode 100755 Licensing/Full/Pictures/large/party_am.png
+ create mode 100755 Licensing/Full/Pictures/large/party_br.png
+ create mode 100755 Licensing/Full/Pictures/large/routine_chores_am.png
+ create mode 100755 Licensing/Full/Pictures/large/routine_chores_br.png
+ create mode 100755 Licensing/Full/Pictures/large/school_subjects_am.png
+ create mode 100755 Licensing/Full/Pictures/large/school_subjects_br.png
+ create mode 100755 Licensing/Full/Pictures/large/shapes.png
+ create mode 100755 Licensing/Full/Pictures/large/space.png
+ create mode 100755 Licensing/Full/Pictures/large/sports_extreme_am.png
+ create mode 100755 Licensing/Full/Pictures/large/sports_extreme_br.png
+ create mode 100755 Licensing/Full/Pictures/large/sports_individual.png
+ create mode 100755 Licensing/Full/Pictures/large/sports_racket_am.png
+ create mode 100755 Licensing/Full/Pictures/large/sports_racket_br.png
+ create mode 100755 Licensing/Full/Pictures/large/sports_team_am.png
+ create mode 100755 Licensing/Full/Pictures/large/sports_team_br.png
+ create mode 100755 Licensing/Full/Pictures/large/toys_am.png
+ create mode 100755 Licensing/Full/Pictures/large/toys_br.png
+ create mode 100755 Licensing/Full/Pictures/large/toys_equipment_am.png
+ create mode 100755 Licensing/Full/Pictures/large/toys_equipment_br.png
+ create mode 100755 Licensing/Full/Pictures/large/toys_games_puzzles.png
+ create mode 100755 Licensing/Full/Pictures/large/vegetables_am.png
+ create mode 100755 Licensing/Full/Pictures/large/vegetables_beans_am.png
+ create mode 100755 Licensing/Full/Pictures/large/vegetables_beans_br.png
+ create mode 100755 Licensing/Full/Pictures/large/vegetables_br.png
+ create mode 100755 Licensing/Full/Pictures/large/vegetables_salad_am.png
+ create mode 100755 Licensing/Full/Pictures/large/vegetables_salad_br.png
+ create mode 100755 Licensing/Full/Pictures/large/vehicles_aircraft_am.png
+ create mode 100755 Licensing/Full/Pictures/large/vehicles_aircraft_br.png
+ create mode 100755 Licensing/Full/Pictures/large/vehicles_boats_am.png
+ create mode 100755 Licensing/Full/Pictures/large/vehicles_boats_br.png
+ create mode 100755 Licensing/Full/Pictures/large/vehicles_rail_am.png
+ create mode 100755 Licensing/Full/Pictures/large/vehicles_rail_br.png
+ create mode 100755 Licensing/Full/Pictures/large/vehicles_road_am.png
+ create mode 100755 Licensing/Full/Pictures/large/vehicles_road_br.png
+ create mode 100755 Licensing/Full/Pictures/large/vehicles_small_am.png
+ create mode 100755 Licensing/Full/Pictures/large/vehicles_small_br.png
+ create mode 100755 Licensing/Full/Pictures/large/wear_accessories_am.png
+ create mode 100755 Licensing/Full/Pictures/large/wear_accessories_br.png
+ create mode 100755 Licensing/Full/Pictures/large/wear_clothes_am.png
+ create mode 100755 Licensing/Full/Pictures/large/wear_clothes_br.png
+ create mode 100755 Licensing/Full/Pictures/large/wear_coats_jackets.png
+ create mode 100755 Licensing/Full/Pictures/large/wear_jewellery_am.png
+ create mode 100755 Licensing/Full/Pictures/large/wear_jewellery_br.png
+ create mode 100755 Licensing/Full/Pictures/large/wear_shoes_am.png
+ create mode 100755 Licensing/Full/Pictures/large/wear_shoes_br.png
+ create mode 100755 Licensing/Full/Pictures/large/wear_sports_casual.png
+ create mode 100755 Licensing/Full/Pictures/large/weather.png
+ mode change 100644 => 100755 ge.pl
+ mode change 100755 => 120000 lta.pl
+keenanf@LT-PF3AEX3N:~/GitRepos/UpperPrimary$ cd ~/CDRIVE/FULL_SHUTTLE/
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ ls -alrt
+total 12596024
+drwxrwxrwx 1 keenanf keenanf        4096 Feb 28 12:37  JapaneseALD
+drwxrwxrwx 1 keenanf keenanf        4096 Mar  1 15:55  JALD
+-rwxrwxrwx 1 keenanf keenanf 12185200640 Mar  1 18:01  JapaneseALD2.tar
+drwxrwxrwx 1 keenanf keenanf        4096 Apr 16 17:29  Greek
+drwxrwxrwx 1 keenanf keenanf        4096 Apr 17 08:37  ..
+-rwxrwxrwx 1 keenanf keenanf   468142080 Apr 17 08:59  Greeek.tar
+-rwxrwxrwx 1 keenanf keenanf    53504000 Apr 17 09:57  BOOK_PICS.tar
+-rwxrwxrwx 1 keenanf keenanf   191139840 Apr 17 09:57  STUDENTSL.tar
+-rwxrwxrwx 1 keenanf keenanf      248452 Apr 17 10:12 'A-Z images_text.xlsx'
+drwxrwxrwx 1 keenanf keenanf        4096 Apr 17 10:13  .
+-rwxrwxrwx 1 keenanf keenanf       85815 Apr 17 10:13 'A-Z images_text.csv'
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ tar xvf STUDENTSL.tar 
+accommodation.png
+aerosol.png
+aircraft_hot_air_balloon.png
+airliner.png
+ald_student_pics.dat
+amphibians.png
+anchor.png
+angles.png
+aqualung.png
+arachnids.png
+architecture.png
+arm.png
+asymmetric_bars.png
+atmosphere.png
+axes.png
+axis.png
+ballandsocketjoint.png
+ballbearing.png
+barbedwire.png
+barcode.png
+barrel.png
+bathroom_objects.png
+binoculars_telescope.png
+birds.png
+birds_poultry.png
+birds_prey.png
+birds_seabirds.png
+blades.png
+blockandtackle.png
+body_eye.png
+body_face.png
+body_hand.png
+body.png
+body_skeleton.png
+BOOK_PICS/
+BOOK_PICS/circulation.png
+BOOK_PICS/glacial.png
+BOOK_PICS/petroleum.png
+BOOK_PICS/seismic.png
+BOOK_PICS/hydraulic.png
+BOOK_PICS/nitrogen_cycle.png
+BOOK_PICS/synovial.png
+BOOK_PICS/food_web.png
+BOOK_PICS/skin.png
+BOOK_PICS/solar_system.png
+BOOK_PICS/wavelength.png
+BOOK_PICS/magnetism.png
+BOOK_PICS/aerosol.png
+BOOK_PICS/sheep.png
+BOOK_PICS/asymmetric_bars.png
+BOOK_PICS/plate_tectonics.png
+BOOK_PICS/trapezium.png
+BOOK_PICS/state.png
+BOOK_PICS/vacuum_flask.png
+BOOK_PICS/speed.png
+BOOK_PICS/pressure.png
+BOOK_PICS/moon.png
+BOOK_PICS/virus.png
+BOOK_PICS/longshore_drift.png
+BOOK_PICS/season.png
+BOOK_PICS/crane.png
+BOOK_PICS/distil.png
+BOOK_PICS/overlap.png
+BOOK_PICS/joist.png
+BOOK_PICS/oscilloscope.png
+BOOK_PICS/plough.png
+BOOK_PICS/erode_1.png
+BOOK_PICS/tooth_2.png
+BOOK_PICS/oxbow.png
+BOOK_PICS/rock.png
+BOOK_PICS/purify.png
+BOOK_PICS/refract.png
+BOOK_PICS/generator.png
+BOOK_PICS/loom.png
+BOOK_PICS/cloud.png
+BOOK_PICS/short_sighted.png
+BOOK_PICS/dna.png
+BOOK_PICS/current.png
+BOOK_PICS/eye.png
+BOOK_PICS/diffract.png
+BOOK_PICS/workbench.png
+BOOK_PICS/parallelogram.png
+BOOK_PICS/sonar.png
+BOOK_PICS/wave.png
+BOOK_PICS/prism.png
+BOOK_PICS/magnify.png
+BOOK_PICS/orchestra.png
+BOOK_PICS/resistor.png
+BOOK_PICS/goat.png
+BOOK_PICS/pulley.png
+BOOK_PICS/crocodile_clip.png
+BOOK_PICS/sound_wave.png
+BOOK_PICS/drawbridge.png
+BOOK_PICS/reflection.png
+BOOK_PICS/income.png
+BOOK_PICS/venn_diagram.png
+BOOK_PICS/capital.png
+BOOK_PICS/dry_cell.png
+BOOK_PICS/building.png
+BOOK_PICS/accommodation.png
+BOOK_PICS/lever.png
+BOOK_PICS/tooth_1.png
+BOOK_PICS/fertilize.png
+BOOK_PICS/shadow.png
+BOOK_PICS/lizard.png
+BOOK_PICS/diffuse.png
+BOOK_PICS/health.png
+BOOK_PICS/squid.png
+BOOK_PICS/graph.png
+BOOK_PICS/water_cycle.png
+BOOK_PICS/volcano.png
+BOOK_PICS/lens.png
+BOOK_PICS/fractional_distillation.png
+BOOK_PICS/switch.png
+BOOK_PICS/lion.png
+BOOK_PICS/food_chain.png
+BOOK_PICS/weapon.png
+BOOK_PICS/pommel_horse.png
+BOOK_PICS/periscope.png
+BOOK_PICS/energy.png
+BOOK_PICS/jellyfish.png
+BOOK_PICS/barcode.png
+BOOK_PICS/cell.png
+BOOK_PICS/deer.png
+BOOK_PICS/erode_2.png
+BOOK_PICS/high_pitched.png
+BOOK_PICS/limestone.png
+BOOK_PICS/dodecahedron.png
+BOOK_PICS/portico.png
+BOOK_PICS/arm.png
+BOOK_PICS/windmill.png
+BOOK_PICS/ph.png
+BOOK_PICS/digestive_system.png
+BOOK_PICS/line.png
+BOOK_PICS/convection.png
+BOOK_PICS/floodplain.png
+BOOK_PICS/ear.png
+BOOK_PICS/barrel.png
+BOOK_PICS/dovetail.png
+BOOK_PICS/atmosphere.png
+BOOK_PICS/climate_change.png
+BOOK_PICS/respiratory.png
+BOOK_PICS/photosynthesis.png
+BOOK_PICS/heart.png
+BOOK_PICS/carbon_cycle.png
+BOOK_PICS/earth.png
+BOOK_PICS/rhinoceros.png
+BOOK_PICS/brain.png
+BOOK_PICS/ecosystem.png
+BOOK_PICS/safety.png
+BOOK_PICS/light_bulb.png
+BOOK_PICS/filtration.png
+boomerang.png
+bows_1.png
+bows_2.png
+brain.png
+broken_chipped_cracked.png
+building.png
+buildings.png
+buttons.png
+cablecar.png
+capital.png
+carbon_cycle.png
+catapult_slingshot.png
+cell.png
+cephalopod.png
+cereals.png
+charts.png
+circles.png
+circulation.png
+classroom.png
+cleaning_comp.png
+climate_change.png
+clocks_watches.png
+clothes_gloves.png
+clothes_nightclothes.png
+clothes_scarves.png
+cloud.png
+cogwheel.png
+compasses.png
+conicsections.png
+convection.png
+convex_concave.png
+cord.png
+corrugated.png
+crackers.png
+crane.png
+crocodileclip.png
+crustaceans.png
+current.png
+curtains.png
+cutlery.png
+decorating_diy.png
+deer.png
+diffract.png
+diffuse.png
+digestive_system.png
+dimensions.png
+distil.png
+dna.png
+dodecahedron.png
+dovetail_mitre.png
+drawbridge.png
+dry_cell.png
+ear.png
+earth.png
+ecosystem.png
+edge_rim_border.png
+energy.png
+environment_1.png
+environment_2.png
+erode_1.png
+erode_2.png
+fans.png
+fertilize.png
+filtration.png
+fish.png
+floodplain.png
+flowers.png
+food_chain.png
+food_web.png
+fractional_distillation.png
+froth_foam_bubbles.png
+fruit_berries.png
+fruit_citrus.png
+fruit_misc.png
+fruit_tropical.png
+garden_tools.png
+gastropods.png
+generator.png
+glacial.png
+goat_sheep.png
+handles.png
+health.png
+heart.png
+helices.png
+herbs.png
+hieroglyphics.png
+high_pitched.png
+hinge.png
+hobbies_crafts.png
+hobbies_creative.png
+hobbies_diving_snorkelling.png
+hooks.png
+hydraulic.png
+ill_proof.dat
+ill_proof_files/
+ill_proof_files/themedata.thmx
+ill_proof_files/filelist.xml
+ill_proof_files/colorschememapping.xml
+ill_proof.htm
+ill_proof.htm~
+income.png
+insects.png
+internal_organs.png
+ironingboard.png
+jellyfish.png
+j.htm
+joist.png
+keys.png
+kitchen_appliances.png
+kitchen_cutting.png
+kitchen_drinks.png
+kitchen_opening.png
+kitchen_utensils_misc.png
+knot_loop_coil_bow.png
+label_tag_ticket.png
+laboratory_equipment.png
+lattice.png
+lens.png
+lever.png
+light_bulb.png
+limestone.png
+lines.png
+lion.png
+lizard.png
+longshore_drift.png
+loom.png
+~$l_proof.htm
+magnetism.png
+magnify.png
+make_proof.pl
+make_proof.pl~
+make_proof.pl.log
+mammals_cetaceans.png
+mammals_marsupials.png
+mammals.png
+mammals_primates.png
+mammals_rodents.png
+masks.png
+metronome.png
+minaret.png
+mobiusstrip.png
+money.png
+moon.png
+mountains.png
+musicalnotation.png
+music_brass_instruments.png
+music_guitars.png
+music_percussion_instruments.png
+music_pianos.png
+necks.png
+nitrogen_cycle.png
+nuts.png
+OALD files to edit/
+OALD files to edit/vehicles_construction.png
+OALD files to edit/sports_football.png
+OALD files to edit/vehicles_cycles.png
+OALD files to edit/kitchen_opening.png
+OALD files to edit/axis.png
+OALD files to edit/overalls_dungarees.png
+OALD files to edit/bathroom_objects.png
+OALD files to edit/vehicles_caravan_camper.png
+OALD files to edit/axes.png
+OALD files to edit/music_guitars.png
+OALD files to edit/kitchen_utensils_misc.png
+OALD files to edit/classroom.png
+OALD files to edit/kitchen_cutting.png
+OALD files to edit/hobbies_diving_snorkelling.png
+OALD files to edit/blades.png
+OALD files to edit/hobbies_crafts.png
+OALD files to edit/compasses.png
+OALD files to edit/laboratory_equipment.png
+OALD files to edit/vegetables_salad.png
+OALD files to edit/body_skeleton.png
+OALD files to edit/kitchen_drinks.png
+OALD files to edit/sports_racket.png
+OALD files to edit/birds.png
+OALD files to edit/keys.png
+OneDrive_2020-11-06.zip
+opticalillusions.png
+orchestra.png
+oscilloscope.png
+overalls_dungarees.png
+overlap.png
+oxbow.png
+parallelograms.png
+pegs.png
+periscope.png
+petroleum.png
+photosynthesis.png
+ph.png
+piston.png
+plants.png
+plate_tectonics.png
+plough.png
+plugs.png
+polygons.png
+pommel_horse.png
+portico.png
+pressure.png
+prism.png
+pulley.png
+purify.png
+pushchair_pram_carrycot.png
+rabbit_hare.png
+racks.png
+ratchet.png
+reflection.png
+refract.png
+reptiles.png
+resistor.png
+respiratory.png
+revolvingdoor.png
+rhinoceros.png
+rock.png
+rope_thread_string.png
+safety.png
+scales.png
+season.png
+seismic.png
+shade_shadow.png
+shadow.png
+sheep.png
+short_sighted.png
+skin.png
+sledge_sleigh.png
+solar_system.png
+solids.png
+sonar.png
+sound_wave.png
+speed.png
+spices.png
+spiral.png
+sports_football.png
+sports_racket.png
+sports_track.png
+sports_water.png
+spring.png
+sprocketwheel.png
+squeeze_squash_crush.png
+squid.png
+staircase.png
+state.png
+sticks.png
+stile.png
+students_book_images.dat
+students_book_images.dat~
+styles.css
+styles.css~
+sundial.png
+switch.png
+sword_spear_dagger.png
+synovial.png
+tassel.png
+toga.png
+tooth_1.png
+tooth_2.png
+tree.png
+trees_deciduous.png
+trees_evergreen.png
+triangles.png
+twisted_bent.png
+unicorn.png
+vacuum_flask.png
+vault.png
+vegetables_misc.png
+vegetables_peas_beans.png
+vegetables_root.png
+vegetables_salad.png
+vegetables_squash.png
+vehicles_boats_ships_1.png
+vehicles_buses.png
+vehicles_caravan_camper.png
+vehicles_construction.png
+vehicles_cycles.png
+venndiagram.png
+virus.png
+volcano.png
+water_cycle.png
+wavelength.png
+wave.png
+workbench.png
+yacht.png
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ ls -alrt *.csv
+-rwxrwxrwx 1 keenanf keenanf 85815 Apr 17 10:13 'A-Z images_text.csv'
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ ls
+'A-Z images_text.csv'             keys.png
+'A-Z images_text.xlsx'            kitchen_appliances.png
+ BOOK_PICS                        kitchen_cutting.png
+ BOOK_PICS.tar                    kitchen_drinks.png
+ Greeek.tar                       kitchen_opening.png
+ Greek                            kitchen_utensils_misc.png
+ JALD                             knot_loop_coil_bow.png
+ JapaneseALD                      label_tag_ticket.png
+ JapaneseALD2.tar                 laboratory_equipment.png
+'OALD files to edit'              lattice.png
+ OneDrive_2020-11-06.zip          lens.png
+ STUDENTSL.tar                    lever.png
+ accommodation.png                light_bulb.png
+ aerosol.png                      limestone.png
+ aircraft_hot_air_balloon.png     lines.png
+ airliner.png                     lion.png
+ ald_student_pics.dat             lizard.png
+ amphibians.png                   longshore_drift.png
+ anchor.png                       loom.png
+ angles.png                       magnetism.png
+ aqualung.png                     magnify.png
+ arachnids.png                    make_proof.pl
+ architecture.png                 make_proof.pl.log
+ arm.png                          make_proof.pl~
+ asymmetric_bars.png              mammals.png
+ atmosphere.png                   mammals_cetaceans.png
+ axes.png                         mammals_marsupials.png
+ axis.png                         mammals_primates.png
+ ballandsocketjoint.png           mammals_rodents.png
+ ballbearing.png                  masks.png
+ barbedwire.png                   metronome.png
+ barcode.png                      minaret.png
+ barrel.png                       mobiusstrip.png
+ bathroom_objects.png             money.png
+ binoculars_telescope.png         moon.png
+ birds.png                        mountains.png
+ birds_poultry.png                music_brass_instruments.png
+ birds_prey.png                   music_guitars.png
+ birds_seabirds.png               music_percussion_instruments.png
+ blades.png                       music_pianos.png
+ blockandtackle.png               musicalnotation.png
+ body.png                         necks.png
+ body_eye.png                     nitrogen_cycle.png
+ body_face.png                    nuts.png
+ body_hand.png                    opticalillusions.png
+ body_skeleton.png                orchestra.png
+ boomerang.png                    oscilloscope.png
+ bows_1.png                       overalls_dungarees.png
+ bows_2.png                       overlap.png
+ brain.png                        oxbow.png
+ broken_chipped_cracked.png       parallelograms.png
+ building.png                     pegs.png
+ buildings.png                    periscope.png
+ buttons.png                      petroleum.png
+ cablecar.png                     ph.png
+ capital.png                      photosynthesis.png
+ carbon_cycle.png                 pic_sources.txt
+ catapult_slingshot.png           piston.png
+ cell.png                         plants.png
+ cephalopod.png                   plate_tectonics.png
+ cereals.png                      plough.png
+ charts.png                       plugs.png
+ circles.png                      polygons.png
+ circulation.png                  pommel_horse.png
+ classroom.png                    portico.png
+ cleaning_comp.png                pressure.png
+ climate_change.png               prism.png
+ clocks_watches.png               pulley.png
+ clothes_gloves.png               purify.png
+ clothes_nightclothes.png         pushchair_pram_carrycot.png
+ clothes_scarves.png              rabbit_hare.png
+ cloud.png                        racks.png
+ cogwheel.png                     ratchet.png
+ compasses.png                    reflection.png
+ conicsections.png                refract.png
+ convection.png                   reptiles.png
+ convex_concave.png               resistor.png
+ cord.png                         respiratory.png
+ corrugated.png                   revolvingdoor.png
+ crackers.png                     rhinoceros.png
+ crane.png                        rock.png
+ crocodileclip.png                rope_thread_string.png
+ crustaceans.png                  safety.png
+ current.png                      scales.png
+ curtains.png                     season.png
+ cutlery.png                      seismic.png
+ decorating_diy.png               shade_shadow.png
+ deer.png                         shadow.png
+ diffract.png                     sheep.png
+ diffuse.png                      short_sighted.png
+ digestive_system.png             skin.png
+ dimensions.png                   sledge_sleigh.png
+ distil.png                       solar_system.png
+ dna.png                          solids.png
+ dodecahedron.png                 sonar.png
+ dovetail_mitre.png               sound_wave.png
+ drawbridge.png                   speed.png
+ dry_cell.png                     spices.png
+ ear.png                          spiral.png
+ earth.png                        sports_football.png
+ ecosystem.png                    sports_racket.png
+ edge_rim_border.png              sports_track.png
+ energy.png                       sports_water.png
+ environment_1.png                spring.png
+ environment_2.png                sprocketwheel.png
+ erode_1.png                      squeeze_squash_crush.png
+ erode_2.png                      squid.png
+ fans.png                         staircase.png
+ fertilize.png                    state.png
+ filtration.png                   sticks.png
+ fish.png                         stile.png
+ floodplain.png                   students_book_images.dat
+ flowers.png                      students_book_images.dat~
+ food_chain.png                   styles.css
+ food_web.png                     styles.css~
+ fractional_distillation.png      sundial.png
+ froth_foam_bubbles.png           switch.png
+ fruit_berries.png                sword_spear_dagger.png
+ fruit_citrus.png                 synovial.png
+ fruit_misc.png                   tassel.png
+ fruit_tropical.png               toga.png
+ garden_tools.png                 tooth_1.png
+ gastropods.png                   tooth_2.png
+ generator.png                    tree.png
+ glacial.png                      trees_deciduous.png
+ goat_sheep.png                   trees_evergreen.png
+ handles.png                      triangles.png
+ health.png                       twisted_bent.png
+ heart.png                        unicorn.png
+ helices.png                      vacuum_flask.png
+ herbs.png                        vault.png
+ hieroglyphics.png                vegetables_misc.png
+ high_pitched.png                 vegetables_peas_beans.png
+ hinge.png                        vegetables_root.png
+ hobbies_crafts.png               vegetables_salad.png
+ hobbies_creative.png             vegetables_squash.png
+ hobbies_diving_snorkelling.png   vehicles_boats_ships_1.png
+ hooks.png                        vehicles_buses.png
+ hydraulic.png                    vehicles_caravan_camper.png
+ ill_proof.dat                    vehicles_construction.png
+ ill_proof.htm                    vehicles_cycles.png
+ ill_proof.htm~                   venndiagram.png
+ ill_proof_files                  virus.png
+ income.png                       volcano.png
+ insects.png                      water_cycle.png
+ internal_organs.png              wave.png
+ ironingboard.png                 wavelength.png
+ j.htm                            workbench.png
+ jellyfish.png                    yacht.png
+ joist.png                       '~$l_proof.htm'
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ ls -alrt
+total 12722940
+-rwxrwxrwx 1 keenanf keenanf      139231 Jun  4  2019  clocks_watches.png
+-rwxrwxrwx 1 keenanf keenanf       97061 Jun  4  2019  crackers.png
+-rwxrwxrwx 1 keenanf keenanf      204018 Jun  4  2019  keys.png
+-rwxrwxrwx 1 keenanf keenanf       23967 Jun  4  2019  metronome.png
+-rwxrwxrwx 1 keenanf keenanf       56354 Jun  4  2019  rope_thread_string.png
+-rwxrwxrwx 1 keenanf keenanf      110446 Jun  4  2019  sledge_sleigh.png
+-rwxrwxrwx 1 keenanf keenanf      116892 Jun  4  2019  sticks.png
+-rwxrwxrwx 1 keenanf keenanf       67595 Jun  5  2019  binoculars_telescope.png
+-rwxrwxrwx 1 keenanf keenanf      180486 Jul  1  2020  aircraft_hot_air_balloon.png
+-rwxrwxrwx 1 keenanf keenanf      138627 Jul  1  2020  boomerang.png
+-rwxrwxrwx 1 keenanf keenanf      182106 Jul  1  2020  blades.png
+-rwxrwxrwx 1 keenanf keenanf      160446 Jul  1  2020  compasses.png
+-rwxrwxrwx 1 keenanf keenanf      229995 Jul  1  2020  decorating_diy.png
+-rwxrwxrwx 1 keenanf keenanf      232837 Jul  1  2020  fans.png
+-rwxrwxrwx 1 keenanf keenanf      219889 Jul  1  2020  music_guitars.png
+-rwxrwxrwx 1 keenanf keenanf      133601 Jul  1  2020  clothes_gloves.png
+-rwxrwxrwx 1 keenanf keenanf       83018 Jul  1  2020  hinge.png
+-rwxrwxrwx 1 keenanf keenanf      262594 Jul  1  2020  masks.png
+-rwxrwxrwx 1 keenanf keenanf      274418 Jul  1  2020  music_pianos.png
+-rwxrwxrwx 1 keenanf keenanf      320164 Jul  1  2020  music_percussion_instruments.png
+-rwxrwxrwx 1 keenanf keenanf      129328 Jul  1  2020  sundial.png
+-rwxrwxrwx 1 keenanf keenanf      131766 Jul  1  2020  sword_spear_dagger.png
+-rwxrwxrwx 1 keenanf keenanf      287882 Jul  1  2020  sports_water.png
+-rwxrwxrwx 1 keenanf keenanf      263107 Jul  2  2020  kitchen_appliances.png
+-rwxrwxrwx 1 keenanf keenanf      283936 Jul  2  2020  clothes_nightclothes.png
+-rwxrwxrwx 1 keenanf keenanf      136037 Jul  2  2020  kitchen_opening.png
+-rwxrwxrwx 1 keenanf keenanf      235097 Jul  2  2020  clothes_scarves.png
+-rwxrwxrwx 1 keenanf keenanf      573705 Jul  2  2020  sports_racket.png
+-rwxrwxrwx 1 keenanf keenanf      311294 Jul  2  2020  kitchen_utensils_misc.png
+-rwxrwxrwx 1 keenanf keenanf      319362 Jul  2  2020  hobbies_crafts.png
+-rwxrwxrwx 1 keenanf keenanf      427046 Jul  2  2020  garden_tools.png
+-rwxrwxrwx 1 keenanf keenanf      291272 Jul  2  2020  kitchen_cutting.png
+-rwxrwxrwx 1 keenanf keenanf      231440 Jul  2  2020  cutlery.png
+-rwxrwxrwx 1 keenanf keenanf      416572 Jul  2  2020  vehicles_construction.png
+-rwxrwxrwx 1 keenanf keenanf      221848 Jul  2  2020  kitchen_drinks.png
+-rwxrwxrwx 1 keenanf keenanf      222744 Jul  2  2020  vehicles_caravan_camper.png
+-rwxrwxrwx 1 keenanf keenanf      441269 Jul  2  2020  vehicles_buses.png
+-rwxrwxrwx 1 keenanf keenanf      697599 Jul  2  2020  buildings.png
+-rwxrwxrwx 1 keenanf keenanf      232446 Jul  2  2020  bathroom_objects.png
+-rwxrwxrwx 1 keenanf keenanf      126401 Jul  2  2020  yacht.png
+-rwxrwxrwx 1 keenanf keenanf      433497 Jul  2  2020  vehicles_boats_ships_1.png
+-rwxrwxrwx 1 keenanf keenanf       98188 Jul 10  2020  angles.png
+-rwxrwxrwx 1 keenanf keenanf      378778 Jul 10  2020  pushchair_pram_carrycot.png
+-rwxrwxrwx 1 keenanf keenanf      893607 Oct  8  2020  volcano.png
+-rwxrwxrwx 1 keenanf keenanf      174844 Oct  8  2020  venndiagram.png
+-rwxrwxrwx 1 keenanf keenanf      597999 Oct  8  2020  vegetables_squash.png
+-rwxrwxrwx 1 keenanf keenanf      412165 Oct  8  2020  vegetables_salad.png
+-rwxrwxrwx 1 keenanf keenanf      333274 Oct  8  2020  vegetables_root.png
+-rwxrwxrwx 1 keenanf keenanf      418689 Oct  8  2020  vegetables_peas_beans.png
+-rwxrwxrwx 1 keenanf keenanf      773672 Oct  8  2020  vegetables_misc.png
+-rwxrwxrwx 1 keenanf keenanf      748249 Oct  8  2020  vault.png
+-rwxrwxrwx 1 keenanf keenanf      358106 Oct  8  2020  unicorn.png
+-rwxrwxrwx 1 keenanf keenanf      336303 Oct  8  2020  twisted_bent.png
+-rwxrwxrwx 1 keenanf keenanf       60665 Oct  8  2020  triangles.png
+-rwxrwxrwx 1 keenanf keenanf      699234 Oct  8  2020  trees_evergreen.png
+-rwxrwxrwx 1 keenanf keenanf     1072617 Oct  8  2020  trees_deciduous.png
+-rwxrwxrwx 1 keenanf keenanf      247900 Oct  8  2020  toga.png
+-rwxrwxrwx 1 keenanf keenanf      825745 Oct  8  2020  tree.png
+-rwxrwxrwx 1 keenanf keenanf      793122 Oct  8  2020  stile.png
+-rwxrwxrwx 1 keenanf keenanf      432360 Oct  8  2020  staircase.png
+-rwxrwxrwx 1 keenanf keenanf      371758 Oct  8  2020  squeeze_squash_crush.png
+-rwxrwxrwx 1 keenanf keenanf      503821 Oct  8  2020  sprocketwheel.png
+-rwxrwxrwx 1 keenanf keenanf      423591 Oct  8  2020  spring.png
+-rwxrwxrwx 1 keenanf keenanf      338740 Oct  8  2020  spiral.png
+-rwxrwxrwx 1 keenanf keenanf      213248 Oct  8  2020  spices.png
+-rwxrwxrwx 1 keenanf keenanf      277584 Oct  8  2020  solids.png
+-rwxrwxrwx 1 keenanf keenanf      302418 Oct  8  2020  scales.png
+-rwxrwxrwx 1 keenanf keenanf      954936 Oct  8  2020  shade_shadow.png
+-rwxrwxrwx 1 keenanf keenanf      161189 Oct  8  2020  revolvingdoor.png
+-rwxrwxrwx 1 keenanf keenanf      567192 Oct  8  2020  reptiles.png
+-rwxrwxrwx 1 keenanf keenanf      422868 Oct  8  2020  ratchet.png
+-rwxrwxrwx 1 keenanf keenanf      426622 Oct  8  2020  racks.png
+-rwxrwxrwx 1 keenanf keenanf      709824 Oct  8  2020  rabbit_hare.png
+-rwxrwxrwx 1 keenanf keenanf       30294 Oct  8  2020  polygons.png
+-rwxrwxrwx 1 keenanf keenanf      208263 Oct  8  2020  plugs.png
+-rwxrwxrwx 1 keenanf keenanf      542619 Oct  8  2020  plants.png
+-rwxrwxrwx 1 keenanf keenanf      537631 Oct  8  2020  piston.png
+-rwxrwxrwx 1 keenanf keenanf      435925 Oct  8  2020  pegs.png
+-rwxrwxrwx 1 keenanf keenanf       39043 Oct  8  2020  parallelograms.png
+-rwxrwxrwx 1 keenanf keenanf       88034 Oct  8  2020  oxbow.png
+-rwxrwxrwx 1 keenanf keenanf       52095 Oct  8  2020  opticalillusions.png
+-rwxrwxrwx 1 keenanf keenanf      251702 Oct  8  2020  nuts.png
+-rwxrwxrwx 1 keenanf keenanf      218818 Oct  8  2020  necks.png
+-rwxrwxrwx 1 keenanf keenanf       91275 Oct  8  2020  musicalnotation.png
+-rwxrwxrwx 1 keenanf keenanf     1929957 Oct  8  2020  mountains.png
+-rwxrwxrwx 1 keenanf keenanf      442169 Oct  8  2020  money.png
+-rwxrwxrwx 1 keenanf keenanf      182125 Oct  8  2020  mobiusstrip.png
+-rwxrwxrwx 1 keenanf keenanf      293235 Oct  8  2020  minaret.png
+-rwxrwxrwx 1 keenanf keenanf      307588 Oct  8  2020  mammals_rodents.png
+-rwxrwxrwx 1 keenanf keenanf      588170 Oct  8  2020  mammals_primates.png
+-rwxrwxrwx 1 keenanf keenanf      498823 Oct  8  2020  mammals_marsupials.png
+-rwxrwxrwx 1 keenanf keenanf      649223 Oct  8  2020  mammals_cetaceans.png
+-rwxrwxrwx 1 keenanf keenanf      453641 Oct  8  2020  mammals.png
+-rwxrwxrwx 1 keenanf keenanf       70613 Oct  8  2020  lines.png
+-rwxrwxrwx 1 keenanf keenanf      481237 Oct  8  2020  lattice.png
+-rwxrwxrwx 1 keenanf keenanf      449495 Oct  8  2020  laboratory_equipment.png
+-rwxrwxrwx 1 keenanf keenanf      288058 Oct  8  2020  label_tag_ticket.png
+-rwxrwxrwx 1 keenanf keenanf      341139 Oct  8  2020  knot_loop_coil_bow.png
+-rwxrwxrwx 1 keenanf keenanf      364723 Oct  8  2020  internal_organs.png
+-rwxrwxrwx 1 keenanf keenanf      542578 Oct  8  2020  insects.png
+-rwxrwxrwx 1 keenanf keenanf      417655 Oct  8  2020  hooks.png
+-rwxrwxrwx 1 keenanf keenanf      206098 Oct  8  2020  hieroglyphics.png
+-rwxrwxrwx 1 keenanf keenanf      316322 Oct  8  2020  herbs.png
+-rwxrwxrwx 1 keenanf keenanf      228678 Oct  8  2020  helices.png
+-rwxrwxrwx 1 keenanf keenanf      237842 Oct  8  2020  handles.png
+-rwxrwxrwx 1 keenanf keenanf      323813 Oct  8  2020  gastropods.png
+-rwxrwxrwx 1 keenanf keenanf      597030 Oct  8  2020  fruit_tropical.png
+-rwxrwxrwx 1 keenanf keenanf      573317 Oct  8  2020  fruit_misc.png
+-rwxrwxrwx 1 keenanf keenanf      407634 Oct  8  2020  fruit_citrus.png
+-rwxrwxrwx 1 keenanf keenanf      354720 Oct  8  2020  fruit_berries.png
+-rwxrwxrwx 1 keenanf keenanf      429490 Oct  8  2020  froth_foam_bubbles.png
+-rwxrwxrwx 1 keenanf keenanf      517918 Oct  8  2020  flowers.png
+-rwxrwxrwx 1 keenanf keenanf      511773 Oct  8  2020  fish.png
+-rwxrwxrwx 1 keenanf keenanf     3208203 Oct  8  2020  environment_2.png
+-rwxrwxrwx 1 keenanf keenanf     2152437 Oct  8  2020  environment_1.png
+-rwxrwxrwx 1 keenanf keenanf      252445 Oct  8  2020  edge_rim_border.png
+-rwxrwxrwx 1 keenanf keenanf      394221 Oct  8  2020  dovetail_mitre.png
+-rwxrwxrwx 1 keenanf keenanf      801989 Oct  8  2020  dimensions.png
+-rwxrwxrwx 1 keenanf keenanf      629162 Oct  8  2020  curtains.png
+-rwxrwxrwx 1 keenanf keenanf      391840 Oct  8  2020  crustaceans.png
+-rwxrwxrwx 1 keenanf keenanf      126063 Oct  8  2020  crocodileclip.png
+-rwxrwxrwx 1 keenanf keenanf      454593 Oct  8  2020  corrugated.png
+-rwxrwxrwx 1 keenanf keenanf      282239 Oct  8  2020  cord.png
+-rwxrwxrwx 1 keenanf keenanf       26594 Oct  8  2020  convex_concave.png
+-rwxrwxrwx 1 keenanf keenanf      361077 Oct  8  2020  conicsections.png
+-rwxrwxrwx 1 keenanf keenanf      564460 Oct  8  2020  cogwheel.png
+-rwxrwxrwx 1 keenanf keenanf     1187275 Oct  8  2020  classroom.png
+-rwxrwxrwx 1 keenanf keenanf       64242 Oct  8  2020  circles.png
+-rwxrwxrwx 1 keenanf keenanf       45550 Oct  8  2020  charts.png
+-rwxrwxrwx 1 keenanf keenanf      325589 Oct  8  2020  cereals.png
+-rwxrwxrwx 1 keenanf keenanf      518722 Oct  8  2020  cephalopod.png
+-rwxrwxrwx 1 keenanf keenanf      457301 Oct  8  2020  catapult_slingshot.png
+-rwxrwxrwx 1 keenanf keenanf      235239 Oct  8  2020  cablecar.png
+-rwxrwxrwx 1 keenanf keenanf      216480 Oct  8  2020  buttons.png
+-rwxrwxrwx 1 keenanf keenanf      188936 Oct  8  2020  broken_chipped_cracked.png
+-rwxrwxrwx 1 keenanf keenanf      253686 Oct  8  2020  bows_2.png
+-rwxrwxrwx 1 keenanf keenanf      267299 Oct  8  2020  bows_1.png
+-rwxrwxrwx 1 keenanf keenanf      276095 Oct  8  2020  body_skeleton.png
+-rwxrwxrwx 1 keenanf keenanf      299636 Oct  8  2020  body_hand.png
+-rwxrwxrwx 1 keenanf keenanf      685971 Oct  8  2020  body_face.png
+-rwxrwxrwx 1 keenanf keenanf      415768 Oct  8  2020  body_eye.png
+-rwxrwxrwx 1 keenanf keenanf      310600 Oct  8  2020  body.png
+-rwxrwxrwx 1 keenanf keenanf      143630 Oct  8  2020  blockandtackle.png
+-rwxrwxrwx 1 keenanf keenanf      275548 Oct  8  2020  birds_seabirds.png
+-rwxrwxrwx 1 keenanf keenanf      417461 Oct  8  2020  birds_prey.png
+-rwxrwxrwx 1 keenanf keenanf      406343 Oct  8  2020  birds_poultry.png
+-rwxrwxrwx 1 keenanf keenanf      551082 Oct  8  2020  birds.png
+-rwxrwxrwx 1 keenanf keenanf      138356 Oct  8  2020  barbedwire.png
+-rwxrwxrwx 1 keenanf keenanf      541585 Oct  8  2020  ballbearing.png
+-rwxrwxrwx 1 keenanf keenanf      535113 Oct  8  2020  ballandsocketjoint.png
+-rwxrwxrwx 1 keenanf keenanf      127621 Oct  8  2020  aqualung.png
+-rwxrwxrwx 1 keenanf keenanf      441333 Oct  8  2020  arachnids.png
+-rwxrwxrwx 1 keenanf keenanf      415569 Oct  8  2020  amphibians.png
+-rwxrwxrwx 1 keenanf keenanf      318586 Oct  8  2020  airliner.png
+-rwxrwxrwx 1 keenanf keenanf      290000 Oct 22  2020  overalls_dungarees.png
+-rwxrwxrwx 1 keenanf keenanf      148471 Oct 22  2020  axes.png
+-rwxrwxrwx 1 keenanf keenanf      228061 Oct 22  2020  tassel.png
+-rwxrwxrwx 1 keenanf keenanf       82188 Oct 22  2020  anchor.png
+-rwxrwxrwx 1 keenanf keenanf      443864 Oct 22  2020  hobbies_creative.png
+-rwxrwxrwx 1 keenanf keenanf      319962 Oct 22  2020  cleaning_comp.png
+-rwxrwxrwx 1 keenanf keenanf      195935 Oct 22  2020  axis.png
+-rwxrwxrwx 1 keenanf keenanf      470984 Oct 22  2020  architecture.png
+-rwxrwxrwx 1 keenanf keenanf      420015 Oct 22  2020  vehicles_cycles.png
+-rwxrwxrwx 1 keenanf keenanf      343029 Oct 22  2020  sports_track.png
+-rwxrwxrwx 1 keenanf keenanf      292697 Oct 22  2020  sports_football.png
+-rwxrwxrwx 1 keenanf keenanf      374882 Oct 22  2020  music_brass_instruments.png
+-rwxrwxrwx 1 keenanf keenanf      306289 Oct 22  2020  hobbies_diving_snorkelling.png
+-rwxrwxrwx 1 keenanf keenanf      745449 Nov  6  2020  digestive_system.png
+-rwxrwxrwx 1 keenanf keenanf      111560 Nov  6  2020  arm.png
+-rwxrwxrwx 1 keenanf keenanf    38292455 Nov  6  2020  OneDrive_2020-11-06.zip
+drwxrwxrwx 1 keenanf keenanf        4096 Nov 12  2020  BOOK_PICS
+-rwxrwxrwx 1 keenanf keenanf        1711 Nov 20  2020  make_proof.pl~
+-rwxrwxrwx 1 keenanf keenanf        1356 Nov 20  2020  students_book_images.dat~
+-rwxrwxrwx 1 keenanf keenanf        2870 Nov 20  2020  students_book_images.dat
+-rwxrwxrwx 1 keenanf keenanf      489817 Nov 20  2020  limestone.png
+-rwxrwxrwx 1 keenanf keenanf       65887 Nov 20  2020  light_bulb.png
+-rwxrwxrwx 1 keenanf keenanf      229534 Nov 20  2020  lever.png
+-rwxrwxrwx 1 keenanf keenanf      247917 Nov 20  2020  lens.png
+-rwxrwxrwx 1 keenanf keenanf       93655 Nov 20  2020  income.png
+-rwxrwxrwx 1 keenanf keenanf       83379 Nov 20  2020  hydraulic.png
+-rwxrwxrwx 1 keenanf keenanf       38587 Nov 20  2020  high_pitched.png
+-rwxrwxrwx 1 keenanf keenanf      171068 Nov 20  2020  heart.png
+-rwxrwxrwx 1 keenanf keenanf      218744 Nov 20  2020  health.png
+-rwxrwxrwx 1 keenanf keenanf      540745 Nov 20  2020  glacial.png
+-rwxrwxrwx 1 keenanf keenanf      257359 Nov 20  2020  generator.png
+-rwxrwxrwx 1 keenanf keenanf      519096 Nov 20  2020  fractional_distillation.png
+-rwxrwxrwx 1 keenanf keenanf       63924 Nov 20  2020  food_web.png
+-rwxrwxrwx 1 keenanf keenanf      185257 Nov 20  2020  food_chain.png
+-rwxrwxrwx 1 keenanf keenanf       47297 Nov 20  2020  floodplain.png
+-rwxrwxrwx 1 keenanf keenanf       91178 Nov 20  2020  filtration.png
+-rwxrwxrwx 1 keenanf keenanf      837253 Nov 20  2020  fertilize.png
+-rwxrwxrwx 1 keenanf keenanf       69347 Nov 20  2020  erode_2.png
+-rwxrwxrwx 1 keenanf keenanf      458853 Nov 20  2020  erode_1.png
+-rwxrwxrwx 1 keenanf keenanf     1006989 Nov 20  2020  energy.png
+-rwxrwxrwx 1 keenanf keenanf      731202 Nov 20  2020  ecosystem.png
+-rwxrwxrwx 1 keenanf keenanf      143436 Nov 20  2020  earth.png
+-rwxrwxrwx 1 keenanf keenanf      157664 Nov 20  2020  ear.png
+-rwxrwxrwx 1 keenanf keenanf      158304 Nov 20  2020  dry_cell.png
+-rwxrwxrwx 1 keenanf keenanf       65605 Nov 20  2020  drawbridge.png
+-rwxrwxrwx 1 keenanf keenanf      103533 Nov 20  2020  distil.png
+-rwxrwxrwx 1 keenanf keenanf       49860 Nov 20  2020  diffuse.png
+-rwxrwxrwx 1 keenanf keenanf       46505 Nov 20  2020  diffract.png
+-rwxrwxrwx 1 keenanf keenanf      141712 Nov 20  2020  deer.png
+-rwxrwxrwx 1 keenanf keenanf      452582 Nov 20  2020  current.png
+-rwxrwxrwx 1 keenanf keenanf      181702 Nov 20  2020  convection.png
+-rwxrwxrwx 1 keenanf keenanf      384509 Nov 20  2020  cloud.png
+-rwxrwxrwx 1 keenanf keenanf     1539532 Nov 20  2020  climate_change.png
+-rwxrwxrwx 1 keenanf keenanf       26119 Nov 20  2020  circulation.png
+-rwxrwxrwx 1 keenanf keenanf      124340 Nov 20  2020  cell.png
+-rwxrwxrwx 1 keenanf keenanf      345934 Nov 20  2020  carbon_cycle.png
+-rwxrwxrwx 1 keenanf keenanf       54506 Nov 20  2020  capital.png
+-rwxrwxrwx 1 keenanf keenanf      208906 Nov 20  2020  building.png
+-rwxrwxrwx 1 keenanf keenanf      176165 Nov 20  2020  brain.png
+-rwxrwxrwx 1 keenanf keenanf       42336 Nov 20  2020  barrel.png
+-rwxrwxrwx 1 keenanf keenanf      337041 Nov 20  2020  atmosphere.png
+-rwxrwxrwx 1 keenanf keenanf       54449 Nov 20  2020  asymmetric_bars.png
+-rwxrwxrwx 1 keenanf keenanf       84160 Nov 20  2020  aerosol.png
+-rwxrwxrwx 1 keenanf keenanf       51813 Nov 20  2020  accommodation.png
+-rwxrwxrwx 1 keenanf keenanf      155990 Nov 20  2020  workbench.png
+-rwxrwxrwx 1 keenanf keenanf      221007 Nov 20  2020  wavelength.png
+-rwxrwxrwx 1 keenanf keenanf       69816 Nov 20  2020  wave.png
+-rwxrwxrwx 1 keenanf keenanf      303568 Nov 20  2020  water_cycle.png
+-rwxrwxrwx 1 keenanf keenanf       59128 Nov 20  2020  virus.png
+-rwxrwxrwx 1 keenanf keenanf       62200 Nov 20  2020  vacuum_flask.png
+-rwxrwxrwx 1 keenanf keenanf      144220 Nov 20  2020  tooth_2.png
+-rwxrwxrwx 1 keenanf keenanf     1108079 Nov 20  2020  tooth_1.png
+-rwxrwxrwx 1 keenanf keenanf       36170 Nov 20  2020  synovial.png
+-rwxrwxrwx 1 keenanf keenanf       65460 Nov 20  2020  switch.png
+-rwxrwxrwx 1 keenanf keenanf      467458 Nov 20  2020  state.png
+-rwxrwxrwx 1 keenanf keenanf       13399 Nov 20  2020  squid.png
+-rwxrwxrwx 1 keenanf keenanf       77020 Nov 20  2020  speed.png
+-rwxrwxrwx 1 keenanf keenanf       34484 Nov 20  2020  sound_wave.png
+-rwxrwxrwx 1 keenanf keenanf       71828 Nov 20  2020  sonar.png
+-rwxrwxrwx 1 keenanf keenanf      283497 Nov 20  2020  solar_system.png
+-rwxrwxrwx 1 keenanf keenanf     1026895 Nov 20  2020  skin.png
+-rwxrwxrwx 1 keenanf keenanf      241927 Nov 20  2020  short_sighted.png
+-rwxrwxrwx 1 keenanf keenanf       96652 Nov 20  2020  sheep.png
+-rwxrwxrwx 1 keenanf keenanf      342131 Nov 20  2020  shadow.png
+-rwxrwxrwx 1 keenanf keenanf      534330 Nov 20  2020  seismic.png
+-rwxrwxrwx 1 keenanf keenanf      501667 Nov 20  2020  season.png
+-rwxrwxrwx 1 keenanf keenanf      333100 Nov 20  2020  safety.png
+-rwxrwxrwx 1 keenanf keenanf      289618 Nov 20  2020  rock.png
+-rwxrwxrwx 1 keenanf keenanf       66250 Nov 20  2020  rhinoceros.png
+-rwxrwxrwx 1 keenanf keenanf      430368 Nov 20  2020  respiratory.png
+-rwxrwxrwx 1 keenanf keenanf       68465 Nov 20  2020  resistor.png
+-rwxrwxrwx 1 keenanf keenanf       32804 Nov 20  2020  refract.png
+-rwxrwxrwx 1 keenanf keenanf      332284 Nov 20  2020  reflection.png
+-rwxrwxrwx 1 keenanf keenanf      194995 Nov 20  2020  purify.png
+-rwxrwxrwx 1 keenanf keenanf       56427 Nov 20  2020  pulley.png
+-rwxrwxrwx 1 keenanf keenanf      322537 Nov 20  2020  prism.png
+-rwxrwxrwx 1 keenanf keenanf       61889 Nov 20  2020  pressure.png
+-rwxrwxrwx 1 keenanf keenanf       51793 Nov 20  2020  plough.png
+-rwxrwxrwx 1 keenanf keenanf      906466 Nov 20  2020  plate_tectonics.png
+-rwxrwxrwx 1 keenanf keenanf      439215 Nov 20  2020  photosynthesis.png
+-rwxrwxrwx 1 keenanf keenanf       63361 Nov 20  2020  ph.png
+-rwxrwxrwx 1 keenanf keenanf      437687 Nov 20  2020  petroleum.png
+-rwxrwxrwx 1 keenanf keenanf       25341 Nov 20  2020  periscope.png
+-rwxrwxrwx 1 keenanf keenanf       31047 Nov 20  2020  overlap.png
+-rwxrwxrwx 1 keenanf keenanf       78272 Nov 20  2020  oscilloscope.png
+-rwxrwxrwx 1 keenanf keenanf      306789 Nov 20  2020  orchestra.png
+-rwxrwxrwx 1 keenanf keenanf      450956 Nov 20  2020  nitrogen_cycle.png
+-rwxrwxrwx 1 keenanf keenanf       91185 Nov 20  2020  moon.png
+-rwxrwxrwx 1 keenanf keenanf       43205 Nov 20  2020  magnify.png
+-rwxrwxrwx 1 keenanf keenanf      109704 Nov 20  2020  magnetism.png
+-rwxrwxrwx 1 keenanf keenanf      194926 Nov 20  2020  longshore_drift.png
+-rwxrwxrwx 1 keenanf keenanf      830675 Nov 20  2020  lion.png
+-rwxrwxrwx 1 keenanf keenanf         162 Nov 20  2020 '~$l_proof.htm'
+-rwxrwxrwx 1 keenanf keenanf         191 Nov 20  2020  styles.css~
+-rwxrwxrwx 1 keenanf keenanf          64 Nov 20  2020  styles.css
+-rwxrwxrwx 1 keenanf keenanf       12101 Nov 20  2020  barcode.png
+drwxrwxrwx 1 keenanf keenanf        4096 Nov 20  2020  ill_proof_files
+-rwxrwxrwx 1 keenanf keenanf       13665 Nov 20  2020  crane.png
+-rwxrwxrwx 1 keenanf keenanf      728059 Nov 20  2020  dna.png
+-rwxrwxrwx 1 keenanf keenanf       31016 Nov 20  2020  dodecahedron.png
+-rwxrwxrwx 1 keenanf keenanf      403976 Nov 20  2020  goat_sheep.png
+-rwxrwxrwx 1 keenanf keenanf       88595 Nov 20  2020  ironingboard.png
+-rwxrwxrwx 1 keenanf keenanf       66886 Nov 20  2020  jellyfish.png
+-rwxrwxrwx 1 keenanf keenanf       63124 Nov 20  2020  joist.png
+-rwxrwxrwx 1 keenanf keenanf       15978 Nov 20  2020  lizard.png
+-rwxrwxrwx 1 keenanf keenanf       75577 Nov 20  2020  loom.png
+-rwxrwxrwx 1 keenanf keenanf       36698 Nov 20  2020  pommel_horse.png
+-rwxrwxrwx 1 keenanf keenanf       42759 Nov 20  2020  portico.png
+-rwxrwxrwx 1 keenanf keenanf      244714 Nov 20  2020  ill_proof.dat
+-rwxrwxrwx 1 keenanf keenanf        2084 Nov 20  2020  make_proof.pl
+-rwxrwxrwx 1 keenanf keenanf      264385 Nov 20  2020  ill_proof.htm~
+-rwxrwxrwx 1 keenanf keenanf      264814 Nov 20  2020  ill_proof.htm
+-rwxrwxrwx 1 keenanf keenanf      102795 Dec  3  2020  ald_student_pics.dat
+-rwxrwxrwx 1 keenanf keenanf           0 Dec  3  2020  make_proof.pl.log
+-rwxrwxrwx 1 keenanf keenanf      109892 Dec  3  2020  j.htm
+drwxrwxrwx 1 keenanf keenanf        4096 Mar 17  2021 'OALD files to edit'
+drwxrwxrwx 1 keenanf keenanf        4096 Feb 28 12:37  JapaneseALD
+drwxrwxrwx 1 keenanf keenanf        4096 Mar  1 15:55  JALD
+-rwxrwxrwx 1 keenanf keenanf 12185200640 Mar  1 18:01  JapaneseALD2.tar
+drwxrwxrwx 1 keenanf keenanf        4096 Apr 16 17:29  Greek
+drwxrwxrwx 1 keenanf keenanf        4096 Apr 17 08:37  ..
+-rwxrwxrwx 1 keenanf keenanf   468142080 Apr 17 08:59  Greeek.tar
+-rwxrwxrwx 1 keenanf keenanf    53504000 Apr 17 09:57  BOOK_PICS.tar
+-rwxrwxrwx 1 keenanf keenanf   191139840 Apr 17 09:57  STUDENTSL.tar
+-rwxrwxrwx 1 keenanf keenanf      248452 Apr 17 10:12 'A-Z images_text.xlsx'
+-rwxrwxrwx 1 keenanf keenanf       85815 Apr 17 10:13 'A-Z images_text.csv'
+drwxrwxrwx 1 keenanf keenanf        4096 Apr 17 10:17  .
+-rwxrwxrwx 1 keenanf keenanf       12479 Apr 17 10:17  pic_sources.txt
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ mkdir SPICS
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ mv *.png SPICS/
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ ls
+'A-Z images_text.csv'    Greeek.tar    JapaneseALD2.tar          STUDENTSL.tar          ill_proof.htm~    make_proof.pl.log          students_book_images.dat~
+'A-Z images_text.xlsx'   Greek        'OALD files to edit'       ald_student_pics.dat   ill_proof_files   make_proof.pl~             styles.css
+ BOOK_PICS               JALD          OneDrive_2020-11-06.zip   ill_proof.dat          j.htm             pic_sources.txt            styles.css~
+ BOOK_PICS.tar           JapaneseALD   SPICS                     ill_proof.htm          make_proof.pl     students_book_images.dat  '~$l_proof.htm'
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ ls -alrt
+total 12634424
+-rwxrwxrwx 1 keenanf keenanf    38292455 Nov  6  2020  OneDrive_2020-11-06.zip
+drwxrwxrwx 1 keenanf keenanf        4096 Nov 12  2020  BOOK_PICS
+-rwxrwxrwx 1 keenanf keenanf        1711 Nov 20  2020  make_proof.pl~
+-rwxrwxrwx 1 keenanf keenanf        1356 Nov 20  2020  students_book_images.dat~
+-rwxrwxrwx 1 keenanf keenanf        2870 Nov 20  2020  students_book_images.dat
+-rwxrwxrwx 1 keenanf keenanf         162 Nov 20  2020 '~$l_proof.htm'
+-rwxrwxrwx 1 keenanf keenanf         191 Nov 20  2020  styles.css~
+-rwxrwxrwx 1 keenanf keenanf          64 Nov 20  2020  styles.css
+drwxrwxrwx 1 keenanf keenanf        4096 Nov 20  2020  ill_proof_files
+-rwxrwxrwx 1 keenanf keenanf      244714 Nov 20  2020  ill_proof.dat
+-rwxrwxrwx 1 keenanf keenanf        2084 Nov 20  2020  make_proof.pl
+-rwxrwxrwx 1 keenanf keenanf      264385 Nov 20  2020  ill_proof.htm~
+-rwxrwxrwx 1 keenanf keenanf      264814 Nov 20  2020  ill_proof.htm
+-rwxrwxrwx 1 keenanf keenanf      102795 Dec  3  2020  ald_student_pics.dat
+-rwxrwxrwx 1 keenanf keenanf           0 Dec  3  2020  make_proof.pl.log
+-rwxrwxrwx 1 keenanf keenanf      109892 Dec  3  2020  j.htm
+drwxrwxrwx 1 keenanf keenanf        4096 Mar 17  2021 'OALD files to edit'
+drwxrwxrwx 1 keenanf keenanf        4096 Feb 28 12:37  JapaneseALD
+drwxrwxrwx 1 keenanf keenanf        4096 Mar  1 15:55  JALD
+-rwxrwxrwx 1 keenanf keenanf 12185200640 Mar  1 18:01  JapaneseALD2.tar
+drwxrwxrwx 1 keenanf keenanf        4096 Apr 16 17:29  Greek
+drwxrwxrwx 1 keenanf keenanf        4096 Apr 17 08:37  ..
+-rwxrwxrwx 1 keenanf keenanf   468142080 Apr 17 08:59  Greeek.tar
+-rwxrwxrwx 1 keenanf keenanf    53504000 Apr 17 09:57  BOOK_PICS.tar
+-rwxrwxrwx 1 keenanf keenanf   191139840 Apr 17 09:57  STUDENTSL.tar
+-rwxrwxrwx 1 keenanf keenanf      248452 Apr 17 10:12 'A-Z images_text.xlsx'
+-rwxrwxrwx 1 keenanf keenanf       85815 Apr 17 10:13 'A-Z images_text.csv'
+-rwxrwxrwx 1 keenanf keenanf       12479 Apr 17 10:17  pic_sources.txt
+drwxrwxrwx 1 keenanf keenanf        4096 Apr 17 10:18  SPICS
+drwxrwxrwx 1 keenanf keenanf        4096 Apr 17 10:18  .
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ ls BOOK_PICS
+accommodation.png    climate_change.png    dovetail.png    food_chain.png               joist.png            nitrogen_cycle.png   portico.png      seismic.png        tooth_1.png
+aerosol.png          cloud.png             drawbridge.png  food_web.png                 lens.png             orchestra.png        pressure.png     shadow.png         tooth_2.png
+arm.png              convection.png        dry_cell.png    fractional_distillation.png  lever.png            oscilloscope.png     prism.png        sheep.png          trapezium.png
+asymmetric_bars.png  crane.png             ear.png         generator.png                light_bulb.png       overlap.png          pulley.png       short_sighted.png  vacuum_flask.png
+atmosphere.png       crocodile_clip.png    earth.png       glacial.png                  limestone.png        oxbow.png            purify.png       skin.png           venn_diagram.png
+barcode.png          current.png           ecosystem.png   goat.png                     line.png             parallelogram.png    reflection.png   solar_system.png   virus.png
+barrel.png           deer.png              energy.png      graph.png                    lion.png             periscope.png        refract.png      sonar.png          volcano.png
+brain.png            diffract.png          erode_1.png     health.png                   lizard.png           petroleum.png        resistor.png     sound_wave.png     water_cycle.png
+building.png         diffuse.png           erode_2.png     heart.png                    longshore_drift.png  ph.png               respiratory.png  speed.png          wave.png
+capital.png          digestive_system.png  eye.png         high_pitched.png             loom.png             photosynthesis.png   rhinoceros.png   squid.png          wavelength.png
+carbon_cycle.png     distil.png            fertilize.png   hydraulic.png                magnetism.png        plate_tectonics.png  rock.png         state.png          weapon.png
+cell.png             dna.png               filtration.png  income.png                   magnify.png          plough.png           safety.png       switch.png         windmill.png
+circulation.png      dodecahedron.png      floodplain.png  jellyfish.png                moon.png             pommel_horse.png     season.png       synovial.png       workbench.png
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ pl get_src_files.pl
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ mkdir LICENSING
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ mv SPICS/ STUDENTSL
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ ls BOOK_PICS
+accommodation.png     earth.png                    longshore_drift.png  season.png
+aerosol.png           ecosystem.png                loom.png             seismic.png
+arm.png               energy.png                   magnetism.png        shadow.png
+asymmetric_bars.png   erode_1.png                  magnify.png          sheep.png
+atmosphere.png        erode_2.png                  moon.png             short_sighted.png
+barcode.png           eye.png                      nitrogen_cycle.png   skin.png
+barrel.png            fertilize.png                orchestra.png        solar_system.png
+brain.png             filtration.png               oscilloscope.png     sonar.png
+building.png          floodplain.png               overlap.png          sound_wave.png
+capital.png           food_chain.png               oxbow.png            speed.png
+carbon_cycle.png      food_web.png                 parallelogram.png    squid.png
+cell.png              fractional_distillation.png  periscope.png        state.png
+circulation.png       generator.png                petroleum.png        switch.png
+climate_change.png    glacial.png                  ph.png               synovial.png
+cloud.png             goat.png                     photosynthesis.png   tooth_1.png
+convection.png        graph.png                    plate_tectonics.png  tooth_2.png
+crane.png             health.png                   plough.png           trapezium.png
+crocodile_clip.png    heart.png                    pommel_horse.png     vacuum_flask.png
+current.png           high_pitched.png             portico.png          venn_diagram.png
+deer.png              hydraulic.png                pressure.png         virus.png
+diffract.png          income.png                   prism.png            volcano.png
+diffuse.png           jellyfish.png                pulley.png           water_cycle.png
+digestive_system.png  joist.png                    purify.png           wave.png
+distil.png            lens.png                     reflection.png       wavelength.png
+dna.png               lever.png                    refract.png          weapon.png
+dodecahedron.png      light_bulb.png               resistor.png         windmill.png
+dovetail.png          limestone.png                respiratory.png      workbench.png
+drawbridge.png        line.png                     rhinoceros.png
+dry_cell.png          lion.png                     rock.png
+ear.png               lizard.png                   safety.png
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ perl get_src_files.pl pic_sources.txt > j.res
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ perl get_src_files.pl pic_sources.txt > j.res
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ perl get_src_files.pl pic_sources.txt > j.res
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ ls BOOK_PICS/*angle*
+ls: cannot access 'BOOK_PICS/*angle*': No such file or directory
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ perl get_src_files.pl pic_sources.txt > j.res
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ 
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ ls -rt
+ OneDrive_2020-11-06.zip     students_book_images.dat   ill_proof_files   ill_proof.htm         'OALD files to edit'   Greek          'A-Z images_text.xlsx'   LICENSING            j.res
+ BOOK_PICS                  '~$l_proof.htm'             ill_proof.dat     ald_student_pics.dat   JapaneseALD           Greeek.tar     'A-Z images_text.csv'    get_src_files.pl
+ make_proof.pl~              styles.css~                make_proof.pl     make_proof.pl.log      JALD                  BOOK_PICS.tar   pic_sources.txt        '#pic_sources.txt#'
+ students_book_images.dat~   styles.css                 ill_proof.htm~    j.htm                  JapaneseALD2.tar      STUDENTSL.tar   get_src_files.pl~       STUDENTSL
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ mkdir LPICS
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ perl get_src_files.pl pic_sources.txt > j.sh
+Source/Filename.png
+BOOK_PICS/angle.png
+STUDENTSL/bonsai.png
+BOOK_PICS/concentric.png
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ sh j.sh
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ ls LPICS/
+aerosol.png                   drawbridge.png                  overlap.png
+aircraft_hot_air_balloon.png  edge_rim_border.png             oxbow.png
+airliner.png                  environment_1.png               parallelograms.png
+amphibians.png                environment_2.png               pegs.png
+anchor.png                    fans.png                        piston.png
+aqualung.png                  fish.png                        plants.png
+arachnids.png                 flowers.png                     plugs.png
+architecture.png              food_web.png                    polygons.png
+asymmetric_bars.png           froth_foam_bubbles.png          pommel_horse.png
+atmosphere.png                fruit_berries.png               portico.png
+axes.png                      fruit_citrus.png                pulley.png
+axis.png                      fruit_misc.png                  pushchair.png
+ballandsocketjoint.png        fruit_tropical.png              rabbit_hare.png
+ballbearing.png               garden_tools.png                racks.png
+barbedwire.png                gastropods.png                  ratchet.png
+barcode.png                   goat.png                        reptiles.png
+barrel.png                    graph.png                       revolvingdoor.png
+bathroom_objects.png          handles.png                     rhinoceros.png
+binoculars_telescope.png      health.png                      rope_string_thread.png
+birds.png                     helices.png                     safety.png
+birds_poultry.png             herbs.png                       scales.png
+birds_prey.png                hieroglyphics.png               shade_shadow.png
+birds_seabirds.png            hinge.png                       sheep.png
+blades.png                    hobbies_crafts.png              sledge_sleigh.png
+blockandtackle.png            hobbies_creative.png            solids.png
+body.png                      hobbies_diving_snorkelling.png  spices.png
+body_eye.png                  hooks.png                       spiral.png
+body_face.png                 income.png                      sports_football.png
+body_hand.png                 insects.png                     sports_racket.png
+body_skeleton.png             internal_organs.png             sports_track.png
+boomerang.png                 jellyfish.png                   sports_water.png
+bows_1.png                    joist.png                       spring.png
+bows_2.png                    keys.png                        sprocketwheel.png
+brain.png                     kitchen_appliances.png          squeeze_squash_crush.png
+broken_chipped_cracked.png    kitchen_cutting.png             squid.png
+buildings.png                 kitchen_drinks.png              staircase.png
+buttons.png                   kitchen_opening.png             sticks.png
+cablecar.png                  kitchen_utensils_misc.png       stile.png
+capital.png                   knot_loop_coil.png              sundial.png
+catapult_slingshot.png        label_tag_ticket.png            sword_spear_dagger.png
+cell.png                      laboratory_equipment.png        tassel.png
+cephalopod.png                lattice.png                     toga.png
+cereals.png                   lines.png                       trapezium.png
+charts.png                    lion.png                        tree.png
+circles.png                   lizard.png                      trees_deciduous.png
+classroom.png                 magnify.png                     trees_evergreen.png
+cleaning_comp.png             mammals.png                     triangles.png
+climate_change.png            mammals_cetaceans.png           twisted_bent.png
+clocks_watches.png            mammals_marsupials.png          unicorn.png
+clothes_gloves.png            mammals_primates.png            vault.png
+clothes_nightclothes.png      mammals_rodents.png             vegetables_misc.png
+clothes_scarves.png           masks.png                       vegetables_peas_beans.png
+cogwheel.png                  metronome.png                   vegetables_root.png
+compasses.png                 minaret.png                     vegetables_salad.png
+conicsections.png             mobiusstrip.png                 vegetables_squash.png
+convex_concave.png            money.png                       vehicles_boats_ships_1.png
+cord.png                      mountains.png                   vehicles_buses.png
+corrugated.png                music_brass_instruments.png     vehicles_caravan_camper.png
+crackers.png                  music_drums.png                 vehicles_construction.png
+crocodileclip.png             music_guitars.png               vehicles_cycles.png
+crustaceans.png               music_pianos.png                venndiagram.png
+curtains.png                  musicalnotation.png             virus.png
+cutlery.png                   necks.png                       volcano.png
+decorating_diy.png            nuts.png                        workbench.png
+dimensions.png                opticalillusions.png            yacht.png
+dovetail_mitre.png            overalls_dungarees.png
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ ls -alrtr *png
+-rwxrwxrwx 1 keenanf keenanf 217365 Apr 17 12:23 concentric.png
+-rwxrwxrwx 1 keenanf keenanf 199750 Apr 17 12:23 angles.png
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ mv *.png LPICS/
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ tar cvf StudentPics.tar LPICS/
+LPICS/
+LPICS/aerosol.png
+LPICS/aircraft_hot_air_balloon.png
+LPICS/airliner.png
+LPICS/amphibians.png
+LPICS/anchor.png
+LPICS/angles.png
+LPICS/aqualung.png
+LPICS/arachnids.png
+LPICS/architecture.png
+LPICS/asymmetric_bars.png
+LPICS/atmosphere.png
+LPICS/axes.png
+LPICS/axis.png
+LPICS/ballandsocketjoint.png
+LPICS/ballbearing.png
+LPICS/barbedwire.png
+LPICS/barcode.png
+LPICS/barrel.png
+LPICS/bathroom_objects.png
+LPICS/binoculars_telescope.png
+LPICS/birds.png
+LPICS/birds_poultry.png
+LPICS/birds_prey.png
+LPICS/birds_seabirds.png
+LPICS/blades.png
+LPICS/blockandtackle.png
+LPICS/body.png
+LPICS/body_eye.png
+LPICS/body_face.png
+LPICS/body_hand.png
+LPICS/body_skeleton.png
+LPICS/boomerang.png
+LPICS/bows_1.png
+LPICS/bows_2.png
+LPICS/brain.png
+LPICS/broken_chipped_cracked.png
+LPICS/buildings.png
+LPICS/buttons.png
+LPICS/cablecar.png
+LPICS/capital.png
+LPICS/catapult_slingshot.png
+LPICS/cell.png
+LPICS/cephalopod.png
+LPICS/cereals.png
+LPICS/charts.png
+LPICS/circles.png
+LPICS/classroom.png
+LPICS/cleaning_comp.png
+LPICS/climate_change.png
+LPICS/clocks_watches.png
+LPICS/clothes_gloves.png
+LPICS/clothes_nightclothes.png
+LPICS/clothes_scarves.png
+LPICS/cogwheel.png
+LPICS/compasses.png
+LPICS/concentric.png
+LPICS/conicsections.png
+LPICS/convex_concave.png
+LPICS/cord.png
+LPICS/corrugated.png
+LPICS/crackers.png
+LPICS/crocodileclip.png
+LPICS/crustaceans.png
+LPICS/curtains.png
+LPICS/cutlery.png
+LPICS/decorating_diy.png
+LPICS/dimensions.png
+LPICS/dovetail_mitre.png
+LPICS/drawbridge.png
+LPICS/edge_rim_border.png
+LPICS/environment_1.png
+LPICS/environment_2.png
+LPICS/fans.png
+LPICS/fish.png
+LPICS/flowers.png
+LPICS/food_web.png
+LPICS/froth_foam_bubbles.png
+LPICS/fruit_berries.png
+LPICS/fruit_citrus.png
+LPICS/fruit_misc.png
+LPICS/fruit_tropical.png
+LPICS/garden_tools.png
+LPICS/gastropods.png
+LPICS/goat.png
+LPICS/graph.png
+LPICS/handles.png
+LPICS/health.png
+LPICS/helices.png
+LPICS/herbs.png
+LPICS/hieroglyphics.png
+LPICS/hinge.png
+LPICS/hobbies_crafts.png
+LPICS/hobbies_creative.png
+LPICS/hobbies_diving_snorkelling.png
+LPICS/hooks.png
+LPICS/income.png
+LPICS/insects.png
+LPICS/internal_organs.png
+LPICS/jellyfish.png
+LPICS/joist.png
+LPICS/keys.png
+LPICS/kitchen_appliances.png
+LPICS/kitchen_cutting.png
+LPICS/kitchen_drinks.png
+LPICS/kitchen_opening.png
+LPICS/kitchen_utensils_misc.png
+LPICS/knot_loop_coil.png
+LPICS/label_tag_ticket.png
+LPICS/laboratory_equipment.png
+LPICS/lattice.png
+LPICS/lines.png
+LPICS/lion.png
+LPICS/lizard.png
+LPICS/magnify.png
+LPICS/mammals.png
+LPICS/mammals_cetaceans.png
+LPICS/mammals_marsupials.png
+LPICS/mammals_primates.png
+LPICS/mammals_rodents.png
+LPICS/masks.png
+LPICS/metronome.png
+LPICS/minaret.png
+LPICS/mobiusstrip.png
+LPICS/money.png
+LPICS/mountains.png
+LPICS/musicalnotation.png
+LPICS/music_brass_instruments.png
+LPICS/music_drums.png
+LPICS/music_guitars.png
+LPICS/music_pianos.png
+LPICS/necks.png
+LPICS/nuts.png
+LPICS/opticalillusions.png
+LPICS/overalls_dungarees.png
+LPICS/overlap.png
+LPICS/oxbow.png
+LPICS/parallelograms.png
+LPICS/pegs.png
+LPICS/piston.png
+LPICS/plants.png
+LPICS/plugs.png
+LPICS/polygons.png
+LPICS/pommel_horse.png
+LPICS/portico.png
+LPICS/pulley.png
+LPICS/pushchair.png
+LPICS/rabbit_hare.png
+LPICS/racks.png
+LPICS/ratchet.png
+LPICS/reptiles.png
+LPICS/revolvingdoor.png
+LPICS/rhinoceros.png
+LPICS/rope_string_thread.png
+LPICS/safety.png
+LPICS/scales.png
+LPICS/shade_shadow.png
+LPICS/sheep.png
+LPICS/sledge_sleigh.png
+LPICS/solids.png
+LPICS/spices.png
+LPICS/spiral.png
+LPICS/sports_football.png
+LPICS/sports_racket.png
+LPICS/sports_track.png
+LPICS/sports_water.png
+LPICS/spring.png
+LPICS/sprocketwheel.png
+LPICS/squeeze_squash_crush.png
+LPICS/squid.png
+LPICS/staircase.png
+LPICS/sticks.png
+LPICS/stile.png
+LPICS/sundial.png
+LPICS/sword_spear_dagger.png
+LPICS/tassel.png
+LPICS/toga.png
+LPICS/trapezium.png
+LPICS/tree.png
+LPICS/trees_deciduous.png
+LPICS/trees_evergreen.png
+LPICS/triangles.png
+LPICS/twisted_bent.png
+LPICS/unicorn.png
+LPICS/vault.png
+LPICS/vegetables_misc.png
+LPICS/vegetables_peas_beans.png
+LPICS/vegetables_root.png
+LPICS/vegetables_salad.png
+LPICS/vegetables_squash.png
+LPICS/vehicles_boats_ships_1.png
+LPICS/vehicles_buses.png
+LPICS/vehicles_caravan_camper.png
+LPICS/vehicles_construction.png
+LPICS/vehicles_cycles.png
+LPICS/venndiagram.png
+LPICS/virus.png
+LPICS/volcano.png
+LPICS/workbench.png
+LPICS/yacht.png
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ mv StudentPics.tar ~/GitRepos/StudentsDictionary/Licensing/
+keenanf@LT-PF3AEX3N:~/CDRIVE/FULL_SHUTTLE$ cd !$
+cd ~/GitRepos/StudentsDictionary/Licensing/
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary/Licensing$ ls
+StudentPics.tar                        students_app_licensing_index.xml.errs          wordpower_app_licensing.xml             wordpower_app_licensing_tmp.xml
+students_app_licensing.xml             students_app_licensing_tmp.xml                 wordpower_app_licensing.xml.errs        wordpower_app_licensing_tmp.xml.errs
+students_app_licensing.xml.errs        students_app_licensing_tmp.xml.errs            wordpower_app_licensing_empty_defs.txt
+students_app_licensing_empty_defs.txt  tags_and_attributes_description_students.htm   wordpower_app_licensing_index.xml
+students_app_licensing_index.xml       tags_and_attributes_description_wordpower.htm  wordpower_app_licensing_index.xml.errs
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary/Licensing$ ls -alrt
+total 271320
+-rwxrwxrwx 1 keenanf keenanf 128106480 Apr 14 12:04 students_app_licensing_tmp.xml
+-rwxrwxrwx 1 keenanf keenanf         0 Apr 14 12:04 students_app_licensing_tmp.xml.errs
+-rwxrwxrwx 1 keenanf keenanf         0 Apr 14 12:06 students_app_licensing.xml.errs
+-rwxrwxrwx 1 keenanf keenanf  43643186 Apr 14 12:07 students_app_licensing.xml
+-rwxrwxrwx 1 keenanf keenanf       669 Apr 14 12:07 students_app_licensing_empty_defs.txt
+-rwxrwxrwx 1 keenanf keenanf     21290 Apr 14 12:07 tags_and_attributes_description_students.htm
+-rwxrwxrwx 1 keenanf keenanf   3215846 Apr 14 12:07 students_app_licensing_index.xml
+-rwxrwxrwx 1 keenanf keenanf         0 Apr 14 12:07 students_app_licensing_index.xml.errs
+-rwxrwxrwx 1 keenanf keenanf  23986116 Apr 14 12:10 wordpower_app_licensing_tmp.xml
+-rwxrwxrwx 1 keenanf keenanf         0 Apr 14 12:10 wordpower_app_licensing_tmp.xml.errs
+-rwxrwxrwx 1 keenanf keenanf         0 Apr 14 12:10 wordpower_app_licensing.xml.errs
+-rwxrwxrwx 1 keenanf keenanf   9224753 Apr 14 12:10 wordpower_app_licensing.xml
+-rwxrwxrwx 1 keenanf keenanf       243 Apr 14 12:10 wordpower_app_licensing_empty_defs.txt
+-rwxrwxrwx 1 keenanf keenanf     16755 Apr 14 12:10 tags_and_attributes_description_wordpower.htm
+-rwxrwxrwx 1 keenanf keenanf    819364 Apr 14 12:10 wordpower_app_licensing_index.xml
+-rwxrwxrwx 1 keenanf keenanf         0 Apr 14 12:10 wordpower_app_licensing_index.xml.errs
+drwxrwxrwx 1 keenanf keenanf      4096 Apr 17 09:19 ..
+-rwxrwxrwx 1 keenanf keenanf  68771840 Apr 17 12:24 StudentPics.tar
+drwxrwxrwx 1 keenanf keenanf      4096 Apr 17 12:24 .
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary/Licensing$ cd ..
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ 
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ mkdir data
+mkdir: cannot create directory ‘data’: File exists
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ pwd
+/home/keenanf/GitRepos/StudentsDictionary
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ cd /home/keenanf/GitRepos/StudentsDictionary
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ ls data/
+dps.xml  dps_hex_app_licensing_full.xml  dps_hex_app_licensing_full_tmp.xml  dps_hex_app_licensing_full_tmp.xml.errs
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ ls -al data/dps.xml 
+-rwxrwxrwx 1 keenanf keenanf 124148476 Apr 14 11:53 data/dps.xml
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ ls *sh
+dl.sh  get_samples.sh  j.sh  run_all.sh
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ sh run_all.sh 
+Started at 12:57:25
+
+Punctuation rules: /data/dicts/single_dtd/punctuation/ald10_digital_all_editions_pnc_rules.xml
+cat data/dps.xml | perl ./phons_system_ald10_licensing_or_digital.pl | perl ./utf82hex.pl | perl ./lose_unwanted_app_resources.pl -l   | perl ./eid_adder19.pl   | cat | perl ./add_pracpron.pl  | perl ./do_web_sortkeys.pl  | perl ./select_students.pl   | perl ./select_app_casio.pl   | perl ./sorter.pl  | cat | perl ./digital_restructure.pl -A  | perl ./add_indexer.pl  > data/dps_hex_app_licensing_full.xml
+perl ./lose_unwanted_xref_types.pl -A  data/dps_hex_app_licensing_full.xml | perl ./lose_dps_atts.pl > data/dps_hex_app_licensing_full_tmp.xml
+
+
+
+xmllint --noout data/dps_hex_app_licensing_full_tmp.xml > data/dps_hex_app_licensing_full_tmp.xml.errs
+
+
+perl ./punc.pl  -c PUNC/students_rules_main.xml data/dps_hex_app_licensing_full_tmp.xml | perl ./utf82hex.pl  | cat | perl ./add_upload_date.pl  | perl ./target_app10.pl -A  | cat >  Licensing/Full/students_app_licensing_tmp.xml
+sh: 1: cannot create Licensing/Full/students_app_licensing_tmp.xml: Directory nonexistent
+"perl ./punc.pl  -c PUNC/students_rules_main.xml data/dps_hex_app_licensing_full_tmp.xml | perl ./utf82hex.pl  | cat | perl ./add_upload_date.pl  | perl ./target_app10.pl -A  | cat >  Licensing/Full/students_app_licensing_tmp.xml" unexpectedly returned exit value 2 at /usr/local/share/perl/5.30.0/IPC/System/Simple.pm line 578.
+	IPC::System::Simple::_check_exit("perl ./punc.pl  -c PUNC/students_rules_main.xml data/dps_hex_"..., 2, ARRAY(0x5595f9e22af0)) called at /usr/local/share/perl/5.30.0/IPC/System/Simple.pm line 550
+	IPC::System::Simple::_process_child_error(512, "perl ./punc.pl  -c PUNC/students_rules_main.xml data/dps_hex_"..., ARRAY(0x5595f9e22af0)) called at /usr/local/share/perl/5.30.0/IPC/System/Simple.pm line 190
+	IPC::System::Simple::run("perl ./punc.pl  -c PUNC/students_rules_main.xml data/dps_hex_"...) called at (eval 8) line 12
+	eval {...} called at (eval 8) line 11
+	Fatal::__ANON__("perl ./punc.pl  -c PUNC/students_rules_main.xml data/dps_hex_"...) called at run_licensing_casio.pl line 195
+	main::main called at run_licensing_casio.pl line 11
+ at run_licensing_casio.pl line 195
+Started at 13:09:39
+
+Punctuation rules: /data/dicts/single_dtd/punctuation/ald10_digital_all_editions_pnc_rules.xml
+cat data/dps.xml | perl ./phons_system_ald10_licensing_or_digital.pl | perl ./utf82hex.pl | perl ./lose_unwanted_app_resources.pl -l   | perl ./eid_adder19.pl   | cat | perl ./add_pracpron.pl  | perl ./do_web_sortkeys.pl  | perl ./select_wordpower.pl   | perl ./select_app_casio.pl   | perl ./sorter.pl  | cat | perl ./digital_restructure.pl -A  | perl ./add_indexer.pl  > data/dps_hex_app_licensing_full.xml
+perl ./lose_unwanted_xref_types.pl -A  data/dps_hex_app_licensing_full.xml | perl ./lose_dps_atts.pl > data/dps_hex_app_licensing_full_tmp.xml
+
+
+
+xmllint --noout data/dps_hex_app_licensing_full_tmp.xml > data/dps_hex_app_licensing_full_tmp.xml.errs
+
+
+perl ./punc.pl  -c PUNC/students_rules_main.xml data/dps_hex_app_licensing_full_tmp.xml | perl ./utf82hex.pl  | cat | perl ./add_upload_date.pl  | perl ./target_app10.pl -A  | cat >  Licensing/Full/wordpower_app_licensing_tmp.xml
+sh: 1: cannot create Licensing/Full/wordpower_app_licensing_tmp.xml: Directory nonexistent
+"perl ./punc.pl  -c PUNC/students_rules_main.xml data/dps_hex_app_licensing_full_tmp.xml | perl ./utf82hex.pl  | cat | perl ./add_upload_date.pl  | perl ./target_app10.pl -A  | cat >  Licensing/Full/wordpower_app_licensing_tmp.xml" unexpectedly returned exit value 2 at /usr/local/share/perl/5.30.0/IPC/System/Simple.pm line 578.
+	IPC::System::Simple::_check_exit("perl ./punc.pl  -c PUNC/students_rules_main.xml data/dps_hex_"..., 2, ARRAY(0x55a6ed3da5c8)) called at /usr/local/share/perl/5.30.0/IPC/System/Simple.pm line 550
+	IPC::System::Simple::_process_child_error(512, "perl ./punc.pl  -c PUNC/students_rules_main.xml data/dps_hex_"..., ARRAY(0x55a6ed3da5c8)) called at /usr/local/share/perl/5.30.0/IPC/System/Simple.pm line 190
+	IPC::System::Simple::run("perl ./punc.pl  -c PUNC/students_rules_main.xml data/dps_hex_"...) called at (eval 8) line 12
+	eval {...} called at (eval 8) line 11
+	Fatal::__ANON__("perl ./punc.pl  -c PUNC/students_rules_main.xml data/dps_hex_"...) called at run_licensing_casio.pl line 195
+	main::main called at run_licensing_casio.pl line 11
+ at run_licensing_casio.pl line 195
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ mkdir Licensing/Full
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ mkdir Licensing/Samples
+keenanf@LT-PF3AEX3N:~/GitRepos/StudentsDictionary$ sh run_all.sh 
+Started at 13:53:07
+
+Punctuation rules: /data/dicts/single_dtd/punctuation/ald10_digital_all_editions_pnc_rules.xml
+cat data/dps.xml | perl ./phons_system_ald10_licensing_or_digital.pl | perl ./utf82hex.pl | perl ./lose_unwanted_app_resources.pl -l   | perl ./eid_adder19.pl   | cat | perl ./add_pracpron.pl  | perl ./do_web_sortkeys.pl  | perl ./select_students.pl   | perl ./select_app_casio.pl   | perl ./sorter.pl  | cat | perl ./digital_restructure.pl -A  | perl ./add_indexer.pl  > data/dps_hex_app_licensing_full.xml
+perl ./lose_unwanted_xref_types.pl -A  data/dps_hex_app_licensing_full.xml | perl ./lose_dps_atts.pl > data/dps_hex_app_licensing_full_tmp.xml
+
+
+
+xmllint --noout data/dps_hex_app_licensing_full_tmp.xml > data/dps_hex_app_licensing_full_tmp.xml.errs
+
+
+perl ./punc.pl  -c PUNC/students_rules_main.xml data/dps_hex_app_licensing_full_tmp.xml | perl ./utf82hex.pl  | cat | perl ./add_upload_date.pl  | perl ./target_app10.pl -A  | cat >  Licensing/Full/students_app_licensing_tmp.xml
