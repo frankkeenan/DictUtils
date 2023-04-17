@@ -1,0 +1,418 @@
+frac17	1/7
+Delta	&#x0394;
+Gamma	&#x0393;
+Lambda	&#x039B;
+NDASH	&#x2013;
+Omega	&#x03A9;
+Phi	&#x03A6;
+Pi	&#x03A0;
+Prime	"
+Psi	&#x03A8;
+Sigma	&#x03A3;
+Theta	&#x0398;
+Upsi	&#x03A5;
+Xi	&#x039E;
+aacute	&#x00E0;
+abcedil	&#x0105;
+acirc	&#x00E2;
+aelig	&#x00E6;
+agrave	&#x00E0;
+alpha	&#x03B1;
+amacr	&#x0101;
+amp	&
+ap	&apos; (incorrect entity used &#x2013; entity &apos; (apostrophe) should have been used here)
+apos	&apos;
+arrow_xt_arrow	&#x2192;
+arrow_xt_picat	&#xE091; {arrow symbol pdf.}
+arrow_xt_picon	&#xE091;
+arrow_xt_lookat	special arrow for note at: label
+arrow_xt_noteat	&#xE091;
+arrow	&#x2192;
+arrowsp	&#xE091;
+arsym	arrow symbol for strength of synonyms
+ast	*
+atsym	&#x2192;
+atilde	&#x00E3;
+auml	&#x00E4;
+beta	&#x03B2;
+blarrow	&#x2192;
+brafix	Entity to help with right-to-left text
+bs1	(indicates spaces in Korean entries)
+bsp1	(indicates spaces in Korean entries)
+cacute	&#x0107;
+caret	^
+cbra	Closing bracket
+ccaron	&#x010D;
+ccedil	&#x00E7;
+check	&#x2713;
+chi	&#x03C7;
+clslash	/ blue slash separating words in the patterns and collocations section
+copy	&#x00A9;
+cuberoot	&#x221B;
+coresym	key symbol
+deg	&#x00B0;
+delta	&#x03B4;
+ditto	&#x201D;
+divide	&#x00F7;
+dollar	$
+dp	. decimal point
+drsep	I derivative separator bar
+drsym	Derivative symbol
+dtxt	creates italic text of Serbian language in the definition
+eacute	&#x00E9;
+ebcedil	&#x0119;
+ecirc	&#x00EA;
+egrave	&#x00E8;
+emsp	em space
+ensp2	the space between the part of speech name and the headword
+epsi	&#x03B5;
+equals	=
+eta	&#x03B7;
+eth	&#x00F0;
+euro	&#x20AC;
+f1d16	1/16
+flat	&#x266D;
+frac12	&#x00BD; 
+frac14	&#x00BC;
+frac34	&#x00BE;
+frac58	&#x215D;
+frac76	7/6
+frac78	&#x215E;
+gamma	&#x03B3;
+gql	low quotation marks
+gqr	high quotation marks
+gsoft	&#x011F;
+grslash	/
+gt	>
+half	&#x00BD;
+hand	A pointing hand
+handsp	space after the above
+hdwdsp	headword space
+hellip	&#x2026;
+helpisym	information symbol, white I in a black circle
+helpnotesym	similar to NOTE symbol, but this one is a black rectangle with white text inside
+helpsym	 
+hh_or	the &#x2018;or&#x2019; text in the help boxes
+hyphen	-
+iacute	&#x00CD;
+icirc	&#x00CE;
+idsep	| idiom separator bar
+idotless	&#x0131;
+idpvsep	| separator bar
+idsym	Idiom symbol 
+idsyms	Idiom symbol (multiple idioms)
+igrave	&#x0160; 
+infin	&#x221E;
+iota	&#x03B9;
+iuml	&#x00EF;
+kappa	&#x03BA;
+kernsp	Typesetting kerning space 
+Korean_midpoint	small dot that breaks up Korean text in certain entries 
+lambda	&#x03BB;
+lcross	&#x0142;
+ldquo	&#x201C;
+lsquo	&#x2018;
+lt	<
+macr	&#x00AF;
+xinclg_sym	 small blue arrow indicating the separate collocations in the entry 
+mdash	&#x2014;
+minus	-
+micro	&#x03BC; mu symbol micrometer
+mu	&#x03BC;
+nacute	&#x0144;
+natur	&#x266E;
+nbcomma	non-breaking comma
+nbhyphen	non-breaking hyphen
+nbhyph	non-breaking hyphen in IPA section of entry
+nbsp	non-breaking space
+nbspace	non-breaking space
+nbthinsp	non-breaking thin space
+nbthinsp_num	non-breaking thin space for numbers/figures
+ndash	&#x2013;
+notesym	 note symbol
+ntilde	&#x00F1;
+nu	&#x03BD;
+oacute	&#x00F3;
+ob	/
+obra	Opening bracket
+ocirc	&#x00F4;
+odblac	&#x0151;
+oelig	&#x0153;
+ograve	&#x00F2;
+omega	&#x03C9;
+oppsym	Opposite symbol 
+origin	&#xE052;
+otilde	&#x00F5;
+ouml	&#x00F6;
+p	primary stress
+pause	&#x1D110;
+pcnt	/ slash before the IPA
+p_dr	&#x02C8; primary stress mark light
+percnt	%
+phis	&#x03D5;
+phonslash2	slash at the end of the IPA
+phonslash	slash at the beginning of the IPA
+phonslash_close	closing phonetic slash after IPA
+phonslash_open	opening phonetic slash after IPA
+pi	&#x03C0;
+plus	+
+pound	&#x00A3;
+pound_currency	&#x00A3;
+prime	&apos;
+psi	&#x03C8;
+pstress	primary stress mark
+psym	Symbol to mark subentry 
+p_v	primary stress mark bold
+pvarr	see &p; above
+pvsep	| Phrasal Verbs separator
+pvsym	Phrasal verb symbol 
+pvsyms	same as &pvsym;
+radic	&#x00FC;
+rdquo	&#x201D;
+reg	&#x00AE;
+rho	&#x03C1;
+rsquo	&#x2019;
+sacute	&#x015B;
+s	see &p;
+scaron	&#x0160;
+scedil	&#x015E;
+s_dr	secondary light stress mark
+s_v	secondary bold stress mark
+sharp	&#x266F;
+shy	indicates where words can be hyphenated
+spc_tunsym3	space
+z_space		space
+sp_xp	space after cross reference arrow symbol
+sp_arrow1	space before arrow symbol
+sp_arrow2	space after arrow symbol
+spc_1drsep	space before derivative bar separator
+spc_1idsep	space before idiom bar separator
+spc_1pvsep	space before and after phrasal verb bar separator
+spc_drsep	space after phrasal verb bar separator
+spc_drsym	space after derivative symbol
+spc_idsep	space after idiom separator
+spc_idsym	space after idiom symbol
+spc_idsyms	space after idiom symbols
+spc_pvsep	space after phrasal verbs separator
+spc_pvsym	space after phrasal verbs symbol
+spc_pvsyms	space after phrasal verbs symbols
+spc_tssym	space after &tssym;
+spc_tunsym3	space after &tun_info;
+sstress	secondary stress mark
+thinsp	thin space after various symbols
+trade	trademark &#x2122;
+tm_in_dr	trademark &#x2122;
+tm_in_h	trademark &#x2122;
+tm_in_vs	trademark &#x2122;
+tssym	precedes &tssymsp; tag, derivative symbol
+tun_info_sym	Usage note symbol
+vthinspj	Very thin space	
+xrsym	cross reference symbol
+xsym	example separator
+zcaron	&#x017E;
+star	star symbol for star (key) words 
+sigma	&#x03A3;
+sstress	secondary stress mark
+star	key symbol for key words
+stress	secondary stress mark
+sub2	2 sub = subscript
+sub3	3
+sub4	4
+sub5	5
+sub6	6
+sup100	100 sup = superscript
+sup12	12
+sup15	15
+sup18	18
+sup2	2
+sup20	20
+sup24	24
+sup3	3
+sup30	30
+sup4	4
+sup9	9
+supminus10	-10
+supminus12	-12
+supminus15	-15
+supminus18	-18
+supminus24	-24
+synsep	symbol to separate synonyms, usually a diamond (&#x25C6;) or bullet point (&#x2022;)
+synsym	Synonyms symbol
+tau	&#x03A4;
+theta	&#x0398;
+thinsp	thin space
+thinsp2	thin space
+thinspx	thin space
+tilde	~
+times	&#x00D7;
+trade	&#x2122;
+tssym	&#x25B6; black colour
+tssymsp	space after small black arrow symbol
+tuninfo	info symbol
+uacute	&#x00FA;
+udblac	&#x0171;
+ucirc	&#x00DB; / &#x00FB;
+unsym	usage note symbol i in a circle
+unsym2	usage note symbol 2 &#x2013; white arrow in black circle
+upsi	&#x03C5;
+uuml	&#x00DC;
+w_dr	&#x00B7; word break/syllable separator (middle dot)
+w	&#x00B7; word break/syllable separator (middle dot)
+xi	&#x039E;
+xrefarrow	cross reference arrow
+xrsym	cross reference arrow
+xsep	&#x2662;
+xsepsp	example separator space
+xsep_in_note	Example separator in usage note
+xsym	Symbol separating example <x> tags
+yacute	&#x00FD;
+zacute	&#x0179;
+zdot	&#x017B;
+zeta	&#x03B6;
+pcbra	) phonetics close bracket 
+pobra	( phonetics open bracket 
+ppstress	&#x02C8; primary stress mark
+psstress	&#x02CC; secondary stress mark
+semi	; semicolon
+shwa	&#x0259;
+synsepsp	the space that is used to separate the diamond from the synonym, e.g. synsep, synsepsp
+xinclg_sym	&#x25B6; triangle
+amp_plus_tilde	ae with a tilde above
+bk	used by our typesetting program. Can be removed/ignored
+coresym2	a smaller version of &coresym;
+dict_tilde	a larger tilde used for the entry &#x2018;tilde&#x2019;
+ek	used by our typesetting program. Can be removed/ignored
+etymsym	etymology symbol 
+p_in_a	&#x02C8; primary stress
+p_in_ab	&#x02C8; in abbreviation
+p_in_cc	&#x02C8; in a complement collocate
+p_in_dr	&#x02C8; in derivative
+p_in_h2	&#x02C8; in second headword
+p_in_h	&#x02C8; in headword
+p_in_id	&#x02C8; in idiom group
+p_in_if	&#x02C8; in irregular form
+p_in_pv	&#x02C8; in phrasal verb
+p_in_unx	&#x02C8; in unbox example
+p_in_v	&#x02C8; in variant
+p_in_vs	&#x02C8; in variant spelling
+p_in_x	&#x02C8; in example
+p_in_xh	&#x02C8; in cross reference headword
+p_in_zd	&#x02C8; in derivatives
+pcolon	phonetic colon
+phon_O_plus_tilde	phonetic O with a tilde
+ppstress_1	primary stress 
+s_in_a	secondary stress in alternative form &#x02CC;
+s_in_ab	&#x02CC; in abbreviation
+s_in_cc	&#x02CC; in a complement collocate
+s_in_dr	&#x02CC; in derivative
+s_in_h2	&#x02CC; in second headword
+s_in_h	&#x02CC; in headword
+s_in_id	&#x02CC; in idiom group
+s_in_if	&#x02CC; in irregular form
+s_in_pv	&#x02CC; in phrasal verb
+s_in_v	&#x02CC; in variant
+s_in_vs	&#x02CC; in variant spelling
+s_in_xh	&#x02CC; in cross reference headword
+s_in_zd	&#x02CC; in derivatives
+sdsym	&#x25BA;
+shwa	&#x0259;
+slsp	slash space
+tilde_bold	tilde (~) in bold
+vcbra	variant close bracket )
+vobra	variant open bracket (
+w_in_a	word break in alternative form
+w_in_dr	in derivative
+w_in_dre	in derivative ending
+w_in_fm	in form of headword
+w_in_h2	in second headword
+w_in_h	in headword
+w_in_he	in headword ending
+w_in_if	in irregular form
+w_in_v	in variant
+w_in_vs	in variant spelling
+w_in_xh	in cross reference headword
+w_in_zd	in derivatives
+#xE03B	awlsym - entry: Academic Word List
+#x00A0	nbthinsp - non-breaking thin space
+#x00B7	w - wordbreak dot
+#x02C8	p - primary stress
+#x02CC	s - secondary stress
+#x2002	ensp - en space
+#x2003	emsp - em space
+#x2009	thinsp - thin space
+#x2011	nbhyph - non-breaking hyphen
+#x2014	mdash - m dash
+#x2194	pvarr - phrasal verb arrow
+#xE000	sdsym - structure: sense division (signpost)
+#xE001	drsym - structure: derivative
+#xE002	drsyms - #new structure: derivative group
+#xE003	idsym - #new structure: idiom
+#xE004	idsyms - #new structure: idiom group
+#xE005	pvsym - #new structure: phrasal verb
+#xE006	pvsyms - #new structure: phrasal verb group
+#xE007	psym - structure: part of speech
+#xE008	cfesyms - structure: compound or fixed expressions groups symbol
+#xE039	coresymsub - subentry: core (Oxford 3000)
+#xE03A	coresym - entry: core (Oxford 3000)
+#xE03C	ox5ksym - Oxford 5000 symbol
+#xE03D	opal_spoken - "Opal spoken ""S"" symbol"
+#xE03E	opal_written - "Opal written ""W"" symbol"
+#xE03F	opal_both - "Opal spoken/written ""O"" symbol"
+#xE04A	ungramsym - #new usage note: grammar
+#xE04B	undrsym - #new usage note: derivative
+#xE04C	unsynsym - #new usage note: synonym
+#xE04D	unoppsym - #new usage note: opposite
+#xE04E	uncompsym - #new usage note: compare  (also used for short notes)
+#xE04F	uncolsym - #new usage note: collocation
+#xE050	unspellsym - #new usage note: spelling
+#xE051	unvocsym - #new usage note: vocab
+#xE052	unorigsym - #new usage note: origin
+#xE053	unstysym - #new usage note: style
+#xE054	uncultsym - #new usage note: culture
+#xE055	unusssym - #new usage note: USS
+#xE056	untopicsym - #new usage note: topic
+#xE057	uninfosym - #new usage note: info
+#xE058	unnotesym - usage note: note
+#xE059	unhelpsym - usage note: help
+#xE05A	unmoresym - #new usage note: more
+#xE05B	unmiscsym - #new usage note: misc
+#xE05C	wfosym - #new usage note: Word Family opposite
+#xE05D	unheadsym - #new usage note: heading symbol
+#xE060	cefrsym_a1 - CEFR symbol A1
+#xE061	cefrsym_a2 - CEFR symbol A2
+#xE062	cefrsym_b1 - CEFR symbol B1
+#xE063	cefrsym_b1_plus - CEFR symbol B2
+#xE064	cefrsym_b2 - CEFR symbol B2
+#xE065	cefrsym_c1 - CEFR symbol C1
+#xE066	cefrsym_c2 - CEFR symbol C2
+#xE08A	xrsym - xref: general
+#xE08B	xrsynsym - xref: synonym
+#xE08C	xroppsym - xref: opposite
+#xE08D	xrmltsym - #new xref: more like this
+#xE08E	xrlookatsym - #new xref: look at
+#xE08F	xrnoteatsym - #new xref: note at
+#xE090	xrpicatsym - #new xref: picture at
+#xE091	xrpiconsym - #new xref: picture on
+#xE092	xrshortforsym - #new xref: abbreviation
+#xE0CA	xsep - separator: example sentence
+#xE0CB	xseps - #new separator: example sentences group
+#xE0CC	transsep - #new separator: translation
+#xE0CD	transsym - translations group symbol
+#xE0CE	idsep - #new separator: idiom
+#xE0CF	idseps - #new separator: idioms group
+#xE0D0	pvsep - #new separator: phrasal verb
+#xE0D1	pvseps - #new separator: phrasal verbs group
+#xE0D2	colsep - #new separator: collcation
+#xE0D3	colseps - #new separator: collcations group
+#xE0D4	lisym_bullet - separator: list item (one per line)
+#xE0D5	lisep - separator: list item (inline)
+#xE0D7	cfeseps - #new separator: compound or fixed expression group
+#xE0D8	tceqsym - #new symbol: translation cultural equivalent
+#xE041	usage note grammar symbol
+#xE042	usage note help symbol
+#xE043	usage note more symbol
+#xE044	usage note info symbol
+#xE045	usage note driv symbol
+#xE046	usage note generic symbol
+#1D120	Musical symbol G clef
+#1D122	Musical symbol F clef
