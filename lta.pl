@@ -41,6 +41,7 @@ sub main
 	}
 	s|<!--.*?-->||gio;
 	s|<\?.*?>||gi;
+	s|<\!DOCTYPE.*?>||gi;
 #	next line if (m|<entry[^>]*del=\"y|io);
 #	next line if (m|<entry[^>]*sup=\"y|io);
 	# $h = &get_hex_h($_, "hex", 1); # the 1 says to remove stress etc

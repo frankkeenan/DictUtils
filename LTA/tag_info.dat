@@ -322,7 +322,8 @@ tgl	refers to the Polish translation of an English sentence/word (Serbian/Polish
 th	XHTML-style table header element	
 thelp	help text for Korean	
 thm 	homonym number same as &lt;hm&gt;	
-title	title element for ill-g or note	
+title	title element for ill-g or note
+titled	The text of a note title	
 tobj	translation object	
 top-g	top group	
 topline-g	A tag that may be useful for selecting what is presented on the top 
@@ -418,7 +419,7 @@ xr	cross reference
 xr-g	cross reference group. A container for all elements relating to a specific cross reference	
 xr-gs	cross references group. A container for a sequence of xr-g/xref elements of the same type	
 xr_in_d	cross reference in definition	
-xref	cross reference error. A container for all elements relating to a specific cross reference, where it is known that the cross reference being imported into DPS has technical or editorial issues	
+xref	cross reference which allows the content of the target and the cross reference text to be different
 xs	cross reference sense component	
 xs_fm	variant spelling form of headword	
 xs_ss	superscript number for sense numbers	

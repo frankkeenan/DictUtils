@@ -33,7 +33,7 @@ sub main
 	s|(</dps-data>)|\n\1|gi;
 	s|(<e )|\n\1|gi;
 	$_ = sprintf("%s ", $_);
-	$_ =~ s|</e> *|</entry>|g;
+	$_ =~ s|</e> *|</e>|g;
 	printf("%s", $_); 
     }
 }
