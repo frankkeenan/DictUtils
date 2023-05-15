@@ -31,6 +31,7 @@ package restructure;
 # require "/NEWdata/dicts/generic/progs/restructure.pl";
 #
 #Calls
+# $e = restructure::change_attval_to_contents($e, $tagname, $attname);
 # $e = restructure::delabel($e);
 # $e = restructure::strip_dps($e);
 # $tagname = restructure::get_tagname($bit);    
@@ -102,6 +103,31 @@ package restructure;
 #    ($e, $extract) = restructure::extract_tag($e, $tagname);
 #    $e = restructure::expand_sb_sth($e);
 ##
+
+sub change_attval_to_contents
+{
+    my($e, $tagname, $attname) = @_;
+    my($res, $eid);
+    my($bit, $res);
+    my(@BITS);
+    $e =~ s|(<$tagname[ >].*?</$tagname>)|&split;&fk;$1&split;|gi;
+    @BITS = split(/&split;/, $e);
+    $res = "";
+    foreach my $bit (@BITS){
+	if ($bit =~ s|&fk;||gi){
+	    my $attval = restructure::get_tag_attval($bit, $tagname, $attname);
+	    my $contents = restructure::get_tag_contents($bit, $tagname);
+	    if ($contents =~ m|^ *$|)
+	    {
+		$bit = restructure::del_attrib($bit, $tagname, $attname);
+		$bit =~ s|(</$tagname>)|$attval$1|;
+	    }
+	}
+	$res .= $bit;
+    }    
+    return $res;
+}
+
 
 sub delabel
 {
