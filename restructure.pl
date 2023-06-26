@@ -68,6 +68,7 @@ package restructure;
 # $e = restructure::add_levels_info($e, "entry");
 # $e = restructure::add_zp_to_tag_following_unbox($e);
 # $e = restructure::tag_rename($e, "OLDTAGNAME", "NEWTAGNAME", "TOFIX", "PSGCOMMENT");
+# $e = restructure::lose_tag_in_tag($e, $container, $oldtag);
 # $e = restructure::rename_tag_in_tag($e, $container, $oldtag, $newtag);
 # $e = restructure::rename_tag_with_attrib($e, "OLDTAGNAME", "ATTNAME", "ATTVAL", "NEWTAGNAME");
 # $e = restructure::del_tag_with_attrib($e, "TAGNAME", "ATTNAME", "ATTVAL");
@@ -1544,6 +1545,25 @@ sub rename_tag_in_tag
     }
     return $res;
 }
+
+sub lose_tag_in_tag
+{
+    my($e, $container, $oldtag) = @_;
+
+    my($bit, $res);
+    my(@BITS);
+    $e =~ s|(<$container[ >].*?</$container>)|&split;&fk;$1&split;|gi;
+    @BITS = split(/&split;/, $e);
+    $res = "";
+    foreach $bit (@BITS){
+	if ($bit =~ s|&fk;||gio){
+	    $bit = restructure::tag_delete($bit, $oldtag);
+	}
+	$res .= $bit;
+    }
+    return $res;
+}
+
 
 sub lose_unicode_ents
 {
