@@ -41,7 +41,7 @@ sub main
 	system($comm);
 	
     }
-    my $comm = sprintf("curl -s --user frank.keenan:wltncrs40 \"https://dws-dps.idm.fr/api/v1/projects/%s/entries/export/allInternalAttributesAndAdditionalMetadata\"  | perl  /data/dicts/generic/progs/add_missing_end_tags.pl | perl /NEWdata/dicts/generic/progs/lose_suppressed.pl  > %s/dps.xml", $opt_c, $resdir); 
+    my $comm = sprintf("curl -s --user frank.keenan:wltncrs40 \"https://dws-dps.idm.fr/api/v1/projects/%s/entries/export/allInternalAttributesAndAdditionalMetadata\"  | perl  /data/dicts/generic/progs/add_missing_end_tags.pl  > %s/dps.xml", $opt_c, $resdir); 
     printf(STDERR "%s\n\n", $comm);
     unless ($opt_d)
     {

@@ -333,6 +333,8 @@ w_in_vs	in variant spelling
 w_in_xh	in cross reference headword
 w_in_zd	in derivatives
 #xE03B	awlsym - entry: Academic Word List
+#xA0	nbthinsp - non-breaking thin space
+#xa0	nbthinsp - non-breaking thin space
 #x00A0	nbthinsp - non-breaking thin space
 #x00B7	w - wordbreak dot
 #x02C8	p - primary stress
@@ -416,3 +418,6 @@ w_in_zd	in derivatives
 #xE046	usage note generic symbol
 #1D120	Musical symbol G clef
 #1D122	Musical symbol F clef
+#xE040	Note symbol (see OUP symbol font)
+#xE118	Cross reference arrow (see OUP symbol font)
+#xE132	Speaker symbol (see OUP symbol font)

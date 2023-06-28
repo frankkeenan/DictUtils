@@ -126,6 +126,7 @@ frac-g	fraction used within text
 full	For elements that are to have a skeleton form option - this is the non skeleton version. The class atttribute specified which content type it refers to
 g	geographic information e.g. &#x2018;US&#x2019;, &#x2018;especially US&#x2019;, &#x2018;US also&#x2019;, &#x2018;Brit&#x2019;, &#x2018;Brit also&#x2019;, etc.	
 g_label	contains the geographical information of the word, e.g. &#x2018;Brit&#x2019;	
+gb	British only tag
 geo	geographical label. A multiple choice list
 gi	un geographic label	
 gl	example gloss. An explanation of part of an example
@@ -185,7 +186,7 @@ inflection	An inflection
 it	italic style	
 it2	italic style 2	
 itpt	italic in verb pattern	
-labels	A geographical, register, and subject labels	
+labels	A container for geographical, register, and subject labels	
 label-g	label group. A container for a collection of geo, reg, subj labels	
 langbanksubhead	subheading used in language bank note box	
 leading	non-closing tag appearing before tags. Used internally for typesetting.	
@@ -322,8 +323,7 @@ tgl	refers to the Polish translation of an English sentence/word (Serbian/Polish
 th	XHTML-style table header element	
 thelp	help text for Korean	
 thm 	homonym number same as &lt;hm&gt;	
-title	title element for ill-g or note
-titled	The text of a note title	
+title	title element for ill-g or note	
 tobj	translation object	
 top-g	top group	
 topline-g	A tag that may be useful for selecting what is presented on the top 
@@ -419,7 +419,7 @@ xr	cross reference
 xr-g	cross reference group. A container for all elements relating to a specific cross reference	
 xr-gs	cross references group. A container for a sequence of xr-g/xref elements of the same type	
 xr_in_d	cross reference in definition	
-xref	cross reference which allows the content of the target and the cross reference text to be different
+xref	cross reference error. A container for all elements relating to a specific cross reference, where it is known that the cross reference being imported into DPS has technical or editorial issues	
 xs	cross reference sense component	
 xs_fm	variant spelling form of headword	
 xs_ss	superscript number for sense numbers	
@@ -603,9 +603,11 @@ syn-gs	Container for syn-g elements
 syn-l	Container for list of syn elements
 syndef	Definition of the synonym
 synref	Link to synonym
+us	American only tag
 xlbl	Label for x-ref
 xsd	Sense definiton for link
 HK	Hong Kong terms (in Chinese translation)
 TW	Taiwan terms (in Chinese translation)
 chn	Chinese translation
 und	text/definition inside usage note box
+geo-alt	Container for alternate British and American content

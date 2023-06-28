@@ -68,15 +68,15 @@ package restructure;
 # $e = restructure::add_levels_info($e, "entry");
 # $e = restructure::add_zp_to_tag_following_unbox($e);
 # $e = restructure::tag_rename($e, "OLDTAGNAME", "NEWTAGNAME", "TOFIX", "PSGCOMMENT");
-# $e = restructure::lose_tag_in_tag($e, $container, $oldtag);
 # $e = restructure::rename_tag_in_tag($e, $container, $oldtag, $newtag);
+# $e = restructure::lose_tag($e, "TAGNAME"); # lose the tags but not the contents
+# $e = restructure::lose_tag_in_tag($e, $container, $oldtag);
 # $e = restructure::rename_tag_with_attrib($e, "OLDTAGNAME", "ATTNAME", "ATTVAL", "NEWTAGNAME");
 # $e = restructure::del_tag_with_attrib($e, "TAGNAME", "ATTNAME", "ATTVAL");
 # $e = restructure::renumber_ngs($e);
 # $e = restructure::attrib_rename($e, "TAGNAME", "OLDATTNAME", "NEWATTNAME");
 # $e = restructure::tag_delete($e, "TAGNAME");
 # $e = restructure::tag_delete_empty($e, "TAGNAME");
-# $e = restructure::lose_tag($e, "TAGNAME"); # lose the tags but not the contents
 # $e = restructure::catname($e, "TAGNAME", "OLDATTNAME", "NEWATTNAME");
 # $e = restructure::catval($e, "TAGNAME", "ATTNAME", "OLDATTVAL", "NEWATTVAL", "TOFIX", "PSGCOMMENT");
 # $e = restructure::del_attrib($e, "TAGNAME", "ATTNAME", "TOFIX", "PSGCOMMENT");
@@ -103,7 +103,7 @@ package restructure;
 #    $e = restructure::move_forward_out_of($e, "PRETAG", "POSTTAG");
 #    ($e, $extract) = restructure::extract_tag($e, $tagname);
 #    $e = restructure::expand_sb_sth($e);
-##
+#
 
 sub change_attval_to_contents
 {
@@ -1557,12 +1557,15 @@ sub lose_tag_in_tag
     $res = "";
     foreach $bit (@BITS){
 	if ($bit =~ s|&fk;||gio){
-	    $bit = restructure::tag_delete($bit, $oldtag);
+	    $bit =~ s|<$oldtag([ >])|<FKDEL$1|gi;
+	    $bit =~ s|</$oldtag([ >])|</FKDEL$1|gi;
+	    $bit = restructure::lose_tag($bit, "FKDEL"); # lose the tags but not the contents
 	}
 	$res .= $bit;
     }
     return $res;
 }
+
 
 
 sub lose_unicode_ents

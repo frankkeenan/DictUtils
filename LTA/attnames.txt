@@ -23,6 +23,7 @@ cultequiv	translation is a cultural equivalent rather than a direct translation
 data-s_type	The icon to be used
 depth	height of an image
 dialog	example includes a dialogue between two speakers
+dict	content belongs to the specified dictionary
 display	how should the element be displayed
 display_xpos	manual instruction to display ts element xpos attribute
 dlf	dlf multiple choice values
@@ -88,6 +89,7 @@ ox3000	this item belongs to the Oxford 3000 vocabulary for this source language
 ox5000	this item belongs to the Oxford 5000 vocabulary for this source language
 opal_spoken	The item is a member of the OPAL spoken wordlist
 opal_written	The item is a member of the OPAL written wordlist
+oupsym	The character position in the OUP symbol font for a symbol
 p	part of speech - from an enumerated set
 pic	picture information
 parent	Collocations: editorial attribute for specifying the "slot" a cl tag appears in
@@ -107,6 +109,7 @@ reg	register information - from an enumerated set
 ref	Which media to use?
 resource	electronic reference to another database &#x2013; this is used when the data is imported to populate DPS links between elements
 sb	Specific to Collocations dictionary - used for group near-synonyms	
+sensenum	The sense number
 sl	Specific to Collocations dictionary - used to indicate usage of the collocate	
 showh	display/hide target headword &#x2013; overrides the default rules for publication of the cross reference
 sk	sort override. Use this value instead of the entry key (as defined in DPS) to determine the sort order of the entry
