@@ -1430,7 +1430,7 @@ sub lint
 {
     my($xml_f, $combo, $dbg) = @_; 
     my($xmllint, $comm, $xml_errs_f, $lint_f, $combo_errs_f);
-    $xmllint = "/usr/local/bin/xmllint --noout";
+    $xmllint = "xmllint --noout";
     $lint_f = sprintf("%s.errs", $xml_f);
     $comm  = sprintf("$xmllint $xml_f 2> $lint_f");
     $pcomm  = sprintf("$xmllint $xml_f > $lint_f");
