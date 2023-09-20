@@ -139,6 +139,7 @@ sub tidy_word
     $wd =~ s|&\#x2122;||go;
     $wd =~ s|&\#x2009;||go;
     $wd =~ s|&\#x00AE;||go;
+    $wd =~ s|[Â·ËŒËˆâ„¢â€§â€‰Â®]||gi;
     return $wd;
 }
 
@@ -561,17 +562,17 @@ sub change_ae_ents
     $line =~ s|&\#242;|&Uacute;|go;
     $line =~ s|&\#243;|&Ucirc;|go;
     $line =~ s|&\#244;|&Ugrave;|go;
-    $line =~ s||&eacute;|go;
-    $line =~ s|‡|&aacute;|go;
-    $line =~ s|’|&iacute;|go;
-    $line =~ s|À|&iquest;|go;
-    $line =~ s|–|&ntilde;|go;
-    $line =~ s|—|&oacute;|go;
-    $line =~ s|Á|&iexclam;|go;
-    $line =~ s|œ|&uacute;|go;
-    $line =~ s|É|&hellip;|go;
-    $line =~ s|Ÿ|&uuml;|go;
-    $line =~ s|ƒ|&Eacute;|go;
+    $line =~ s|æ—¨&eacute;|go;
+    $line =~ s|õ€’¤&aacute;|go;
+    $line =~ s|ç«¹&iacute;|go;
+    $line =~ s|ï¾€|&iquest;|go;
+    $line =~ s|ç¿»&ntilde;|go;
+    $line =~ s|æ…¾&oacute;|go;
+    $line =~ s|ï¾|&iexclam;|go;
+    $line =~ s|å¿¿&uacute;|go;
+    $line =~ s|ï¾‰|&hellip;|go;
+    $line =~ s|æ¯«&uuml;|go;
+    $line =~ s|ãƒ&Eacute;|go;
     return($line);
 }
 
