@@ -1,31 +1,6 @@
 #!/usr/local/bin/perl
 #
-# Input = 
-# Result = 
-# $Id: restructure.pl,v 1.6 2019/09/24 14:41:47 keenanf Exp keenanf $
-# $Log: restructure.pl,v $
-# Revision 1.6  2019/09/24 14:41:47  keenanf
-# *** empty log message ***
-#
-# Revision 1.5  2019/02/28 08:50:04  keenanf
-# *** empty log message ***
-#
-# Revision 1.4  2017/10/16 13:32:57  keenanf
-# *** empty log message ***
-#
-# Revision 1.3  2017/01/27 11:53:02  keenanf
-# *** empty log message ***
-#
-# Revision 1.2  2014/12/05 14:24:22  keenanf
-# *** empty log message ***
-#
-# Revision 1.1  2014/11/30 10:05:52  keenanf
-# Initial revision
-#
-#
 package restructure;
-#require "/disk1/home/keenanf/perl/utils.pl";
-#
 #
 # Load this with
 # require "/NEWdata/dicts/generic/progs/restructure.pl";
