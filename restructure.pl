@@ -9,7 +9,7 @@ package restructure;
 # $e = restructure::change_attval_to_contents($e, $tagname, $attname);
 # $e = restructure::delabel($e);
 # $e = restructure::strip_dps($e);
-# $tagname = restructure::get_tagname($bit);    
+# my $tagname = restructure::get_tagname($bit);    
 # $e = restructure::add_group_tag_outsidegroup($e, "TAG", "GROUP_TAG", "EXCLUDE_GROUP");
 # $e = restructure::add_group_tag($e, "TAG", "GROUP_TAG", "NO_COMBINE"); # if NO_COMBINE == 1 won't group them together
 # $e = restructure::add_xgs($e, $dict);
