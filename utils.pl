@@ -36,7 +36,6 @@ require "/NEWdata/dicts/generic/progs/restructure.pl";
 # $bit = &get_xyz_file
 # $bit = &get_fileh
 # $bit = &get_target_fname
-# $bit = &change_ae_ents
 # $bit = &ents2letter
 # $bit = &get_dr_old
 # $bit = &get_hex_h
@@ -451,7 +450,6 @@ sub get_fileh
 	$h = $1;
 	if ($h =~ /&/)
 	{
-	    $h = &change_ae_ents($h);
 	    $h = &ents2letter($h);
 	}
 	if ($h =~ /^ *$/)
@@ -543,7 +541,6 @@ sub get_dr_old
     {
 	$dr = $1;
 	$dr =~ s|<.*?>||gio;
-	$dr = &change_ae_ents($dr);
 	$dr = &ents2letter($dr);
 	return $h;
     }
@@ -664,7 +661,6 @@ sub get_h
 	$h = $1;
 	$h =~ s|<.*?>||gio;
 	$h =~ s|,.*||;
-	$h = &change_ae_ents($h);
 	$h = &ents2letter($h);
 	return $h;
     }
@@ -693,7 +689,6 @@ sub get_dr
 	$h = $1;
 	$h =~ s|<.*?>||gio;
 	$h =~ s|,.*||;
-	$h = &change_ae_ents($h);
 	$h = &ents2letter($h);
 	return $h;
     }
@@ -728,7 +723,6 @@ sub get_xml_h
 	$h =~ s|,.*||;
 	unless ($az =~ m|^ *$|)
 	{
-	    $h = &change_ae_ents($h);
 	    $h = &ents2letter($h);
 	}
 	$h = &tidy_hexwd($h);
@@ -779,7 +773,6 @@ sub get_hdwd
 	$h =~ s|&[lr][sd]quo;||goi;
 	$h =~ s|<.*?>||gio;
 	$h =~ s|,.*$||;
-	$h = &change_ae_ents($h);
 	$h = &ents2letter($h);
 	return $h;
     }
@@ -810,7 +803,6 @@ sub get_hdwd_BAK
 	$h = $1;
 	$h =~ s|<.*?>||gio;
 	$h =~ s|,.*$||;
-	$h = &change_ae_ents($h);
 	$h = &ents2letter($h);
 	return $h;
     }
@@ -841,7 +833,6 @@ sub get_accented_hdwd
 	$h = $1;
 	$h =~ s|<.*?>||gio;
 	$h =~ s|,.*$||;
-	$h = &change_ae_ents($h);
 	#	$h = &ents2letter($h);
 	return $h;
     }
@@ -869,7 +860,6 @@ sub get_dr_old2
     {
 	$h = $1;
 	$h =~ s|<.*?>||gio;
-	$h = &change_ae_ents($h);
 	$h = &ents2letter($h);
 	return $h;
     }
@@ -1199,7 +1189,7 @@ sub get_sound_dir
     return $subdir;
 }
 
-sub mkdir
+sub mkdir_old
 {
     my($dir, $log) = @_;
     my($comm);
