@@ -398,7 +398,7 @@ wfp	word family part of speech. A multiple choice list
 wfw	word family word	
 wfw-g	word family word group. A container for all elements relating to a word family word	
 wordlist	Indicates that the sense or group is a member of the wordlist specified by the list attribute
-wordlist-g	A container for wordlsit tags
+wordlist-g	A container for wordlist tags
 wx	wrong example	
 x	example	
 x-g	example group. A container for all elements relating to an example	
