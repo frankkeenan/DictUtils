@@ -3,7 +3,7 @@
 package restructure;
 #
 # Load this with
-# require "/NEWdata/dicts/generic/progs/restructure.pl";
+# require "/usr/local/bin/restructure.pl";
 #
 #Calls
 # $e = restructure::change_attval_to_contents($e, $tagname, $attname);
