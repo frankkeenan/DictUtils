@@ -7,8 +7,8 @@ use strict;
 our ($LOG, $LOAD, $opt_f, $opt_u, $opt_D, $opt_I, $opt_O, $opt_d, $opt_c, %W);
 if (1)
 {
-    require "/NEWdata/dicts/generic/progs/utils.pl";
-    require "/NEWdata/dicts/generic/progs/restructure.pl";
+    require "/usr/local/bin/utils.pl";
+    require "/usr/local/bin/restructure.pl";
 }
 else {
     require "./utils.pl";

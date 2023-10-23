@@ -1,23 +1,15 @@
 #!/usr/local/bin/perl
 #
-# $Id: utils.pl,v 1.3 2019/04/01 10:24:46 keenanf Exp keenanf $
-# $Log: utils.pl,v $
-# Revision 1.3  2019/04/01 10:24:46  keenanf
-# Added routine &delete_unlinked_prongs($_)
-#
-# Revision 1.2  2019/04/01 10:17:28  keenanf
-# *** empty log message ***
-#
-# Revision 1.1  2013/07/09 08:28:36  keenanf
-# Initial revision
-#
-# Revision 1.1  2006/02/27 08:52:01  keenanf
-# Initial revision
-#
-#
 use File::Compare;
 use Cwd 'abs_path';
-require "/NEWdata/dicts/generic/progs/restructure.pl";
+if (1)
+{
+    require "/usr/local/bin/restructure.pl";
+}
+else {
+    require "./restructure.pl";
+}
+#
 # $_ = &hex_non_ascii($_) 
 # &mycomm($comm, $DBG, $quiet)
 # $_ = &clean_wd($_);
