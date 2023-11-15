@@ -2,9 +2,13 @@
 use Getopt::Std;
 use autodie qw(:all);
 use utf8;
-require "/home/keenanf/perl/utils.pl";
-require "/home/keenanf/perl/restructure.pl";
-#require "/NEWdata/dicts/generic/progs/xsl_lib_fk.pl";
+our ($LOG, $LOAD, $opt_f, $opt_u, $opt_d, $opt_D, $opt_I, $opt_O, %W, %USED, %F, %INFO);
+our $PDIR = "/usr/local/bin/";
+#$PDIR = ".";
+
+require "$PDIR/utils.pl";
+require "$PDIR/restructure.pl";
+
 $LOG = 0;
 $LOAD = 0;
 $UTF8 = 1;
@@ -15,7 +19,7 @@ $\ = "\n";              # set output record separator
 
 sub main
 {
-    getopts('uf:L:IOc:');
+    getopts('uf:L:IOc:h');
  #   &usage unless ($opt_c);
     &usage if ($opt_u);
     my($e, $res, $bit);
@@ -45,7 +49,10 @@ sub main
 	if (m| row=\"0\"|)
 	{
 	    &get_tag_names($_);
-	    next line;
+	    unless ($opt_h)
+	    {
+		next line;
+	    }
 	}
 	$_ = &set_tag_names($_);
 	print $_;
@@ -87,7 +94,15 @@ sub get_tag_names
 	if ($bit =~ s|&fk;||gi){
 	    $colnum = restructure::get_tag_attval($bit, "col", "col"); 
 	    $name = restructure::get_tag_contents($bit, "col");
+	    if ($colnum == 0)
+	    {
+		if ($name =~ m|^[0-9a-f]+:|)
+		{
+		    $name = "E_EID";
+		}
+	    }
 	    $name =~ s|[^a-z0-9_]+|_|gi;
+	    $name =~ s|_$||;
 	    $NAME[$colnum] = $name;		 
 	}
 	$res .= $bit;

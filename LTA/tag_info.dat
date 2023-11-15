@@ -78,7 +78,7 @@ dhb	bold headword in definition
 dhs	headword in speech marks	
 dis-g	discriminator group. A container for a sequence of discriminators
 display	Part of the indexing structure: Display versions of indexing elements
-div	As with HTML - styling defined by teh class attribute
+div	As with HTML - styling defined by the class attribute
 dl	The dl tag is used for declaring a definition list. This tag is used within &lt;dd&gt; tag. A definition list is similar to other lists but in a definition list, each list item contains two entries; a term and a description
 dlf	literal/figurative discriminator. A multiple choice list
 dps-data	a physical collection of entries. This is the root element in the DTD

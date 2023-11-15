@@ -45,7 +45,10 @@ sub main
 	# s|£|&\#x00A3;|g;
         # $_ = restructure::delabel($_);	
 	# $tagname = restructure::get_tagname($bit);    
-	print $_;
+	s|||;
+	s|<row|\n<row|gi;
+	s|</Worksheet>|\n</Worksheet>|gi;
+	printf("%s", $_); 
 	if ($opt_O){printf(bugout_fp "%s\n", $_);}
     }
     &close_debug_files;
