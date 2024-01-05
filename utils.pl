@@ -2,13 +2,11 @@
 #
 use File::Compare;
 use Cwd 'abs_path';
-if (1)
-{
-    require "/usr/local/bin/restructure.pl";
-}
-else {
-    require "./restructure.pl";
-}
+#$PDIR = ".";
+$PDIR = "/usr/local/bin/";
+
+require "$PDIR/utils.pl";
+require "$PDIR/restructure.pl";
 #
 # $_ = &hex_non_ascii($_) 
 # &mycomm($comm, $DBG, $quiet)
@@ -87,6 +85,15 @@ else {
 #
 $SoundBase = "/usrdata3/audio";
 $SOUND_DBASE = "/usrdata3/audio/DBASE.dat";
+
+sub mark_ascii_range
+{
+    my($e) = @_;
+    my($res, $eid);	
+    $e =~ s|^([\N{U+20}-\N{U+FF}]*)$|<ASCII>$1</ASCII>|;
+    return $e;
+}
+
 
 sub reduce
 {
@@ -277,11 +284,11 @@ sub open_debug_files
 sub open_debug_files_bug
 {
     my($logfile);
-#    open my $fh, ">:utf8", $filename or die "could not open $filename: $!\n";
-#    open my $fh, "<:encoding(utf-8)", $filename or die "could not open $filename: $!\n";    
+    #    open my $fh, ">:utf8", $filename or die "could not open $filename: $!\n";
+    #    open my $fh, "<:encoding(utf-8)", $filename or die "could not open $filename: $!\n";    
     #    if ($UTF8){
-#    binmode(STDIN, ":utf8");
-#    binmode(STDOUT, ":utf8");
+    #    binmode(STDIN, ":utf8");
+    #    binmode(STDOUT, ":utf8");
     #    }
     if ($LOG){
 	if ($opt_L)
@@ -295,10 +302,10 @@ sub open_debug_files_bug
 	open log_fp, ">:utf8", ">$logfile" || die "Unable to open >$logfile"; 
     }
     if ($opt_I){
-	    open bugin_fp,  ">:utf8", ">$0.in" || die "Unable to open >$0.in"; 
+	open bugin_fp,  ">:utf8", ">$0.in" || die "Unable to open >$0.in"; 
     }    
     if ($opt_O){
-	    open bugout_fp,  ">:utf8", ">$0.out" || die "Unable to open >$0.out"; 
+	open bugout_fp,  ">:utf8", ">$0.out" || die "Unable to open >$0.out"; 
     }
 }
 

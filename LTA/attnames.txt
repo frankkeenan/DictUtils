@@ -4,6 +4,7 @@ appr	this element has been approved by the content owner
 before_names	Phonetic is to be used before names
 before_vowels	Phonetic is to be used before vowels
 block	Specifies if CSS block display should be applied to this tag.
+bookmark	On a Ref tag - indicates the identifier of the target element inside the target entry
 bord	this element is &#x2018;borderline&#x2019; and can be suppressed from publication if extent needs to be reduced
 careful	check data is correct vs &#x2018;near homonyms&#x2019;
 cet4	Chinese College English Test Level 4 applies to this item
@@ -130,7 +131,7 @@ symbol	The symbol to display
 t	Collocations specific: indicating how to treat an &lt;sb-g&gt; tag
 thumb	thumbnail picture information
 title	the headword is the title of a published/artistic work &#x2013; used in encyclopedic entries
-topic	On a Ref tag - indicated the target
+topic	On a Ref tag - indicated the target entry identifier
 topics	Topics associated with this content
 topic_cefr	The CEFR value for an item that may not be a member of the Oxford 3000/5000 wordlist but is a member of a topic
 tofix	this element requires editorial attention

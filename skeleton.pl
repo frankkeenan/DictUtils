@@ -4,9 +4,9 @@ use autodie qw(:all);
 use open qw(:std :utf8);
 use utf8;
 use strict;
-our ($LOG, $LOAD, $opt_f, $opt_u, $opt_D, $opt_I, $opt_O, $PDIR, %W, %USED, %F, %INFO);
+our ($LOG, $LOAD, $opt_f, $opt_u, $opt_d, $opt_D, $opt_I, $opt_O, %W, %USED, %F, %INFO, %CT);
+our $PDIR = "/usr/local/bin/";
 #$PDIR = ".";
-$PDIR = "/usr/local/bin/";
 
 require "$PDIR/utils.pl";
 require "$PDIR/restructure.pl";
@@ -76,6 +76,7 @@ sub load_file
 	s|||g;
 	# my ($eid, $info) = split(/\t/);
 	# $INFO{$eid} = $info;
+	# $W{$_} = 1;
     }
     close(in_fp);
 } 
