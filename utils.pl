@@ -8,6 +8,7 @@ $PDIR = "/usr/local/bin/";
 require "$PDIR/utils.pl";
 require "$PDIR/restructure.pl";
 #
+# $_ = &inherit_lexids($_);
 # $_ = &hex_non_ascii($_) 
 # &mycomm($comm, $DBG, $quiet)
 # $_ = &clean_wd($_);
@@ -85,6 +86,34 @@ require "$PDIR/restructure.pl";
 #
 $SoundBase = "/usrdata3/audio";
 $SOUND_DBASE = "/usrdata3/audio/DBASE.dat";
+
+sub inherit_lexids
+{
+    my($e) = @_;
+    my($res, $prev_lexid);	
+    if (m|^.*? lexid=\"(.*?)\"|)
+    {
+	$prev_lexid = $1;
+    }
+    $e =~ s|(<[a-zA-Z].*?>)|&split;&fk;$1&split;|gi;
+    my @BITS = split(/&split;/, $e);
+    my $res = "";
+    foreach my $bit (@BITS){
+	if ($bit =~ s|&fk;||gi){
+	    my $tagname = restructure::get_tagname($bit);    
+	    my $lexid = restructure::get_tag_attval($bit, $tagname, "lexid");
+	    if ($lexid =~ m|^ *$|)
+	    {
+		$bit = restructure::set_tag_attval($bit, $tagname, "lexid", $prev_lexid); 
+	    } else {
+		$prev_lexid = $lexid;
+	    }	    
+	}
+	$res .= $bit;
+    }    
+    return $res;
+}
+
 
 sub mark_ascii_range
 {
