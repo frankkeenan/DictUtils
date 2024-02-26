@@ -42,7 +42,7 @@ sub main
 	
     }
     my $DPSPASS = $ENV{'DPSPASS'};
-    my $comm = sprintf("curl -s --user frank.keenan:%s \"https://dws-dps.idm.fr/api/v1/projects/%s/entries/export/allInternalAttributesAndAdditionalMetadata\"  | perl  /usr/local/bin/add_missing_end_tags.pl  > %s/dps.xml", $DPSPASS, $opt_c, $resdir); 
+    my $comm = sprintf("curl -s --user frank.keenan:%s \"https://dws-dps.idm.fr/api/v1/projects/%s/entries/export/allInternalAttributesAndAdditionalMetadata\"  | perl  /usr/local/bin/add_missing_end_tags.pl  | perl ./oneline.pl > %s/dps.xml", $DPSPASS, $opt_c, $resdir); 
     my $pcomm = $comm;
     $pcomm =~ s| --user +[^ ]* | |;
     printf(STDERR "%s\n\n", $pcomm);

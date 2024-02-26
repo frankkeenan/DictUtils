@@ -6,7 +6,7 @@ use utf8;
 use strict;
 our ($LOG, $LOAD, $opt_f, $opt_u, $opt_D, $opt_I, $opt_O, $opt_d, %W);
 #$PDIR = ".";
-$PDIR = "/usr/local/bin/";
+my $PDIR = "/usr/local/bin/";
 
 require "$PDIR/utils.pl";
 require "$PDIR/restructure.pl";

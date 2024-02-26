@@ -4,12 +4,14 @@ use autodie qw(:all);
 use open qw(:std :utf8);
 use utf8;
 #use strict;
-our ($LOG, $LOAD, $opt_f, $opt_u, $opt_D, $opt_I, $opt_O, $opt_d, %W);
-require "/NEWdata/dicts/generic/progs/utils.pl";
-require "/NEWdata/dicts/generic/progs/restructure.pl";
+our ($LOG, $LOAD, $opt_a, $opt_f, $opt_u, $opt_D, $opt_I, $opt_O, $PDIR, %W, %USED, %F, %INFO, $p);
+$PDIR = "/usr/local/bin/";
+
+require "$PDIR/utils.pl";
+require "$PDIR/restructure.pl";
 
 use Getopt::Std;
-$LOG = 1;
+$LOG = 0;
 
 $, = ' ';               # set output field separator
 $\ = "\n";              # set output record separator
@@ -64,7 +66,7 @@ sub main
 
     &report_tag_count;
     &report_ent_count;
-    &report_where;
+#    &report_where;
     if (($opt_e) || ($opt_o))
     {
 	for ($lct=0; $lct <= $#LINE; $lct++)
