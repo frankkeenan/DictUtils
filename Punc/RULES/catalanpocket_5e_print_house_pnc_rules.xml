@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE config SYSTEM "config.dtd"
+	[
+		<!--load entity declarations for print symbols-->
+		<!ENTITY % book_symbols SYSTEM "book_symbols_tags.ent">
+
+		%book_symbols;
+	]
+>
+<!--fill in config attributes to show intended use for this config file-->
+<config project="catalan_pocket5" pub="print" edition="house" target="xml" css="brazilian3e.css">
+
+	<!--delete elements with these edition settings-->
+	<rules>
+		<!--delete elements which are to be excluded from this edition-->
+		<rule><xpath>//xr-g[edition-g/exclude[@edition='house']]</xpath><action type="delete"/></rule>
+		<rule><xpath>//ill-g[edition-g/exclude[@edition='house']]</xpath><action type="delete"/></rule>
+		
+		<!--delete elements which are to be included in other editions and not in this edition-->
+		<rule><xpath>//xr-g[edition-g[not(include[@edition='house']) and include[@edition!='house']]]</xpath><action type="delete"/></rule>
+		<rule><xpath>//ill-g[edition-g[not(include[@edition='house']) and include[@edition!='house']]]</xpath><action type="delete"/></rule>
+	</rules>
+		
+
+		<!--run essential_multilingual punctuation rules-->
+<xi:include href="catalan_pocket5_print_pnc_rules.xml" parse="xml" xpointer="catalan_pocket5_print_pnc_rules"/>
+
+</config>

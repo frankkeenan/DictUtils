@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE config SYSTEM "config.dtd"[
+		<!--load entity declarations for digital symbols-->
+		<!ENTITY % digital_symbols SYSTEM "digital_symbols.ent">
+		%digital_symbols;
+	]>
+<!--fill in config attributes to show intended use for this config file-->
+<config project="catalan_pocket5" pub="digital" edition="house" target="xml" css="ald9_digital.css">
+	<rules xml:id="catalan_pocket5_digital_all_editions_pnc_rules" >
+	
+		<!--rename these elements-->
+		
+		<rule><xpath>//xref</xpath><action type="rename">xr-g</action></rule>
+		
+		<!--DELETIONS-->
+
+		<rule><xpath>//xr-g[@resource='esphrv']</xpath><action type="delete"/></rule>
+		<rule><xpath>//xr-gs[@xt='wordfamily']</xpath><action type="delete"/></rule>
+		
+		<!--delete elements with "non-digital" @pub-->
+		<rule><xpath>//*[@pub='print']</xpath><action type="delete"/></rule>
+		<rule><xpath>//*[@sup='y']</xpath><action type="delete"/></rule>
+		
+		<!--delete these elements-->
+<!--		<rule><xpath>//dr-gs</xpath><action type="delete"/></rule>--> <!-- DIGITAL NB xrefs!-->
+<!--		<rule><xpath>//pron-g[@trans='orth']</xpath><action type="delete"/></rule>--> <!-- REMOVED GL 20150730 -->
+		<rule><xpath>//xr-gs[@xt='visualvocab']</xpath><action type="delete"/></rule>
+		<rule><xpath>//xr-gs[@xt='mlt']</xpath><action type="delete"/></rule> <!--to catch any without DPS links that won't have been replaced with the target-->
+		
+<!--		<rule><xpath>//top-g[//pos[starts-with(@pos, 'v')]]/if-gs</xpath><action type="delete"/></rule> -->
+		<rule><xpath>//sn-gs[preceding-sibling::top-g[//pos[starts-with(@pos, 'v')]]]/sn-g/if-gs</xpath><action type="delete"/></rule>
+		
+		<!--suppress XHM while HM is suppressed-->
+<!--		<rule><xpath>//xhm</xpath><action type="delete"/></rule>-->
+				
+		<!--delete XH/XHM if XW and these @xt values-->
+		<rule><xpath>//xr-gs[@xt='cp' or @xt='eq' or @xt='nsyn' or @xt='opp' or @xt='see' or @xt='syn']/xr-g/xh[preceding-sibling::xw]</xpath><action type="delete"/></rule>
+		<rule><xpath>//xr-gs[@xt='cp' or @xt='eq' or @xt='nsyn' or @xt='opp' or @xt='see' or @xt='syn']/xr-g/xhm[preceding-sibling::xw]</xpath><action type="delete"/></rule>
+		<rule><xpath>//xr-gs[@xt='id' and not(ancestor::un)]/xr-g/xw</xpath><action type="delete"/></rule> <!--DIGITAL ok?-->
+		<rule><xpath>//xr-gs[@xt='pv']/xr-g/xh[preceding-sibling::xw]</xpath><action type="delete"/></rule> <!--DIGITAL ok?-->
+		<rule><xpath>//xr-gs[@xt='pv']/xr-g/xhm[preceding-sibling::xw]</xpath><action type="delete"/></rule> <!--DIGITAL ok?-->
+		<rule><xpath>//xr-gs[@xt='pv']/xr-g/xh[following-sibling::xw]</xpath><action type="delete"/></rule> <!--DIGITAL ok?-->
+		<rule><xpath>//xr-gs[@xt='pv']/xr-g/xhm[following-sibling::xw]</xpath><action type="delete"/></rule> <!--DIGITAL ok?-->
+		<rule><xpath>//xr-g[contains(descendant::xh, 'pàg') and contains(descendant::xh, 'xxx')]</xpath><action type="delete"/></rule>
+
+
+			<!--duplicated above to deal with deadxref-->
+		
+		<rule><xpath>//xr-gs[@xt='cp' or @xt='eq' or @xt='nsyn' or @xt='opp' or @xt='see' or @xt='syn']/deadxref/xh[preceding-sibling::xw]</xpath><action type="delete"/></rule>
+		<rule><xpath>//xr-gs[@xt='cp' or @xt='eq' or @xt='nsyn' or @xt='opp' or @xt='see' or @xt='syn']/deadxref/xhm[preceding-sibling::xw]</xpath><action type="delete"/></rule>
+		<rule><xpath>//xr-gs[@xt='id']/deadxref/xh[preceding-sibling::xw]</xpath><action type="delete"/></rule> <!--DIGITAL ok?-->
+		<rule><xpath>//xr-gs[@xt='id']/deadxref/xhm[preceding-sibling::xw]</xpath><action type="delete"/></rule> <!--DIGITAL ok?-->
+		<rule><xpath>//xr-gs[@xt='pv']/deadxref/xh[preceding-sibling::xw]</xpath><action type="delete"/></rule> <!--DIGITAL ok?-->
+		<rule><xpath>//xr-gs[@xt='pv']/deadxref/xhm[preceding-sibling::xw]</xpath><action type="delete"/></rule> <!--DIGITAL ok?-->
+		<rule><xpath>//xr-gs[@xt='pv']/deadxref/xh[following-sibling::xw]</xpath><action type="delete"/></rule> <!--DIGITAL ok?-->
+		<rule><xpath>//xr-gs[@xt='pv']/deadxref/xhm[following-sibling::xw]</xpath><action type="delete"/></rule> <!--DIGITAL ok?-->
+
+		<!--delete XW if these @xt values-->
+		<!--<rule><xpath>//xw[ancestor::xr-gs[@xt='id']]</xpath><action type="delete"/></rule>-->
+
+		<!--delete these XR-G children in wordfinder notes-->
+		<rule><xpath>//xhm[ancestor::unbox[@unbox='wordfinder']]</xpath><action type="delete"/></rule>
+		<rule><xpath>//xpos[ancestor::unbox[@unbox='wordfinder']]</xpath><action type="delete"/></rule>
+		<rule><xpath>//xs[ancestor::unbox[@unbox='wordfinder']]</xpath><action type="delete"/></rule>
+		
+		
+
+		<!--delete these elements if now empty (delete child before parent)-->
+
+		<rule><xpath>//pron-g</xpath><action type="delete_empty"/></rule>
+		<rule><xpath>//sn-g</xpath><action type="delete_empty"/></rule>
+		<rule><xpath>//sn-gs</xpath><action type="delete_empty"/></rule>
+		<rule><xpath>//rx-g</xpath><action type="delete_empty"/></rule>
+		<rule><xpath>//x-g</xpath><action type="delete_empty"/></rule>
+		<rule><xpath>//x-gs</xpath><action type="delete_empty"/></rule>
+		<rule><xpath>//xr-gs</xpath><action type="delete_empty"/></rule>
+		<rule><xpath>//res-g</xpath><action type="delete_empty"/></rule>
+		
+		<!--homonyms-->
+
+		<rule><xpath>entry[@hm and not(@psg='Guide-FromStub')]</xpath><action type="hm"/></rule>
+		
+		<!--NUMBERED SENSES-->
+		
+		<!--number sn-g - keep the three rules in this sequence to ensure numbering reinitialises correctly-->
+		<rule><xpath>//cfe-g | //dr-g | //idm-g | //pv-g</xpath><action type="num"/></rule>
+		<rule><xpath>//subentry-g</xpath><action type="num"/></rule>
+		<rule><xpath>//h-g</xpath><action type="num"/></rule>
+
+		<!--LETTERED SENSES-->
+		<rule><xpath>//sn-g[descendant::subs-g]</xpath><action type="letter"/></rule>
+		<rule><xpath>//pnc[@class='letter']</xpath><action type="space"/></rule>	<!--probably not universal, so specified here rather than in perl program-->
+		<rule><xpath>//pnc[@class='letter']</xpath><action type="wrap">()</action></rule>		
+
+<!-- Senses start new para so no space wanted -->
+<!--		<rule><xpath>//pnc[@class='num']</xpath><action type="space"/></rule>-->	<!--probably not universal, so specified here rather than in perl program-->
+		
+		
+		<!--OXFORD 3000 and AWL-->
+		
+		<!--keep this after sense numbering to ensure correct symbol positioning-->
+<!--
+		<rule><xpath>//dr-g/top-g[descendant::dr[@academic]]</xpath><action type="sym_first">&awlsym;</action></rule>
+		<rule><xpath>//h-g/top-g[descendant::h[@academic]]</xpath><action type="sym_first">&awlsym;</action></rule>
+
+		<rule><xpath>//dr-g/top-g[descendant::dr[@ox3000='y']]</xpath><action type="sym_first">&coresymsub;</action></rule>
+		
+		<rule><xpath>//h-g/top-g[descendant::h[@cefr='a1']]</xpath><action type="sym_first">&cefrsym_a1;</action></rule>
+		<rule><xpath>//h-g/top-g[descendant::h[@cefr='a2']]</xpath><action type="sym_first">&cefrsym_a2;</action></rule>
+		<rule><xpath>//h-g/top-g[descendant::h[@cefr='b1']]</xpath><action type="sym_first">&cefrsym_b1;</action></rule>
+		<rule><xpath>//h-g/top-g[descendant::h[@cefr='b2']]</xpath><action type="sym_first">&cefrsym_b2;</action></rule>
+		<rule><xpath>//h-g/top-g[descendant::h[@cefr='c1']]</xpath><action type="sym_first">&cefrsym_c1;</action></rule>
+		<rule><xpath>//h-g/top-g[descendant::h[@cefr='c2']]</xpath><action type="sym_first">&cefrsym_c2;</action></rule>
+		<rule><xpath>//h-g/top-g[descendant::h[@ox3000='y']]</xpath><action type="sym_first">&coresym;</action></rule>
+		<rule><xpath>//h-g/top-g[descendant::h[@ox5000='y']]</xpath><action type="sym_first">&ox5ksym;</action></rule>
+
+		<rule><xpath>//idm-g/top-g[descendant::idm[@cefr='a1']]</xpath><action type="sym_first">&cefrsym_a1;</action></rule>
+		<rule><xpath>//idm-g/top-g[descendant::idm[@cefr='a2']]</xpath><action type="sym_first">&cefrsym_a2;</action></rule>
+		<rule><xpath>//idm-g/top-g[descendant::idm[@cefr='b1']]</xpath><action type="sym_first">&cefrsym_b1;</action></rule>
+		<rule><xpath>//idm-g/top-g[descendant::idm[@cefr='b2']]</xpath><action type="sym_first">&cefrsym_b2;</action></rule>
+		<rule><xpath>//idm-g/top-g[descendant::idm[@cefr='c1']]</xpath><action type="sym_first">&cefrsym_c1;</action></rule>
+		<rule><xpath>//idm-g/top-g[descendant::idm[@cefr='c2']]</xpath><action type="sym_first">&cefrsym_c2;</action></rule>
+		<rule><xpath>//idm-g/top-g[descendant::idm[@ox3000='y']]</xpath><action type="sym_first">&coresymsub;</action></rule>
+		
+		<rule><xpath>//pv-g/top-g[descendant::pv[@cefr='a1']]</xpath><action type="sym_first">&cefrsym_a1;</action></rule>
+		<rule><xpath>//pv-g/top-g[descendant::pv[@cefr='a2']]</xpath><action type="sym_first">&cefrsym_a2;</action></rule>
+		<rule><xpath>//pv-g/top-g[descendant::pv[@cefr='b1']]</xpath><action type="sym_first">&cefrsym_b1;</action></rule>
+		<rule><xpath>//pv-g/top-g[descendant::pv[@cefr='b2']]</xpath><action type="sym_first">&cefrsym_b2;</action></rule>
+		<rule><xpath>//pv-g/top-g[descendant::pv[@cefr='c1']]</xpath><action type="sym_first">&cefrsym_c1;</action></rule>
+		<rule><xpath>//pv-g/top-g[descendant::pv[@cefr='c2']]</xpath><action type="sym_first">&cefrsym_c2;</action></rule>
+		<rule><xpath>//pv-g/top-g[descendant::pv[@ox3000='y']]</xpath><action type="sym_first">&coresymsub;</action></rule>
+
+		<rule><xpath>//sn-g[@cefr='a1']</xpath><action type="sym_first">&cefrsym_a1;</action></rule>
+		<rule><xpath>//sn-g[@cefr='a2']</xpath><action type="sym_first">&cefrsym_a2;</action></rule>
+		<rule><xpath>//sn-g[@cefr='b1']</xpath><action type="sym_first">&cefrsym_b1;</action></rule>
+		<rule><xpath>//sn-g[@cefr='b2']</xpath><action type="sym_first">&cefrsym_b2;</action></rule>
+		<rule><xpath>//sn-g[@cefr='c1']</xpath><action type="sym_first">&cefrsym_c1;</action></rule>
+		<rule><xpath>//sn-g[@cefr='c2']</xpath><action type="sym_first">&cefrsym_c2;</action></rule>
+-->
+<!--added later in target_xdcc.pl	<rule><xpath>//sn-g[@ox3000='y']</xpath><action type="sym_first">&coresymsub;</action></rule> -->
+<!--		<rule><xpath>//sn-g[@ox5000='y']</xpath><action type="sym_first">&ox5ksym;</action></rule>
+
+		<rule><xpath>//subentry-g[@cefr='a1']</xpath><action type="sym_first">&cefrsym_a1;</action></rule>
+		<rule><xpath>//subentry-g[@cefr='a2']</xpath><action type="sym_first">&cefrsym_a2;</action></rule>
+		<rule><xpath>//subentry-g[@cefr='b1']</xpath><action type="sym_first">&cefrsym_b1;</action></rule>
+		<rule><xpath>//subentry-g[@cefr='b2']</xpath><action type="sym_first">&cefrsym_b2;</action></rule>
+		<rule><xpath>//subentry-g[@cefr='c1']</xpath><action type="sym_first">&cefrsym_c1;</action></rule>
+		<rule><xpath>//subentry-g[@cefr='c2']</xpath><action type="sym_first">&cefrsym_c2;</action></rule>
+		<rule><xpath>//subentry-g[@ox3000='y']</xpath><action type="sym_first">&coresymsub;</action></rule>
+		<rule><xpath>//subentry-g[@ox5000='y']</xpath><action type="sym_first">&ox5ksym;</action></rule>
+-->
+
+		<!--GROUPS OF SENSES WITH SHORTCUTS-->
+		
+		<!-- for multiple sn-gs siblings-->
+<!--		<rule><xpath>//sn-gs[../sn-gs[2]]</xpath><action type="sym_first">&sdsym;</action></rule>-->
+		<rule><xpath>//shcut</xpath><action type="space"/></rule>
+		
+		
+
+		<rule><xpath>//un</xpath><action type="prefix">nota</action></rule>
+		<rule><xpath>//un</xpath><action type="space"/></rule>
+		
+		
+		<rule><xpath>//ul[@class='inline']</xpath><action type="mark_display">block</action></rule>
+
+		<!--inline list item separator-->
+		<rule><xpath>//unbox[@unbox='mlt']//ul[@class='inline']/li_mlt[preceding-sibling::li_mlt]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//unbox[@unbox='mlt']//ul[@class='inline']/li[preceding-sibling::li]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//ul[@class='inline']/li[preceding-sibling::li and not(ancestor::unbox[@unbox='mlt'])]</xpath><action type="sep">&lisep;</action></rule>
+		
+		<!--newline before other list item types except first-->
+		<rule><xpath>//li[parent::ul[@class!='inline']]</xpath><action type="mark_display">block</action></rule>
+
+		<!--symbol and space for bullet list items-->
+		<rule><xpath>//li[parent::ul[@class='bullet']]</xpath><action type="bullet">&lisym_bullet;</action></rule>
+		
+		<!--newlines-->
+		<rule><xpath>//h1</xpath><action type="mark_display">block</action></rule>
+		<rule><xpath>//h2</xpath><action type="mark_display">block</action></rule>
+		<rule><xpath>//h3</xpath><action type="mark_display">block</action></rule>
+		<rule><xpath>//p</xpath><action type="mark_display">block</action></rule>
+		<rule><xpath>//tr</xpath><action type="mark_display">block</action></rule>
+		<rule><xpath>//unbox</xpath><action type="mark_display">block</action></rule>
+
+		<!--table-cells-->
+		<rule><xpath>//td</xpath><action type="mark_display">table-cell</action></rule>
+		<rule><xpath>//th</xpath><action type="mark_display">table-cell</action></rule>
+
+		<!-- colon in usage notes between text and examples - Mantis 13731 -->
+		<rule><xpath>//unbox//x-gs[preceding-sibling::node()[1][self::text()]]</xpath><action type="sep">:</action></rule>
+		<rule><xpath>//un//x-gs[preceding-sibling::node()[1][self::text()]]</xpath><action type="sep">:</action></rule>
+
+		<!--ALT-G-->
+
+		<rule><xpath>//alt[preceding-sibling::*[1][self::alt]]</xpath><action type="sep">/</action></rule>
+
+		<!--Guide BLOCKQUOTES-->
+		
+		<rule><xpath>//p-g</xpath><action type="wrap">“”</action></rule>		
+
+		<!--COMPLEMENT FRAMES-->
+
+		<rule><xpath>//cf[preceding-sibling::*[1][not(self::cf)]]</xpath><action type="space"/></rule>
+		<rule><xpath>//cf[preceding-sibling::*[1][self::cf]]</xpath><action type="sep">;</action></rule>
+				
+		<!--DEFINITIONS-->
+
+		<rule><xpath>//def[preceding-sibling::*]</xpath><action type="mark_display">inline</action></rule>
+		<rule><xpath>//def</xpath><action type="space"/></rule>
+		<rule><xpath>//def_qt</xpath><action type="wrap">‘’</action></rule>
+		
+		<!--DISCRIMINATORS-->
+
+		<rule><xpath>//dis-g</xpath><action type="wrap">()</action></rule>
+		<rule><xpath>//dis-g</xpath><action type="space"/></rule>
+
+		
+
+	<rule><xpath>//dr-g/top-g</xpath><action type="sym_first">&drsym;</action></rule>
+
+		<rule><xpath>//dr[preceding-sibling::dr]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//dr</xpath><action type="partial">-</action></rule>
+
+		<!--GLOSS-->
+
+		<rule><xpath>//gl</xpath><action type="prefix">=</action></rule>
+		<rule><xpath>//gl</xpath><action type="wrap">()</action></rule>
+				
+		<!--GRAM-G-->
+		
+		<rule><xpath>//gram[preceding-sibling::*[1][self::gram]]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//gram-g</xpath><action type="wrap">[]</action></rule>
+		<rule><xpath>//gram-g</xpath><action type="space"/></rule>
+		
+		<!--H-->
+		<rule><xpath>//h[preceding-sibling::h]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//h[2]</xpath><action type="partial">-</action></rule>
+		
+		<!--CFEs-->
+		<rule><xpath>//cfe-gs</xpath><action type="heading">loc</action></rule>
+		<rule><xpath>//cfe-g</xpath><action type="space"/></rule>
+<!--		<rule><xpath>//idm[preceding-sibling::idm]</xpath><action type="sep">&idsep;</action></rule> -->
+		<rule><xpath>//cfe[preceding-sibling::cfe]</xpath><action type="sep">,</action></rule>
+		
+		<!--IDIOMS-->
+		<rule><xpath>//idm-gs</xpath><action type="heading">EXPRESSIONS</action></rule>
+		<rule><xpath>//idm-g</xpath><action type="space"/></rule>
+<!--		<rule><xpath>//idm[preceding-sibling::idm]</xpath><action type="sep">&idsep;</action></rule> -->
+		<rule><xpath>//idm[preceding-sibling::idm]</xpath><action type="sep">,</action></rule>
+		
+		<!--IRREGULAR FORMS-->
+
+		<rule><xpath>//if[preceding-sibling::*[1][self::label-g]]</xpath><action type="space"/></rule>
+
+		<rule><xpath>//if-g[preceding-sibling::*[1][self::or]]</xpath><action type="sep"><ei>o</ei></action></rule>		
+		<rule><xpath>//if-g[preceding-sibling::*[1][self::if-g]/@form=./@form]</xpath><action type="sep"><ei>o</ei></action></rule>
+		
+		<!--separate adjacent IF-G elements with a semi-colon before or after //if-g with @form="ptpp"-->
+		<rule><xpath>//if-g[@form='ptpp' and preceding-sibling::*[1][self::if-g]]</xpath><action type="sep">;</action></rule>
+		<rule><xpath>//if-g[preceding-sibling::*[1][self::if-g[@form='ptpp']]]</xpath><action type="sep">;</action></rule>
+
+		<!-- separate adjacent IF-G elements with a comma if the second IF-G doesn't include LABEL-G, or if the second IF-G contains the IF "busses"-->
+		<rule><xpath>//if-g[not(child::*[1][self::label-g]) and preceding-sibling::*[1][self::if-g]]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//if-g[child::if/text()='busses' and preceding-sibling::*[1][self::if-g]]</xpath><action type="sep">,</action></rule>
+
+		<!--if IF-G contains LABEL-G (and doesn't contain IF "busses") separate from preceding IF-G with a space and bracket the IF-G containing LABEL-G-->
+		<rule><xpath>//if-g[child::*[1][self::label-g] and preceding-sibling::*[1][self::if-g]]</xpath><action type="space"/></rule>
+		<rule><xpath>//if-g[child::*[1][self::label-g] and not(child::if/text()='busses')]</xpath><action type="wrap">()</action></rule>
+		
+		<!--output prefix if first "pl" if-g-->
+		<rule><xpath>//if-g[@form='pl'][1]</xpath><action type="prefix">plural</action></rule>
+
+		<rule><xpath>//if-g[@form='superl' and child::nil]</xpath><action type="prefix"><er>no</er> superlative</action></rule>
+		<rule><xpath>//if-gs</xpath><action type="wrap">()</action></rule>
+		<rule><xpath>//if-gs</xpath><action type="space"/></rule>
+
+		<!--LABEL-G-->
+
+		<!--separate the child elements - "or" before or element, else comma-->
+		<rule><xpath>//label-g/or</xpath><action type="sep">or</action></rule>
+		<rule><xpath>//geo[preceding-sibling::*[1][self::geo] or preceding-sibling::*[1][self::reg] or preceding-sibling::*[1][self::subj]]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//reg[preceding-sibling::*[1][self::geo] or preceding-sibling::*[1][self::reg] or preceding-sibling::*[1][self::subj]]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//subj[preceding-sibling::*[1][self::geo] or preceding-sibling::*[1][self::reg] or preceding-sibling::*[1][self::subj]]</xpath><action type="sep">,</action></rule>	
+
+		<!--unless parent is v-g, wrap child elements with round brackets-->
+		<rule><xpath>//label-g[not(ancestor::v-gs) and not(parent::if-g) and not(@pnc='n')]</xpath><action type="wrap">()</action></rule>
+		<rule><xpath>//label-g[not(parent::li) and not(parent::v-g/*[1][self::label-g])]</xpath><action type="space"/></rule>
+		
+		<!--PART OF SPEECH-->
+<!--		<rule><xpath>//posref[preceding-sibling::posref]</xpath><action type="sep">,</action></rule> -->
+		<rule><xpath>//pos[preceding-sibling::pos and not(parent::body)]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//pos-g[ancestor::trans-gs]</xpath><action type="wrap">[]</action></rule>
+		<rule><xpath>//pos-g</xpath><action type="space"/></rule>
+
+		<!--PHONETICS-->
+
+		<rule><xpath>//eph</xpath><action type="wrap">//</action></rule>
+		<rule><xpath>//phon</xpath><action type="wrap">//</action></rule>
+		<rule><xpath>//pron-gs</xpath><action type="space"/></rule>
+
+		
+		<rule><xpath>//pron-g[@geo="br" and preceding-sibling::pron-g[1]/@geo!=@geo]</xpath><action type="prefix">GB</action></rule>
+<!--		<rule><xpath>//pron-g[@geo="n_am" and not(preceding-sibling::pron-g[1])]</xpath><action type="prefix">USA</action></rule>  -->
+		<rule><xpath>//pron-g[@geo="n_am" and preceding-sibling::pron-g[1]/@geo!=@geo]</xpath><action type="prefix">USA</action></rule>
+<!--		<rule><xpath>//pron-g[@geo="usa" and preceding-sibling::pron-g[1]/@geo!=@geo]</xpath><action type="prefix">US</action></rule>  -->
+
+		<!--generate a semi-colon between adjacent pron-g elements-->
+		<rule><xpath>//pron-g[preceding-sibling::pron-g[1]/@geo!=@geo]</xpath><action type="sep">;</action></rule>
+		<rule><xpath>//pron-g[preceding-sibling::pron-g[1]/@geo=@geo]</xpath><action type="sep">,</action></rule>
+
+
+		<!--generate a semi-colon and North American English before the first of a sequence of North American English pron-g elements-->
+		<!--<rule><xpath>//pron-g[@geo="n_am" and preceding-sibling::pron-g[1]/@geo!=@geo]</xpath><action type="prefix">North American English</action></rule-->
+		
+		<!--PHRASAL VERBS-->
+		<rule><xpath>//pv-gs</xpath><action type="heading">PHRASAL VERBS</action></rule>
+
+		<!--space before pv-g except where first child of pvp-g on newline-->
+<!--		<rule><xpath>//pvp-g[1]/pv-g[1]</xpath><action type="space"/></rule>
+		<rule><xpath>//pv-g[preceding-sibling::pv-g]</xpath><action type="space"/></rule> -->
+
+		<!--pvp-g sections-->
+<!--		<rule><xpath>//pvp-g[preceding-sibling::pvp-g]</xpath><action type="mark_display">block</action></rule>
+		<rule><xpath>//pv[preceding-sibling::pv]</xpath><action type="sep">&pvsep;</action></rule> -->
+
+		<!--SUB-ENTRY-->
+
+<!--		<rule><xpath>//subentry-g</xpath><action type="sym_first">&psym;</action></rule> -->
+		<rule><xpath>//subentry-g</xpath><action type="mark_display">block</action></rule>
+		
+		<!--TRANSLATIONS-->
+		
+		<rule><xpath>//tcf</xpath><action type="space"/></rule>
+		
+		<rule><xpath>//trans-gs</xpath><action type="space"/></rule>
+
+		<rule><xpath>//trans-g[preceding-sibling::*[1][self::trans-g]]</xpath><action type="sep">;</action></rule>
+		
+		<rule><xpath>//ts[preceding-sibling::*[1][self::dis-g]]</xpath><action type="space"/></rule>
+		<rule><xpath>//ts[preceding-sibling::*[1][self::tel or self::ts or self::ts-g]]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//ts[preceding-sibling::*[1][self::if-gs]]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//ts[@cultequiv='y']</xpath><action type="sym_first">&tceqsym;</action></rule>
+
+		<rule><xpath>//ts-g[preceding-sibling::*[1][self::dis-g]]</xpath><action type="space"/></rule>
+		<rule><xpath>//ts-g[preceding-sibling::*[1][self::ts or self::ts-g]]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//ts-g[preceding-sibling::*[1][self::if-gs]]</xpath><action type="sep">,</action></rule>
+		
+		<rule><xpath>//tel</xpath><action type="wrap">()</action></rule>
+		<rule><xpath>//tel</xpath><action type="space"/></rule>
+		
+		<rule><xpath>//tsab</xpath><action type="prefix">abreviatura</action></rule>
+		<rule><xpath>//tsab</xpath><action type="wrap">()</action></rule>
+		<rule><xpath>//tsab</xpath><action type="space"/></rule>
+		
+		<rule><xpath>//tx</xpath><action type="space"/></rule>
+
+		<rule><xpath>//tobj</xpath><action type="space"/></rule>
+		<rule><xpath>//tobj/following-sibling::node()[1][self::text()]</xpath><action type="space"/></rule>
+
+		<!--USE NOTES-->
+
+		<rule><xpath>//use</xpath><action type="wrap">()</action></rule>
+		<rule><xpath>//use</xpath><action type="space"/></rule>
+		
+		<!--VARIANTS-->
+		
+		<rule><xpath>//v</xpath><action type="partial">-</action></rule>
+		<rule><xpath>//v[preceding-sibling::*[1][self::label-g]]</xpath><action type="space"/></rule>
+		
+		<rule><xpath>//v-g[preceding-sibling::v-g]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//v-g[preceding-sibling::*[1][self::label-g]]</xpath><action type="space"/></rule>
+
+			<!--abbreviations-->
+			<rule><xpath>//v-gs[@type='ab']</xpath><action type="prefix">abreviatura</action></rule>
+			<rule><xpath>//v-gs[@type='ab']</xpath><action type="wrap">()</action></rule>
+			<rule><xpath>//v-gs[@type='ab']</xpath><action type="space"/></rule>
+
+			<!--alt forms-->
+			<rule><xpath>//v-gs[@type='alt']</xpath><action type="space"/></rule>
+			
+						<!--full forms-->
+			<rule><xpath>//v-gs[@type='ff']</xpath><action type="prefix">abreviatura de</action></rule>
+			<rule><xpath>//v-gs[@type='ff']</xpath><action type="wrap">()</action></rule>
+			<rule><xpath>//v-gs[@type='ff']</xpath><action type="space"/></rule>
+			
+						<!--symbols-->
+			<rule><xpath>//v-gs[@type='sym']</xpath><action type="prefix">símbolo</action></rule>
+			<rule><xpath>//v-gs[@type='sym']</xpath><action type="wrap">()</action></rule>
+			<rule><xpath>//v-gs[@type='sym']</xpath><action type="space"/></rule>
+
+			<!--variant foms - "also" prefix if first v-g begins with a v element-->
+			<rule><xpath>//v-gs[@type='vf' and v-g[1]/*[1][self::v] and not(*[1][self::label-g])]</xpath><action type="prefix">tamb&#x00E9;</action></rule>
+			<rule><xpath>//v-gs[@type='vf']</xpath><action type="wrap">()</action></rule>
+			<rule><xpath>//v-gs[@type='vf']</xpath><action type="space"/></rule>
+
+			<rule><xpath>//v-gs[@type='vs' and v-g[1]/*[1][self::v] and not(*[1][self::label-g])]</xpath><action type="prefix">tamb&#x00E9;</action></rule>
+			<rule><xpath>//v-gs[@type='vs']</xpath><action type="wrap">()</action></rule>
+			<rule><xpath>//v-gs[@type='vs']</xpath><action type="space"/></rule>
+
+
+
+			<rule><xpath>//vp-g[@form='root']/vp</xpath><action type="prefix">present simple: I / you / we / they</action></rule>
+			<rule><xpath>//vp-g[@form='thirdps']/vp</xpath><action type="prefix">he / she / it</action></rule>
+			<rule><xpath>//vp-g[@form='past']/vp</xpath><action type="prefix">past simple:</action></rule>
+			<rule><xpath>//vp-g[@form='pastpart']/vp</xpath><action type="prefix">past participle:</action></rule>
+			<rule><xpath>//vp-g[@form='prespart']/vp</xpath><action type="prefix">-ing form:</action></rule>
+			<!--add a space before above suffix elements-->
+			<rule><xpath>//vp/pnc</xpath><action type="space"/></rule>
+			
+		<!--WORD FAMILIES-->
+
+		<rule><xpath>//wf-g</xpath><action type="heading">Word Family</action></rule>	<!--Jamie u/c or l/c?-->
+		<rule><xpath>//wf-g</xpath><action type="mark_display">block</action></rule>
+
+		<rule><xpath>//wfw-g</xpath><action type="mark_display">block</action></rule>
+
+		<rule><xpath>//wfp</xpath><action type="space"/></rule>
+		
+		<rule><xpath>//wfo</xpath><action type="space"/></rule>
+		<rule><xpath>//wfo</xpath><action type="sym_first">≠</action></rule>
+		<rule><xpath>//wfo</xpath><action type="wrap">()</action></rule>
+		
+		<!--EXAMPLES-->
+<!-- remove generation of xsep from punctuation - it's a CSS thing -->
+		<rule><xpath>//x[preceding-sibling::*[1][self::cf]]</xpath><action type="space"/></rule>
+		<rule><xpath>//x[preceding-sibling::*[1][self::label-g]]</xpath><action type="space"/></rule>
+		<rule><xpath>//rx-g[preceding-sibling::*[1][self::cf]]</xpath><action type="space"/></rule>
+		<rule><xpath>//rx-g[preceding-sibling::*[1][self::label-g]]</xpath><action type="space"/></rule>
+
+		<rule><xpath>//ul/li/x-gs/x-g</xpath><action type="mark_display">inline</action></rule>
+		<rule><xpath>//x-g[not(@display='inline')]</xpath><action type="sym_first">&xseps;</action></rule>
+
+		<!--XR-GS block display-->
+
+		<rule><xpath>//body/xr-gs</xpath><action type="mark_display">block</action></rule>
+
+		<!--XR-GS separator in wordfinder UNBOX-->
+		
+		<rule><xpath>//unbox[@unbox='wordfinder']//xr-gs[preceding-sibling::*[1][self::xr-gs]]</xpath><action type="sep">,</action></rule>
+
+
+		<!--XR-GS prefixes-->
+
+		<rule><xpath>//xr-gs[not(parent::body|parent::def|parent::p)]</xpath><action type="space"/></rule>
+		
+		<!--cfe xref where no cfe-->
+		<rule><xpath>//cfe-gs[not(//cfe)]//xr-gs[@xt='cfe' and not(ancestor::un)]</xpath><action type="prefix">VEGEU</action></rule>
+
+		<!--cfe xref where cfe-->
+		<rule><xpath>//cfe-gs[descendant::cfe]//xr-gs[@xt='cfe' and not(ancestor::un)]</xpath><action type="prefix">VEGEU TAMBÉ</action></rule>	
+		
+		<rule><xpath>//xr-gs[@xt='collocat' and not(ancestor::unbox[@unbox='wordfinder'])]</xpath><action type="prefix"><esc>collocations</esc> at</action></rule>
+		<rule><xpath>//xr-gs[@xt='collocat' and not(ancestor::unbox[@unbox='wordfinder'])]</xpath><action type="sym_first">&xrsym;</action></rule>
+		<rule><xpath>//xr-gs[@xt='collocat_ref' and not(ancestor::unbox[@unbox='wordfinder'])]</xpath><action type="prefix"><esc>collocations</esc> at</action></rule>
+		<rule><xpath>//xr-gs[@xt='collocat_ref' and not(ancestor::unbox[@unbox='wordfinder'])]</xpath><action type="sym_first">&xrsym;</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='cp']</xpath><action type="prefix">Compareu amb</action></rule>
+		<rule><xpath>//xr-gs[@xt='cp']</xpath><action type="sym_first">&xrsym;</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='defat']</xpath><action type="sym_first">&xrsym;</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='eq']</xpath><action type="prefix">=</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='expressat']</xpath><action type="prefix"><esc>express yourself</esc> at</action></rule>
+		<rule><xpath>//xr-gs[@xt='expressat']</xpath><action type="sym_first">&xrsym;</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='fullentry']</xpath><action type="prefix"><esc>See main entry</esc> at</action></rule>
+		<rule><xpath>//xr-gs[@xt='fullentry']</xpath><action type="sym_first">&xrsym;</action></rule>
+		<rule><xpath>//xr-gs[@xt='driv_base']</xpath><action type="prefix"><esc>Derivative of</esc></action></rule>
+		<rule><xpath>//xr-gs[@xt='driv_base']</xpath><action type="sym_first">&xrsym;</action></rule>
+		<!--not in idm-gs-->
+<!-- idioms in digital version will be a list of xrefs -->		
+<!--		<rule><xpath>//xr-gs[@xt='id' and parent::*[not(self::idm-gs)]]</xpath><action type="prefix">see</action></rule> -->
+<!--		<rule><xpath>//xr-gs[@xt='id' and parent::*[not(self::idm-gs)]]</xpath><action type="sym_first">&idsym;</action></rule>-->
+		<rule><xpath>//xr-gs[@xt='id' and not(ancestor::un)]</xpath><action type="heading">Ver</action></rule>
+		<rule><xpath>//xr-gs[@xt='pv' and not(ancestor::un)]</xpath><action type="heading">Phrasal Verbs</action></rule>
+
+		<!--in idm-gs-->
+<!--		<rule><xpath>//idm-gs/xr-gs[@xt='id']</xpath><action type="prefix">more at</action></rule>
+		<rule><xpath>//idm-gs/xr-gs[@xt='id']</xpath><action type="sym_first">&xrsym;</action></rule> -->
+
+		<rule><xpath>//xr-gs[@xt='langbankat']</xpath><action type="prefix"><esc>language bank</esc> at</action></rule>
+		<rule><xpath>//xr-gs[@xt='langbankat']</xpath><action type="sym_first">&xrsym;</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='langbankat_ref']</xpath><action type="prefix"><esc>language bank</esc> at</action></rule>
+		<rule><xpath>//xr-gs[@xt='langbankat_ref']</xpath><action type="sym_first">&xrsym;</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='mlt']</xpath><action type="prefix"><esc>more like this</esc> p.</action></rule>
+		<rule><xpath>//xr-gs[@xt='mlt']</xpath><action type="sym_first">&xrmltsym;</action></rule>
+		
+		<rule><xpath>//xr-gs[@xt='nsyn']</xpath><action type="prefix">synonym</action></rule>
+		<rule><xpath>//xr-gs[@xt='nsyn']</xpath><action type="sym_first">&xrsym;</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='opp']</xpath><action type="prefix">opposite</action></rule>
+		<rule><xpath>//xr-gs[@xt='opp']</xpath><action type="sym_first">&xrsym;</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='picat']</xpath><action type="prefix">PICTURE AT</action></rule>
+		<rule><xpath>//xr-gs[@xt='picat']</xpath><action type="sym_first">&xrsym;</action></rule>
+		<rule><xpath>//xr-gs[@xt='plof']</xpath><action type="prefix">PLURAL DE</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='ppof']</xpath><action type="prefix">PARTICIPI PASSAT DE</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='presptof']</xpath><action type="prefix">present participle of</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='ptof']</xpath><action type="prefix">PASSAT DE</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='ptppof']</xpath><action type="prefix">PASSAT, PARTICIPI PASSAT DE</action></rule>
+		
+		<rule><xpath>//xr-gs[@xt='shortfor']</xpath><action type="prefix">ABREVIATURA DE</action></rule>		
+
+		<rule><xpath>//xr-gs[@xt='rn']</xpath><action type="prefix">related noun</action></rule>
+		<rule><xpath>//xr-gs[@xt='rn']</xpath><action type="sym_first">&xrsym;</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='see' and not(ancestor::unbox[@unbox='wordfinder'])]</xpath><action type="prefix">VEGEU</action></rule>
+		<rule><xpath>//xr-gs[@xt='see' and not(ancestor::unbox[@unbox='wordfinder'])]</xpath><action type="sym_first">&xrsym;</action></rule>
+		<rule><xpath>//xr-gs[@xt='seealso']</xpath><action type="prefix">VEGEU TAMBÉ</action></rule>
+		<rule><xpath>//xr-gs[@xt='seealso' and not(ancestor::unbox[@unbox='wordfinder'])]</xpath><action type="sym_first">&xrsym;</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='syn']</xpath><action type="prefix">synonym</action></rule>
+		<rule><xpath>//xr-gs[@xt='syn']</xpath><action type="sym_first">&xrsym;</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='synsnoteat']</xpath><action type="prefix"><esc>synonyms</esc> at</action></rule>
+		<rule><xpath>//xr-gs[@xt='synsnoteat']</xpath><action type="sym_first">&xrsym;</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='synsnoteat_ref']</xpath><action type="prefix"><esc>synonyms</esc> at</action></rule>
+		<rule><xpath>//xr-gs[@xt='synsnoteat_ref']</xpath><action type="sym_first">&xrsym;</action></rule>
+
+		<rule><xpath>//sn-g/xr-gs[@xt='topicentry']</xpath><action type="prefix">See related entries:</action></rule>
+		
+		<rule><xpath>//xr-gs[@xt='useat']</xpath><action type="prefix">VEGEU NOTA A</action></rule>
+		<rule><xpath>//xr-gs[@xt='useat']</xpath><action type="sym_first">&xrsym;</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='useat_ref']</xpath><action type="prefix">VEGEU NOTA A</action></rule>
+		<rule><xpath>//xr-gs[@xt='useat_ref']</xpath><action type="sym_first">&xrsym;</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='wordfinder' and not(ancestor::unbox[@unbox='wordfinder'])]</xpath><action type="prefix"><esc>wordfinder note</esc> at</action></rule>
+		<rule><xpath>//xr-gs[@xt='wordfinder' and not(ancestor::unbox[@unbox='wordfinder'])]</xpath><action type="sym_first">&xrsym;</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='writingtutor']</xpath><action type="prefix"><esc>writing tutor</esc> p.</action></rule>
+		<rule><xpath>//xr-gs[@xt='writingtutor']</xpath><action type="sym_first">&xrsym;</action></rule>
+		
+		<rule><xpath>//xr-gs[@xt='exas']</xpath><action type="prefix">VEGEU EXEMPLES A</action></rule>
+		<rule><xpath>//xr-gs[@xt='exas']</xpath><action type="sym_first">&xrsym;</action></rule>
+
+		<rule><xpath>//xr-gs[@xt='sourceentry']</xpath><action type="prefix">See the full entry for </action></rule>
+
+		<!--XR-G-->
+<!--		<rule><xpath>//xpos</xpath><action type="space"/></rule> -->
+		<rule><xpath>//xr-g/xpos[@xpos='adj']</xpath><action type="abbreviate">adj</action></rule>
+		<rule><xpath>//xr-g/xpos[@xpos='adv']</xpath><action type="abbreviate">adv</action></rule>
+		<rule><xpath>//xr-g/xpos[@xpos='conj']</xpath><action type="abbreviate">conj</action></rule>
+		<rule><xpath>//xr-g/xpos[@xpos='n']</xpath><action type="abbreviate">s</action></rule>
+		<rule><xpath>//xr-g/xpos[@xpos='nm']</xpath><action type="abbreviate">sm</action></rule>
+		<rule><xpath>//xr-g/xpos[@xpos='prep']</xpath><action type="abbreviate">prep</action></rule>
+		<rule><xpath>//xr-g/xpos[@xpos='v']</xpath><action type="abbreviate">v</action></rule>
+		<rule><xpath>//xr-g/xpos[@xpos='vi']</xpath><action type="abbreviate">vi</action></rule>
+		<rule><xpath>//xr-g/xpos[@xpos='vt']</xpath><action type="abbreviate">vt</action></rule>
+		
+				
+		<rule><xpath>//xs</xpath><action type="wrap">()</action></rule>
+		<rule><xpath>//xs</xpath><action type="space"/></rule>
+		<rule><xpath>//xr-gs[not(@xt='id') and not(@xt='pv')]/xr-g[preceding-sibling::*[1][self::xr-g]]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//deadxref[preceding-sibling::*[1][self::deadxref]]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//xr-g[preceding-sibling::*[1][self::deadxref]]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//deadxref[preceding-sibling::*[1][self::xr-g]]</xpath><action type="sep">,</action></rule>
+		
+		<rule><xpath>//xr-gs[@xt='cfe']/xr-g/xw</xpath><action type="delete"/></rule>
+		<rule><xpath>//xr-gs[@xt='id' and not(ancestor::un)]/xr-g/xw</xpath><action type="delete"/></rule>
+		<rule><xpath>//xh[preceding-sibling::*[1][self::xw]]</xpath><action type="sep">en</action></rule>
+				
+		<!--LABELS-->
+		
+		<!--LABELS-->
+
+		<rule><xpath>//dlf[preceding-sibling::*[1][self::dlf]]</xpath><action type="sep"><ei>i</ei></action></rule>
+		<rule><xpath>//dlf[preceding-sibling::*[1][self::ds]]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//dlf[preceding-sibling::*[1][self::dtxt]]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//dlf[@dlf='fig' and not(text())]</xpath><action type="label">sentit figurat</action></rule>
+		<rule><xpath>//dlf[@dlf='lit' and not(text())]</xpath><action type="label">sentit literal</action></rule>
+				
+		<rule><xpath>//ds[preceding-sibling::*[1][self::ds]]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//ds[preceding-sibling::*[1][self::dtxt]]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//dtxt[preceding-sibling::*[1][self::ds]]</xpath><action type="sep">,</action></rule>
+		<rule><xpath>//dtxt[preceding-sibling::*[1][self::dtxt]]</xpath><action type="sep">,</action></rule>
+
+						
+		<rule><xpath>//gram[@gram='attribn' and not(text())]</xpath><action type="label">sustantivo en posición atributiva</action></rule>
+		<rule><xpath>//gram[@gram='c' and not(text())]</xpath><action type="label">contable</action></rule>
+		<rule><xpath>//gram[@gram='nbn' and not(text())]</xpath><action type="label">predicativo</action></rule>
+		<rule><xpath>//gram[@gram='obn' and not(text())]</xpath><action type="label">sólo antes de sustantivo</action></rule>
+		<rule><xpath>//gram[@gram='oftpass' and not(text())]</xpath><action type="label">generalmente pasiva</action></rule>
+		<rule><xpath>//gram[@gram='pl' and not(text())]</xpath><action type="label">pl</action></rule>
+		<rule><xpath>//gram[@gram='plv' and not(text())]</xpath><action type="label">verbo en plural</action></rule>
+		<rule><xpath>//gram[@gram='sing' and not(text())]</xpath><action type="label">sing</action></rule>
+		<rule><xpath>//gram[@gram='singoplv' and not(text())]</xpath><action type="label">verbo en singular o en plural</action></rule>
+		<rule><xpath>//gram[@gram='singv' and not(text())]</xpath><action type="label">verbo en singular</action></rule>
+		<rule><xpath>//gram[@gram='u' and not(text())]</xpath><action type="label">incontable</action></rule>
+		<rule><xpath>//gram[@gram='ubn' and not(text())]</xpath><action type="label">generalmente en posición atributiva</action></rule>
+		<rule><xpath>//gram[@gram='usupass' and not(text())]</xpath><action type="label">generalmente pasiva</action></rule>
+		<rule><xpath>//gram[@gram='usupl' and not(text())]</xpath><action type="label">generalmente en plural</action></rule>
+		<rule><xpath>//gram[@gram='ususing' and not(text())]</xpath><action type="label">generalmente en singular</action></rule>
+		<rule><xpath>//gram[@gram='usuu' and not(text())]</xpath><action type="label">generalmente incontable</action></rule>
+
+		
+		<!--POS default-->
+		<rule><xpath>//pos-g/pos[@pos='abbrof']</xpath><action type="label">abreviatura de</action></rule>
+
+		<rule><xpath>//pos[@pos='abbr' and not(text())]</xpath><action type="label">abreviatura</action></rule>
+		<rule><xpath>//pos[@pos='adj' and not(text())]</xpath><action type="label">adjetivo</action></rule>
+		<rule><xpath>//pos[@pos='adjpos' and not(text())]</xpath><action type="label">adjetivo posesivo</action></rule>
+		<rule><xpath>//pos[@pos='adv' and not(text())]</xpath><action type="label">adverbio</action></rule>
+		<rule><xpath>//pos[@pos='defa' and not(text())]</xpath><action type="label">artículo definido</action></rule>
+		<rule><xpath>//pos[@pos='conj' and not(text())]</xpath><action type="label">conjunción</action></rule>
+		<rule><xpath>//pos[@pos='exclam' and not(text())]</xpath><action type="label">interjección</action></rule>
+		<rule><xpath>//pos[@pos='indefa' and not(text())]</xpath><action type="label">artículo indefinido</action></rule>
+		<rule><xpath>//pos[@pos='n' and not(text())]</xpath><action type="label">sustantivo</action></rule>
+		<rule><xpath>//pos[@pos='nf' and not(text())]</xpath><action type="label">sustantivo femenino</action></rule>
+		<rule><xpath>//pos[@pos='nm' and not(text())]</xpath><action type="label">sustantivo masculino</action></rule>
+		<rule><xpath>//pos[@pos='nmf' and not(text())]</xpath><action type="label">sustantivo masculino y femenino</action></rule>
+		<rule><xpath>//pos[@pos='nm-nf' and not(text())]</xpath><action type="label">sustantivo que varía en masculino y femenino</action></rule>
+		<rule><xpath>//pos[@pos='nmonf' and not(text())]</xpath><action type="label">sustantivo masculino o femenino</action></rule>
+		<rule><xpath>//pos[@pos='npr' and not(text())]</xpath><action type="label">nombre propio</action></rule>
+		<rule><xpath>//pos[@pos='pref' and not(text())]</xpath><action type="label">prefijo</action></rule>
+		<rule><xpath>//pos[@pos='prep' and not(text())]</xpath><action type="label">preposición</action></rule>
+		<rule><xpath>//pos[@pos='pron' and not(text())]</xpath><action type="label">pronombre</action></rule>
+		<rule><xpath>//pos[@pos='pronpos' and not(text())]</xpath><action type="label">pronombre posesivo</action></rule>
+		<rule><xpath>//pos[@pos='suf' and not(text())]</xpath><action type="label">sufijo</action></rule>
+		<rule><xpath>//pos[@pos='v' and not(text())]</xpath><action type="label">verbo</action></rule>
+		<rule><xpath>//pos[@pos='vaux' and not(text())]</xpath><action type="label">verbo auxiliar</action></rule>
+		<rule><xpath>//pos[@pos='vi' and not(text())]</xpath><action type="label">verbo intransitivo</action></rule>
+		<rule><xpath>//pos[@pos='vimp' and not(text())]</xpath><action type="label">verbo impersonal</action></rule>
+		<rule><xpath>//pos[@pos='vmodal' and not(text())]</xpath><action type="label">verbo modal</action></rule>
+		<rule><xpath>//pos[@pos='vpron' and not(text())]</xpath><action type="label">verbo pronominal</action></rule>
+		<rule><xpath>//pos[@pos='vt' and not(text())]</xpath><action type="label">verbo transitivo</action></rule>
+		
+				
+		<rule><xpath>//wfp[@wfp='adj']</xpath><action type="label">adjetivo</action></rule>
+		<rule><xpath>//wfp[@wfp='adv']</xpath><action type="label">adverbio</action></rule>
+		<rule><xpath>//wfp[@wfp='n']</xpath><action type="label">sustantivo</action></rule>
+		<rule><xpath>//wfp[@wfp='v']</xpath><action type="label">verbo</action></rule>		
+		
+		<!--hanging indent for "stress entries"-->
+
+		<rule><xpath>//h[1][starts-with(text(),'ˈ') or starts-with(text(),'ˌ')]</xpath><action type="mark_indent">hanging</action></rule>
+
+		<!--TAG SPECIAL CHARACTER CLASSES-->
+		<!--for this action type, the parameter is a character class - eg "&p;&s;" = "tag any instances of &p; and any instances of &s;".
+			The exception to this is the parameter "PU", which indicates to "tag all private use characters".-->
+
+		<!--replace pvarr character with a symbol-->
+		<rule><xpath>//*</xpath><action type="tag">↔</action></rule>
+		<rule><xpath>//*/sty[@name='pvarr']</xpath><action type="abbreviate">&pvarr;</action></rule>
+		
+		<!--delete wordbreaks-->
+		<!--<rule><xpath>//*</xpath><action type="tag">&#x00B7;</action></rule>		
+		<rule><xpath>//*/sty[@name='wdbrk']</xpath><action type="delete"/></rule>-->
+
+		<!--print specified node-->
+
+		<rule><xpath>//entry</xpath><action type="print"/></rule>
+	
+	</rules>
+</config>

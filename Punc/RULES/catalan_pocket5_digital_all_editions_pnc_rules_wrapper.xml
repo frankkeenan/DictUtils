@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE config SYSTEM "config.dtd"
+	[
+		<!--load entity declarations for digital symbols-->
+		<!ENTITY % digital_symbols SYSTEM "digital_symbols.ent">
+		%digital_symbols;
+	]
+>
+<config project="catalan_pocket5" pub="digital" edition="house" target="xml" css="ald9_digital.css">
+<xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="catalan_pocket5_digital_all_editions_pnc_rules.xml" parse="xml" xpointer="catalan_pocket5_digital_all_editions_pnc_rules"/>
+</config>
