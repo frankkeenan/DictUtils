@@ -1,6 +1,15 @@
 #!/usr/local/bin/perl
 
 # this program puts adjacent idiom groups into a simple alphabetic order ...
+our $PDIR = $ENV{DICT_UTILS};
+if ($PDIR =~ m|^ *$|)
+{
+    printf(STDERR "Need to set ENV for DICT_UTILS\n\n"); 
+}
+#$PDIR = ".";
+
+require "$PDIR/utils.pl";
+require "$PDIR/restructure.pl";
 
 ###########################################
 

@@ -29,9 +29,9 @@ sub main
     {
 	$USE_OLD = 1;
     }
-    $tags_file = "./LTA/tag_info.dat";
-    $ents_file = "./LTA/ents_old_dtd.txt";
-    $atts_file = "./LTA/attnames.txt";
+    $tags_file = "$ENV{DICT_UTILS}/LTA/tag_info.dat";
+    $ents_file = "$ENV{DICT_UTILS}//LTA/ents_old_dtd.txt";
+    $atts_file = "$ENV{DICT_UTILS}//LTA/attnames.txt";
     &load_tags_file($tags_file);
     &load_ents_file($ents_file);
     &load_atts_file($atts_file);

@@ -1,4 +1,4 @@
-require "/disk1/home/hughsoni/perl/lib/std.pl";
+require "$ENV{DICT_UTILS}/std.pl";
 
 
 sub resolve_brackets {

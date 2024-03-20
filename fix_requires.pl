@@ -5,15 +5,10 @@ use open qw(:std :utf8);
 use utf8;
 use strict;
 our ($LOG, $LOAD, $opt_f, $opt_u, $opt_D, $opt_I, $opt_O, $opt_D, $opt_d, %W, %F);
-if (1)
-{
-    require "./utils.pl";
+my $PDIR = $ENV{DICT_UTILS};
 
-}
-else {
-
-
-}
+require "$PDIR/utils.pl";
+require "$PDIR/restructure.pl";
 # require "/data_new/VocabHub/progs/VocabHub.pm";
 #require "/NEWdata/dicts/generic/progs/xsl_lib_fk.pl";
 $LOG = 0;
@@ -39,7 +34,7 @@ sub main
 	my $to_fix  = &check_requires($f);
 	if ($to_fix)
 	{
-	    my $comm = sprintf("perl fix_requires_inplace.pl \"%s\"", $f); 
+	    my $comm = sprintf("perl %s/fix_requires_inplace.pl \"%s\"", $PDIR, $f); 
 	    print $comm;
 	    system($comm);
 	}

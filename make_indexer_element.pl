@@ -1,8 +1,7 @@
 use Getopt::Std;
-
-require "/disk1/home/keenanf/perl/utils.pl";
-require "/disk1/home/hughsoni/perl/lib/std.pl";
-require "/disk1/home/hughsoni/Translations/scripts/trans_funcs.pl";
+require "$ENV{DICT_UTILS}/utils.pl";
+require "$ENV{DICT_UTILS}/std.pl";
+require "$ENV{DICT_UTILS}/trans_funcs.pl";
 
 
 $, = "\t";

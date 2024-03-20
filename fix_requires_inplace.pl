@@ -5,15 +5,10 @@ use open qw(:std :utf8);
 use utf8;
 use strict;
 our ($LOG, $LOAD, $opt_f, $opt_u, $opt_D, $opt_I, $opt_O, $opt_D, $opt_d, %W, %F);
-if (1)
-{
-    require "./utils.pl";
-    require "./restructure.pl";
-}
-else {
-    require "./utils.pl";
-    require "./restructure.pl";
-}
+my $PDIR = $ENV{DICT_UTILS};
+
+require "$PDIR/utils.pl";
+require "$PDIR/restructure.pl";
 # require "/data_new/VocabHub/progs/VocabHub.pm";
 #require "/NEWdata/dicts/generic/progs/xsl_lib_fk.pl";
 $LOG = 0;
@@ -43,7 +38,7 @@ sub main
 	{
 	    my $space = $1;
 	    my $f = $2;
-	    $f =~ s|^.*/|./|;
+	    $f =~ s|^.*/|\$ENV{DICT_UTILS}/|;
 	    $_ = sprintf("%srequire \"%s\";", $space, $f); 
 	}
 
