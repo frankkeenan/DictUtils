@@ -33,5 +33,6 @@ def main():
         xpath2 = re.sub(r'\{[^\}]*\}', '', xpath)
         print(f"{xpath2}\t{count}")
 
+
 if __name__ == "__main__":
     main()

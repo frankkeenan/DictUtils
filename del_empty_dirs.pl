@@ -24,26 +24,41 @@ $\ = "\n";              # set output record separator
 
 sub main
 {
-    getopts('a:bz:d:');
-#    stores value of arguments in $opt_a and $opt_z and BOOLEAN $opt_b
-#
+    getopts('a:bz:f:');
+    #    stores value of arguments in $opt_a and $opt_z and BOOLEAN $opt_b
+    #
     my $pwd = getcwd;
     # chdir "/usrdata3/audio/WAVS";
     # First delete DS_Store files
     # To be added
-    my $newdir = $opt_d;
-    chdir $newdir;
-    open(FIND, "find . -type d -empty -print|");
- FILE: 
-    while (my $fname = <FIND>) 
+    my $newdir = $opt_f;
+    while (1)
     {
-	chomp $fname;       # strip record separator
-	# format will be ./1/10/10p/10p#_gb_1.mp3
-	my $comm = sprintf("rmdir \"%s\"", $fname); 	
-	printf("deleting \"$fname\"\n"); 
-	system($comm);
-
+	my $ct = &del_folder($newdir);
+	last if ($ct == 0);
     }
     chdir $pwd;
+}
+
+sub del_folder
+{
+    my($folder) = @_;
+    my($ct, $eid);	
+    chdir $folder;
+    open(FIND, "find . -type d -empty -print|");
+  FILE: 
+    while (my $fname = <FIND>) 
+  {
+      chomp $fname;       # strip record separator
+      # format will be ./1/10/10p/10p#_gb_1.mp3
+      my $comm = sprintf("rmdir \"%s\"", $fname); 	
+      printf("deleting \"$fname\"\n"); 
+      unless ($USED{$fname}++)
+      {
+	  $ct++;
+      }
+      system($comm);
+  }
+    return($ct);
 }
 

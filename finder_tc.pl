@@ -31,6 +31,8 @@ sub main
     my $fname;
     my $tc = sprintf("perl /usr/local/bin/tc.pl"); 
     my $dictDir = "/home/keenanf/DICTS";
+    my $dictDir = "/data/data_c/Projects";
+    my $dictDir = "/data/Newdata/dicts";
     $W{"dps.xml"} = 1;
     $W{"dps_hex.xml"} = 1;
     $W{"combo.dat"} = 1;
