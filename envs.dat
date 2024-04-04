@@ -1,0 +1,6 @@
+export WDLISTS=/home/keenanf/GitRepos/SpellCheck/Wdlists
+export PUNC_DIR=/home/keenanf/GitRepos/ELTDicts/punc
+export EIDS_DIR=/home/keenanf/GitRepos/ELTDicts/EIDS
+export ELTDICTS=/home/keenanf/GitRepos/ELTDicts
+export DICT_UTILS=/home/keenanf/GitRepos/DictUtils
+export GITDIR=/home/keenanf/GitRepos
