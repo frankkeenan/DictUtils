@@ -3,7 +3,12 @@
 use File::Compare;
 use Cwd 'abs_path';
 #$PDIR = ".";
-$PDIR = "/usr/local/bin/";
+our $PDIR = $ENV{DICT_UTILS};
+if ($PDIR =~ m|^ *$|)
+{
+    printf(STDERR "Need to set ENV for DICT_UTILS\n\n"); 
+}
+#$PDIR = ".";
 
 require "$PDIR/utils.pl";
 require "$PDIR/restructure.pl";
@@ -241,6 +246,7 @@ sub clean_wd
     $wd =~ s|&\#x2122;||go;
     $wd =~ s|&\#x2009;||go;
     $wd =~ s|&\#x00AE;||go;
+    $wd =~ s|[ˈˌ·‧™ ®©]||go;
     return $wd;
 }
 

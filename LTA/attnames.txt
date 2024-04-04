@@ -172,3 +172,7 @@ e:targetproject	Editing system's Project identifier
 exercise	Exercise type
 level	Level of usage for exercise tags.
 altforms	Whether the content of the tag contains alternate forms (e.g. slashed phrasal verbs)
+indent	How to indent the tag
+sntype	Whether a sense is numbered or not
+thumb_resource	The thumbnail image
+word	word 

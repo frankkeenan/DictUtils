@@ -611,3 +611,12 @@ TW	Taiwan terms (in Chinese translation)
 chn	Chinese translation
 und	text/definition inside usage note box
 geo-alt	Container for alternate British and American content
+Indexer	Specification of tags for indexing (can be used to assign priority e.g. Headword is more significant than inflection)
+collapse	Tag to allow content to be collapsed
+hdwd-g	Grouping for headwords
+hdwd2	Secondary headword
+pos-block	Part of speech block
+posref-g	Grouping for part of speech references
+sn-top	Grouping for the content at the start of a sense
+untitle	Title of a note
+v_alt	Alternative form
