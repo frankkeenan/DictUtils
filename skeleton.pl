@@ -4,7 +4,7 @@ use autodie qw(:all);
 use open qw(:std :utf8);
 use utf8;
 use strict;
-our ($LOG, $LOAD, $opt_f, $opt_u, $opt_d, $opt_D, $opt_I, $opt_O, %W, %USED, %F, %INFO, %CT);
+our ($LOG, $LOAD, $opt_f, $opt_u, $opt_d, $opt_D, $opt_I, $opt_O, %W, %USED, %F, %INFO, %CT, $p);
 our $PDIR = $ENV{DICT_UTILS};
 if ($PDIR =~ m|^ *$|)
 {
