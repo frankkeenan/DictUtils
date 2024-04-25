@@ -32,7 +32,11 @@ sub main
 	$_ = restructure::delabel($_);
 	if ($etag =~ m|^ *$|)
 	{
-	    if (m|<(entryGroup)|)
+	    if (m|<(SuperEntry)|)
+	    {
+		$etag = $1;
+	    }
+	    elsif (m|<(entryGroup)|)
 	    {
 		$etag = $1;
 	    }
