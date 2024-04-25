@@ -5,15 +5,15 @@ use open qw(:std :utf8);
 use utf8;
 use strict;
 our ($LOG, $LOAD, $opt_f, $opt_u, $opt_D, $opt_I, $opt_O, $opt_d, $opt_c, %W);
-if (1)
+our $PDIR = $ENV{DICT_UTILS};
+if ($PDIR =~ m|^ *$|)
 {
-    require "/usr/local/bin/utils.pl";
-    require "/usr/local/bin/restructure.pl";
+    printf(STDERR "Need to set ENV for DICT_UTILS\n\n"); 
 }
-else {
-    require "./utils.pl";
-    require "./restructure.pl";
-}
+#$PDIR = ".";
+
+require "$PDIR/utils.pl";
+require "$PDIR/restructure.pl";
 # require "/data_new/VocabHub/progs/VocabHub.pm";
 #require "/NEWdata/dicts/generic/progs/xsl_lib_fk.pl";
 $LOG = 0;
@@ -42,7 +42,7 @@ sub main
 	
     }
     my $DPSPASS = $ENV{'DPSPASS'};
-    my $comm = sprintf("curl -s --user frank.keenan:%s \"https://dws-dps.idm.fr/api/v1/projects/%s/entries/export/allInternalAttributesAndAdditionalMetadata\"  | perl  /usr/local/bin/add_missing_end_tags.pl  | perl ./oneline.pl > %s/dps.xml", $DPSPASS, $opt_c, $resdir); 
+    my $comm = sprintf("curl -s --user $DPSUSER:%s \"https://dws-dps.idm.fr/api/v1/projects/%s/entries/export/allInternalAttributesAndAdditionalMetadata\"  | perl  /usr/local/bin/add_missing_end_tags.pl  | perl $PDIR/oneline.pl > %s/dps.xml", $DPSPASS, $opt_c, $resdir); 
     my $pcomm = $comm;
     $pcomm =~ s| --user +[^ ]* | |;
     printf(STDERR "%s\n\n", $pcomm);
