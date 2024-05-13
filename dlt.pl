@@ -5,15 +5,15 @@ use open qw(:std :utf8);
 use utf8;
 use strict;
 our ($LOG, $LOAD, $opt_f, $opt_u, $opt_D, $opt_I, $opt_O, $opt_d, $opt_c, %W);
-our $PDIR = $ENV{DICT_UTILS};
-if ($PDIR =~ m|^ *$|)
+if (1)
 {
-    printf(STDERR "Need to set ENV for DICT_UTILS\n\n"); 
+    require "/usr/local/bin/utils.pl";
+    require "/usr/local/bin/restructure.pl";
 }
-#$PDIR = ".";
-
-require "$PDIR/utils.pl";
-require "$PDIR/restructure.pl";
+else {
+    require "./utils.pl";
+    require "./restructure.pl";
+}
 # require "/data_new/VocabHub/progs/VocabHub.pm";
 #require "/NEWdata/dicts/generic/progs/xsl_lib_fk.pl";
 $LOG = 0;
@@ -33,7 +33,7 @@ sub main
 #   $opt_L = ""; # name of file for the log_fp output to go to
     &open_debug_files;
     use open qw(:utf8 :std);
-    my $resdir = sprintf("/data/data_c/Projects/OL/%s", $opt_c);
+    my $resdir = sprintf("/data/data_c/Projects/OLT/%s", $opt_c);
     unless (-d $resdir)
     {
 	my $comm = sprintf("mkdir -p \"%s\"", $resdir);
@@ -43,10 +43,8 @@ sub main
     }
     my $DPSPASS = $ENV{'DPSPASS'};
     my $DPSUSER = $ENV{'DPSUSER'};
-    my $comm = sprintf("curl -s --user $DPSUSER:%s \"https://dws-dps.idm.fr/api/v1/projects/%s/entries/export/allInternalAttributesAndAdditionalMetadata\"  | perl  /usr/local/bin/add_missing_end_tags.pl  | perl $PDIR/oneline.pl > %s/dps.xml", $DPSPASS, $opt_c, $resdir); 
-    my $pcomm = $comm;
-    $pcomm =~ s| --user +[^ ]* | |;
-    printf(STDERR "%s\n\n", $pcomm);
+    my $comm = sprintf("curl -s --user frank.keenan:%s \"https://dwst-dps.idm.fr/api/v1/projects/%s/entries/export/allInternalAttributesAndAdditionalMetadata\"  | perl  /usr/local/bin/add_missing_end_tags.pl  > %s/dps.xml", $DPSPASS, $opt_c, $resdir); 
+    printf(STDERR "%s\n\n", $comm);
     unless ($opt_d)
     {
 	system($comm);
