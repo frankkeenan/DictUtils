@@ -4,16 +4,27 @@ use autodie qw(:all);
 use open qw(:std :utf8);
 use utf8;
 use strict;
-our ($LOG, $LOAD, $opt_f, $opt_u, $opt_D, $opt_I, $opt_O, $opt_d, $opt_c, %W);
-our $PDIR = $ENV{DICT_UTILS};
-if ($PDIR =~ m|^ *$|)
-{
-    printf(STDERR "Need to set ENV for DICT_UTILS\n\n"); 
-}
-#$PDIR = ".";
+our ($LOG, $LOAD, $opt_f, $opt_d, $opt_g, $opt_S, $opt_u, $opt_D, $opt_I, $opt_O,  $opt_c, %W);
 
-require "$PDIR/utils.pl";
-require "$PDIR/restructure.pl";
+sub usage
+{
+    printf(STDERR "USAGE: $0 -u [-g groupname] [-S] \n"); 
+    printf(STDERR "\t-u:\tDisplay usage\n"); 
+    printf(STDERR "\t-c:\tDictCode\n");
+    printf(STDERR "\t-g:\tDPS group to download\n");
+    printf(STDERR "\t-S:\tDownload the SuperEntry\n"); 
+    exit;
+}
+
+if (1)
+{
+    require "/usr/local/bin/utils.pl";
+    require "/usr/local/bin/restructure.pl";
+}
+else {
+    require "./utils.pl";
+    require "./restructure.pl";
+}
 # require "/data_new/VocabHub/progs/VocabHub.pm";
 #require "/NEWdata/dicts/generic/progs/xsl_lib_fk.pl";
 $LOG = 0;
@@ -25,7 +36,7 @@ $\ = "\n";              # set output record separator
 
 sub main
 {
-    getopts('uf:L:IODc:');
+    getopts('uf:L:IODc:g:Sd');
     &usage if ($opt_u);
     &usage unless ($opt_c);
     my($e, $res, $bit);
@@ -38,27 +49,33 @@ sub main
     {
 	my $comm = sprintf("mkdir -p \"%s\"", $resdir);
 	printf(STDERR "%s\n\n", $comm);
-	system($comm);
-	
+	system($comm);	
     }
     my $DPSPASS = $ENV{'DPSPASS'};
     my $DPSUSER = $ENV{'DPSUSER'};
-    my $comm = sprintf("curl -s --user $DPSUSER:%s \"https://dws-dps.idm.fr/api/v1/projects/%s/entries/export/allInternalAttributesAndAdditionalMetadata\"  | perl  /usr/local/bin/add_missing_end_tags.pl  | perl $PDIR/oneline.pl > %s/dps.xml", $DPSPASS, $opt_c, $resdir); 
-    my $pcomm = $comm;
-    $pcomm =~ s| --user +[^ ]* | |;
-    printf(STDERR "%s\n\n", $pcomm);
+    my ($group, $parameters);
+    my $resf = "dps";    
+    if ($opt_g)
+    {
+	$parameters .= sprintf("entrySetName=%s&", $opt_g); 
+	$resf .= sprintf("_group_%s", $opt_g); 
+    }
+    if ($opt_S)
+    {
+	$parameters .= sprintf("exportVersionsHistory=true&"); 
+    }
+    unless ($parameters =~ m|^ *$|)
+    {
+	$parameters =~ s|& *$||;
+	$parameters = sprintf("?%s", $parameters); 
+
+    }
+    my $comm = sprintf("curl -s --user frank.keenan:%s \"https://dws-dps.idm.fr/api/v1/projects/%s/entries/export/allInternalAttributesAndAdditionalMetadata%s\"  | perl  /usr/local/bin/add_missing_end_tags.pl  > %s/%s.xml", $DPSPASS, $opt_c, $parameters, $resdir, $resf); 
+    printf(STDERR "%s\n\n", $comm);
     unless ($opt_d)
     {
 	system($comm);
     }
-    exit;
-}
-
-sub usage
-{
-    printf(STDERR "USAGE: $0 -u \n"); 
-    printf(STDERR "\t-u:\tDisplay usage\n"); 
-    printf(STDERR "\t-c:\tDictCode\n"); 
     exit;
 }
 
