@@ -4,13 +4,14 @@ use autodie qw(:all);
 use open qw(:std :utf8);
 use utf8;
 use strict;
-our ($LOG, $LOAD, $opt_f, $opt_d, $opt_g, $opt_S, $opt_u, $opt_D, $opt_I, $opt_O,  $opt_c, %W);
+our ($LOG, $LOAD, $opt_A, $opt_f, $opt_d, $opt_g, $opt_S, $opt_u, $opt_D, $opt_I, $opt_O,  $opt_c, %W);
 
 sub usage
 {
     printf(STDERR "USAGE: $0 -u [-g groupname] [-S] \n"); 
     printf(STDERR "\t-u:\tDisplay usage\n"); 
     printf(STDERR "\t-c:\tDictCode\n");
+    printf(STDERR "\t-A:\tInclude annotations as PIs\n");
     printf(STDERR "\t-g:\tDPS group to download\n");
     printf(STDERR "\t-S:\tDownload the SuperEntry\n"); 
     exit;
@@ -36,7 +37,7 @@ $\ = "\n";              # set output record separator
 
 sub main
 {
-    getopts('uf:L:IODc:g:Sd');
+    getopts('uf:L:IODc:g:SdA');
     &usage if ($opt_u);
     &usage unless ($opt_c);
     my($e, $res, $bit);
@@ -63,6 +64,10 @@ sub main
     if ($opt_S)
     {
 	$parameters .= sprintf("exportVersionsHistory=true&"); 
+    }
+    if ($opt_A)
+    {
+	$parameters .= sprintf("exportAnnotationsPIs=true&"); 
     }
     unless ($parameters =~ m|^ *$|)
     {
