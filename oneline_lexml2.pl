@@ -4,8 +4,13 @@ use autodie qw(:all);
 use open qw(:std :utf8);
 use utf8;
 use strict;
-our ($LOG, $LOAD, $opt_f, $opt_u, $opt_D, $opt_I, $opt_O, $opt_D, $opt_d, %W, %F, $PDIR);
-$PDIR = "/usr/local/bin/";
+our ($LOG, $LOAD, $opt_f, $opt_u, $opt_D, $opt_I, $opt_O, $opt_D, $opt_d, %W, %F);
+our $PDIR = $ENV{DICT_UTILS};
+if ($PDIR =~ m|^ *$|)
+{
+    printf(STDERR "Need to set ENV for DICT_UTILS\n\n"); 
+}
+#$PDIR = ".";
 
 require "$PDIR/utils.pl";
 require "$PDIR/restructure.pl";

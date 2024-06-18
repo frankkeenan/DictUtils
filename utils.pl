@@ -2,6 +2,9 @@
 #
 use File::Compare;
 use Cwd 'abs_path';
+use Text::Unidecode;
+# my $e = unidecode("ä, ö, ü, é"); # will give "a, o, u, e"
+
 #$PDIR = ".";
 our $PDIR = $ENV{DICT_UTILS};
 if ($PDIR =~ m|^ *$|)
@@ -1955,6 +1958,7 @@ sub load_posdefs
     $POS{"num"} = "adj";
     $POS{"number"} = "adj";
     $POS{"ordinal"} = "adj";
+    $POS{"phrase"} = "phr";
     $POS{"preposition"} = "prep";
     $POS{"pronoun"} = "pron";
     $POS{"verb"} = "v";

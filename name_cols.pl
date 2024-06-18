@@ -3,9 +3,11 @@ use Getopt::Std;
 use autodie qw(:all);
 use utf8;
 our ($LOG, $LOAD, $opt_f, $opt_u, $opt_d, $opt_D, $opt_I, $opt_O, %W, %USED, %F, %INFO);
-our $PDIR = "/usr/local/bin/";
-#$PDIR = ".";
-
+our $PDIR = $ENV{DICT_UTILS};
+if ($PDIR =~ m|^ *$|)
+{
+    printf(STDERR "Need to set ENV for DICT_UTILS\n\n"); 
+}
 require "$PDIR/utils.pl";
 require "$PDIR/restructure.pl";
 

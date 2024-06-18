@@ -5,15 +5,13 @@ use open qw(:std :utf8);
 use utf8;
 use strict;
 our ($LOG, $LOAD, $opt_f, $opt_u, $opt_D, $opt_I, $opt_O, $opt_D, $opt_d, %W, %F);
-if (1)
+our $PDIR = $ENV{DICT_UTILS};
+if ($PDIR =~ m|^ *$|)
 {
-    require "/NEWdata/dicts/generic/progs/utils.pl";
-    require "/NEWdata/dicts/generic/progs/restructure.pl";
+    printf(STDERR "Need to set ENV for DICT_UTILS\n\n"); 
 }
-else {
-    require "./utils.pl";
-    require "./restructure.pl";
-}
+require "$PDIR/utils.pl";
+require "$PDIR/restructure.pl";
 # require "/data_new/VocabHub/progs/VocabHub.pm";
 #require "/NEWdata/dicts/generic/progs/xsl_lib_fk.pl";
 $LOG = 0;
