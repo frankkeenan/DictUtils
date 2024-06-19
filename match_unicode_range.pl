@@ -38,24 +38,19 @@ sub main
 	binmode DB::OUT,":utf8";
     }
     if ($LOAD){&load_file($opt_f);}
+    my $caps = "\x{0040}-\x{005A}";
+    my $vietnamese = "\x{1EA1}-\x{1EF9}";
+    my $accented = "\x{00C0}-\x{01BF}";
+    my $letters = "\x{0040}-\x{005A}\x{0061}-\x{007A}";
   line:    
     while (<>){
 	chomp;       # strip record separator
 	s|||g;
 	if ($opt_I){printf(bugin_fp "%s\n", $_);}	
-	# s|<!--.*?-->||gio;
-#	next line if (m|<entry[^>]*sup=\"y|io);
-#	unless (m|<entry|){print $_; next line;}
-	# my $h = &get_hex_h($_, "hex", 1); # the 1 says to remove stress etc
-	# $eid = &get_tag_attval($_, "entry", "eid");
-	# $EntryId = &get_dps_entry_id($_);
-	# $_ = &reduce_idmids($_);
-	# s|£|&\#x00A3;|g;
-        # $_ = restructure::delabel($_);	
-	# my $tagname = restructure::get_tagname($bit);    
-	# 
-	# Match the hex range &#x00C0;-&#x017E;
-	s|([^a-zA-Z0-9£\'\x{00C0}-\x{017E}])sb([^a-zA-Z0-9£\'\x{00C0}-\x{017E}])|$1<FK>SOMEBODY</FK>$2|g;
+	# Match the hex caps &#x00C0;-&#x017E;
+#	s|([^a-zA-Z0-9£\'\x{00C0}-\x{017E}])sb([^a-zA-Z0-9£\'\x{00C0}-\x{017E}])|$1<FK>SOMEBODY</FK>$2|g;
+	s|([$letters]+)|<letters>$1</letters>|g;
+#	s|([$caps]+)|<caps>$1</caps>|g;
 	print $_;
 	if ($opt_O){printf(bugout_fp "%s\n", $_);}
     }
