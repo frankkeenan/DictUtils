@@ -42,6 +42,7 @@ sub main
     my $vietnamese = "\x{1EA1}-\x{1EF9}";
     my $accented = "\x{00C0}-\x{01BF}";
     my $letters = "\x{0040}-\x{005A}\x{0061}-\x{007A}";
+    my $emojis = "\x{1F300}-\x{1FaF7}\x{2600}-\x{27C0}";
   line:    
     while (<>){
 	chomp;       # strip record separator
@@ -49,7 +50,8 @@ sub main
 	if ($opt_I){printf(bugin_fp "%s\n", $_);}	
 	# Match the hex caps &#x00C0;-&#x017E;
 #	s|([^a-zA-Z0-9£\'\x{00C0}-\x{017E}])sb([^a-zA-Z0-9£\'\x{00C0}-\x{017E}])|$1<FK>SOMEBODY</FK>$2|g;
-	s|([$letters]+)|<letters>$1</letters>|g;
+#	s|([$letters]+)|<letters>$1</letters>|g;
+	s|([$emojis]+)|<emojis>$1</emojis>|g;
 #	s|([$caps]+)|<caps>$1</caps>|g;
 	print $_;
 	if ($opt_O){printf(bugout_fp "%s\n", $_);}
